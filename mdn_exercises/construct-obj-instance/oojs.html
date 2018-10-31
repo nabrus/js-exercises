@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Object-oriented JavaScript example</title>
+  </head>
+
+  <body>
+    <p>This example requires you to enter commands in your browser's JavaScript console (see <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">What are browser developer tools</a> for more information).</p>
+
+  </body>
+
+    <script>
+    function Person(first, last, age, gender, interests) {
+      this.name = {
+        'first': first,
+        'last': last,
+      };
+      this.age = age;
+      this.gender = gender;
+      this.interests = interests;
+      this.bio = function() {
+        let hobbies = '';
+        // conditional with a loop to get proper sentence
+        // structure depending on number of interests
+        if (this.interests.length === 1) {
+          hobbies += this.interests[0] + '.';
+        } else if (this.interests.length === 2) {
+          hobbies += this.interests[0] + ' and ' + this.interests[1] + '.';
+        } else {
+          for (let index = 0; index < this.interests.length; index++) {
+            if (index === this.interests.length - 1) {
+              hobbies += 'and ' + this.interests[index] + '.';
+            } else {
+              hobbies += this.interests[index] + ', ';
+            }
+          }
+        }
+
+        // conditional for proper sentence structure for diff genders
+        if (this.gender === 'male') {
+          alert(this.name.first + ' ' + this.name.last + ' is ' + this.age + ' years old. He likes ' + hobbies);
+        } else if (this.gender === 'female') {
+          alert(this.name.first + ' ' + this.name.last + ' is ' + this.age + ' years old. She likes ' + hobbies);
+        } else {
+          alert(this.name.first + ' ' + this.name.last + ' is ' + this.age + ' years old. This person likes ' + hobbies);
+        }
+      };
+      this.greeting = function() {
+        alert('Hi! I\'m ' + this.name.first + '.');
+      };
+    }
+    var person1 = new Person('Bob', 'Smith', 32, 'male', ['music', 'skiing']);
+    var person2 = new Person('Mary', 'Jones', 25, 'female', ['reading', 'running']);
+    var person3 = new Person ('Pat', 'Newburger', 49, 'both', ['jogging', 'gaming', 'drinking', 'dancing']);
+    var person4 = new Person('Han', 'Solo', 27, 'male', ['flying', 'smuggling', 'out-running the Empire', 'collecting money']);
+    var person5 = new Person('Peter', 'Parker', 17, 'male', ['being Spider-Man']);
+    </script>
+</html>
