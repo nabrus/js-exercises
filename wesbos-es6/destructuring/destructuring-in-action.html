@@ -7,7 +7,22 @@
 <body>
 <script>
  
- 
+ let inBattle = 'Spider-Man';
+ let onSide = 'Iron-Man';
+/*  How we can switch the variables above using destructuring.
+  One way of accomplishing this task could be:  
+  
+  var tmp = inBattle;
+  inBattle = onSide;
+  onSide = tmp;
+
+  Then the tmp variable would need to be deleted.
+  Easier way with destructuring:  */
+
+  console.log(inBattle, onSide); // Spider-Man Iron-Man
+  [inBattle, onSide] = [onSide, inBattle];
+  console.log(inBattle, onSide); // Iron-Man Spider-Man
+
 
 </script>
 </body>
