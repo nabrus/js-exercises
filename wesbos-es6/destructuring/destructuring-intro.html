@@ -6,6 +6,8 @@
 </head>
 <body>
 <script>
+
+  // 1st EXAMPLE 
   const person = {
     first: 'Steve',
     last: 'Urban',
@@ -14,7 +16,51 @@
     twitter: '@_surban_'
   };
 
+  /*  Destructuring allows properties of objects or items from an
+  array to be extracted into their own variables.
+  So instead of authoring the following to accomplish this:
+
+  const first = person.first;
+  const last = person.last;  
   
+  destructuring is as follows  */
+
+  const { first, last, twitter } = person;
+
+  // 2nd EXAMPLE - nested data
+  const steve = {
+    first: 'Steve', 
+    last: 'Urban',
+    links: {
+      social: {
+        twitter: 'https://twitter.com/_surban_',
+        facebook: 'https://facebook.com',
+      },
+      web: {
+        blog: 'https://github.io/nabrus'
+      }
+    }
+  }
+
+  /*  Again, instead of the following:
+     
+  const twitter = steve.links.social.twitter;
+  const facebook = steve.links.social.facebook; 
+  
+  Destructuring AND renaming the variables, since twitter was 
+  already used in previous object.  */
+
+  const { twitter:tweet, facebook:fb } = steve.links.social;
+
+  // 3rd EXAMPLE - setting defaults
+  //const settings = { width: 400, color: 'black' } // height, fontSize 
+  //const { width = 100, height = 100, color = 'blue', fontSize = 25 } = settings;
+
+  /*  Defaults used when property isn't already set. So settings.width is 400 not 100, but height is the default 100 since it isn't apart of settings.  */
+
+  // 4th EXAMPLE 
+  // Object Destructuring with variable renaming & default values
+  const { w: width = 400, h: height = 500 } = { w: 800 };
 
 </script>
 </body>
