@@ -16,7 +16,65 @@
   <p>Hi I'm p 09</p>
   <p>Hi I'm p 10</p>
 <script>
-  const cuts = ['Chuck', 'Brisket', 'Shank', 'Short Rib'];
+
+  // example 1
+  // const cuts = ['Chuck', 'Brisket', 'Shank', 'Short Rib'];
+  // // destructured from const cut
+  // for (const [i,cut] of cuts.entries()) {
+  //   // console.log(cut[0], cut[1]);
+  //   console.log(`${cut} is the ${i + 1} item`);
+  // }
+  /*
+    output:
+    Chuck is the 1 item
+    Brisket is the 2 item
+    Shank is the 3 item
+    Short Rib is the 4 item
+  */
+
+  // example 2
+  // function addUpNumbers() {
+  //   let total = 0;
+  //   for (let num of arguments) {
+  //     total += num;
+  //   }
+  //   console.log(total); // 267
+  //   return total;
+  // }
+
+  // addUpNumbers(10,23,52,34,12,13,123);
+
+  // example 3 string
+  // const name = "Steve Urban";
+  
+  // for (const char of name) { // const can be used since you are overwriting 
+  //   console.log(char);       // the variable every time
+  // }
+  /*
+    output:
+    S
+    t
+    e
+    v
+    e
+
+    U
+    r
+    b
+    a
+    n
+  */
+
+  // example 4 - using for..of to loop over p tags
+  // when one is clicked on, it logs to console
+  const ps = document.querySelectorAll('p');
+  for (const para of ps) {
+    para.addEventListener('click', function() {
+      console.log(this.textContent);
+    });
+  }
+  
+
 
 </script>
 </body>
