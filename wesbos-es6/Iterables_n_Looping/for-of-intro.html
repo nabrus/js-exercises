@@ -6,8 +6,64 @@
 </head>
 <body>
 <script>
+  // example of modifying the prototype for the for...in example below
+  Array.prototype.shuffle = function() {
+    var i = this.length, j, temp;
+    if ( i == 0 ) return this;
+    while ( --i ) {
+      j = Math.floor( Math.random() * ( i + 1 ) );
+      temp = this[i];
+      this[i] = this[j];
+      this[j] = temp;
+    }
+    return this;
+  };
 
+  // Intro to the for...of loop
+  // iterating over the following cuts variable
   const cuts = ['Chuck', 'Brisket', 'Shank', 'Short Rib'];
+
+  cuts.shop = 'MM MEats'; // added property for the for...in example below
+
+  // Examples of other ways to loop over an iterable
+  // EX.1 for loop
+
+  // for (let i = 0; i < cuts.length; i++) {
+  //   console.log(cuts[i]);
+  // }
+
+
+  // Ex.2 .foreach method
+
+  // cuts.forEach((cut) => {
+  //   console.log(cut);
+  // });
+  // Downsides to using: Cannot abort this loop, cannot skip an item.
+  // For example a break or continue keyword cannot be used:
+  // cuts.forEach((cut) => {
+  //   console.log(cut);
+  //   if(cut === 'Brisket') {
+  //     break;
+  //   }
+  // }); // Uncaught SyntaxError: Illegal break statement
+
+
+  // Ex.3 for...in loop which iterates over all 
+  // non-Symbol, enumerable properties of an object.
+
+  for (const cut in cuts) {
+    console.log(cut);
+  }
+  // outputs the indices: 0, 1, 2...
+
+  for (const index in cuts) {
+    console.log(cuts[index]);
+  }
+  // outputs the items: Chuck, Brisket...
+  // So a downside can be that this also iterates over 
+  // anything added to the prototype or an added property. 
+  // So now the added `shuffle` function outputs 
+  // as well as the added property `shop` added above.
 
 
 </script>
