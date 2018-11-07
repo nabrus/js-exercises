@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Iterables & Looping</title>
+</head>
+<body>
+
+<script>
+
+  // iterating over an object
+  const apple = {
+    color: 'Red',
+    size: 'Medium',
+    weight: 50,
+    sugar: 10
+  };
+
+  // .entries() [not available yet] is one solution. polyfill needed 
+
+  // for (const prop of apple.entries()) {
+  //   console.log(prop);
+  // }
+
+
+  for (const prop of Object.keys(apple)) {
+    console.log(apple[prop]);
+  }
+
+  // for...in will give the same result - best for now on iterating objects
+  for (const prop in apple) {  
+    console.log(apple[prop]);
+  }
+
+  /* output:
+
+    Red
+    Medium
+    50
+    10
+
+  */
+
+
+  // example authored by Wes Bos
+  for (const prop in apple) {
+    const value = apple[prop];
+    console.log(value, prop);
+  }
+
+  /* output:
+
+    Red color
+    Medium size
+    50 "weight"
+    10 "sugar"
+    
+  */
+
+
+
+</script>
+</body>
+</html>
