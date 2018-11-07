@@ -51,20 +51,41 @@
   // Ex.3 for...in loop which iterates over all 
   // non-Symbol, enumerable properties of an object.
 
-  for (const cut in cuts) {
-    console.log(cut);
-  }
-  // outputs the indices: 0, 1, 2...
+  // for (const cut in cuts) {
+  //   console.log(cut);
+  // }  // outputs the indices of the array: 0, 1, 2... 
+        // (note-output is in list form, no commas)
 
-  for (const index in cuts) {
-    console.log(cuts[index]);
-  }
-  // outputs the items: Chuck, Brisket...
+  // for (const index in cuts) {
+  //   console.log(cuts[index]);
+  // } 
+  // outputs the items: Chuck, Brisket...MM MEats, ƒ () {...
+
   // So a downside can be that this also iterates over 
   // anything added to the prototype or an added property. 
   // So now the added `shuffle` function outputs 
   // as well as the added property `shop` added above.
 
+
+  // The for...of loop
+
+  for (const cut of cuts) {     // You can use const instead of let, 
+    console.log(cut);           // if you don't reassign the variable 
+    if(cut === 'Brisket') {     // inside the block.
+      break;
+    }
+  } // output: Chuck, Brisket
+
+  for (const cut of cuts) {
+    if(cut === 'Brisket') {
+      continue;
+    }
+    console.log(cut);
+  } // output: Chuck, Shank, ShortRib
+
+  // note-The for...of loop does not output changes to the 
+  // prototype or added properties. break and continue 
+  // keywords can be used.
 
 </script>
 </body>
