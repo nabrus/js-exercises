@@ -6,11 +6,68 @@
 </head>
 <body>
   <div class="people">
-    <p>Wes</p>
-    <p>Kait</p>
-    <p>Snickers</p>
+    <p>Wyatt</p>
+    <p>Betty</p>
+    <p>Mose</p>
   </div>
 <script>
+
+  /*
+
+  Both methods are on Array not the prototype itself
+  The Array.from() method creates a new, shallow-copied Array instance from an array-like or iterable object.
+
+  */
+
+  // Array.from()...
+
+  const people = document.querySelectorAll('.people p'); // people is a NodeList
+  const peopleArray = Array.from(people); // create an array from people
+  // Now we can use .map() after changing the NodeList, which .map() 
+  // would not work on, to an array.
+  const names = peopleArray.map(person => person.textContent);
+
+  console.log(names); // ["Wyatt", "Betty", "Mose"]
+
+  // Can reduce the code down to...
+
+  const people1 = Array.from(document.querySelectorAll('.people p'));
+  const names1 = people1.map(person => person.textContent);
+
+  console.log(names1); // ["Wyatt", "Betty", "Mose"]
+
+  // Using the optional map function parameter...
+
+  const people3 = document.querySelectorAll('.people p'); // or insert as arg
+  const peopleArr = Array.from(people3, person => {
+    console.log(person);          // Each `person` is each actual DOM node
+    return person.textContent;    // <p>Wyatt<p>...and the other <p> tags listed
+  });
+
+  console.log(peopleArr); // ["Wyatt", "Betty", "Mose"]
+
+
+  // Convert the arguments object into an actual array 
+  // so the .reduce() method can be used.
+  function sumAll() {
+    const nums = Array.from(arguments);
+    return nums.reduce((prev, next) => prev + next, 0);
+  }
+
+  console.log(sumAll(5,20,5,30,65)); // 125
+
+
+  /*
+
+    The Array.of() method creates a new Array instance with a variable number of arguments, regardless of number or type of the arguments.
+
+  */
+
+  // Array.of()...
+  const ages = Array.of(2,41,38,22,95); // Pass in as many args as you want
+
+  console.log(ages); // [2, 41, 38, 22, 95]
+
 
 
 </script>
