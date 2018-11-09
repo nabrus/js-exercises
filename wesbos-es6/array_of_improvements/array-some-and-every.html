@@ -13,7 +13,7 @@
   */
 
   // 👵👨 is there at least one adult in the group?
-  const adult = ages.some(age => age > 18);
+  const adult = ages.some(age => age >= 18); 
   console.log(adult);
   
 
@@ -22,7 +22,7 @@
   */
 
   // 🍻 is everyone old enough to drink?
-  const millerTime = ages.every(age => age > 21);
+  const millerTime = ages.every(age => age >= 21);
   console.log(millerTime);
 
 
