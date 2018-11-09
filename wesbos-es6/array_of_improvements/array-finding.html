@@ -178,6 +178,40 @@
      }
   ];
   
+  // .find() & .findIndex()
+
+  /*
+    The find() method returns the value of the first element in the array that satisfies the provided testing function. Otherwise undefined is returned.
+  */
+
+  // Using .find() to find a post from the array of objects above.
+  // Explicit code example
+
+  // const post = posts.find(post => {
+  //   console.log(post.code); // output: lists all code values for each object
+  //   if(post.code === "VBgtGQcSf") {
+  //     return true;
+  //   }
+  //   return false;
+  // });
+  // console.log(post); // output: object that equals code: VBgtGQcSf
+
+  // refactored
+
+  // const code = "VBgtGQcSf"
+  // const post = posts.find(post => post.code === code);
+  // console.log(post);
+
+
+  /*
+    The findIndex() method returns the index of the first element in the array that satisfies the provided testing function. Otherwise, it returns -1, indicating no element passed the test.
+  */
+
+  const code = "VBgtGQcSf"
+  const post = posts.find(post => post.code === code);
+
+  const postIndex = posts.findIndex(post => post.code === code);
+  console.log(postIndex); // 22
 
 </script>
 </body>
