@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Array .some() and .every()</title>
+</head>
+<body>
+<script>
+  const ages = [32, 15, 19, 12];
+
+  /*
+    The some() method tests whether at least one element in the array passes the test implemented by the provided function.
+  */
+
+  // 👵👨 is there at least one adult in the group?
+  const adult = ages.some(age => age > 18);
+  console.log(adult);
+  
+
+  /*
+    The every() method tests whether all elements in the array pass the test implemented by the provided function.
+  */
+
+  // 🍻 is everyone old enough to drink?
+  const millerTime = ages.every(age => age > 21);
+  console.log(millerTime);
+
+
+</script>
+</body>
+</html>
