@@ -34,6 +34,26 @@
 const heading = document.querySelector('.jump');
 heading.innerHTML = sparanWrap(heading.textContent);
 
+/*
+  The following sparanWrap function takes in the textContent from
+  the selected element and returns - 
+
+  1. An array of the string content `SPREADS!` spread out: 
+  ["S", "P", "R", "E", "A", "D", "S", "!"]. 
+
+  2. .map() is used to iterate over each element 
+  (each letter in this case) and wrap them with 
+  <span> tags: 
+  ["<span>S</span>", "<span>P</span>", "<span>R</span>", 
+   "<span>E</span>", "<span>A</span>", "<span>D</span>", 
+   "<span>S</span>", "<span>!</span>"]
+
+  3. Then we use .join() because we don't want an array, 
+  just a string of the html:
+  "<span>S</span><span>P</span><span>R</span><span>E</span>
+  <span>A</span><span>D</span><span>S</span><span>!</span>"
+*/
+
 function sparanWrap(word) {
   return [...word].map(letter => `<span>${letter}</span>`).join('');
 }
