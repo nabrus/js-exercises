@@ -7,9 +7,29 @@
 <body>
 <script>
 
+  /*
+    Spread syntax allows an iterable such as an array expression or string to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected, or an object expression to be expanded in places where zero or more key-value pairs (for object literals) are expected.
+  */
+
+  /*
+    A string with square brackets creates an array
+    ['steve']
+    output gives an array of that item - ["steve"]
+
+    Using the spread operator will spread out the string 
+    to each of the characters.
+    [...'steve']
+    output ["s", "t", "e", "v", "e"]
+  */
+
   const featured = ['Deep Dish', 'Pepperoni', 'Hawaiian'];
   const specialty = ['Meatzza', 'Spicy Mama', 'Margherita'];
 
+  const pizzas = [...featured, ...specialty];
+  console.log(pizzas);
+  // output: ["Deep Dish", "Pepperoni", "Hawaiian", 
+  //         "Meatzza", "Spicy Mama", "Margherita"]
+  
   const deepDish = {
     pizzaName: 'Deep Dish',
     size: 'Medium',
