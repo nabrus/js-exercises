@@ -12,29 +12,56 @@
   */
 
   /*
-    A string with square brackets creates an array
+    An array of a string
+
     ['steve']
+
     output gives an array of that item - ["steve"]
 
-    Using the spread operator will spread out the string 
-    to each of the characters.
+    Using the spread operator will spread out every 
+    item of the iterable to be its own separate item 
+    in the array. So an array with a string as an item 
+    will spread out to each of the characters.
+
     [...'steve']
+
     output ["s", "t", "e", "v", "e"]
   */
 
   const featured = ['Deep Dish', 'Pepperoni', 'Hawaiian'];
   const specialty = ['Meatzza', 'Spicy Mama', 'Margherita'];
 
-  const pizzas = [...featured, ...specialty];
-  console.log(pizzas);
+  // const pizzas = [...featured, ...specialty];
+  // console.log(pizzas);
   // output: ["Deep Dish", "Pepperoni", "Hawaiian", 
-  //         "Meatzza", "Spicy Mama", "Margherita"]
-  
-  const deepDish = {
-    pizzaName: 'Deep Dish',
-    size: 'Medium',
-    ingredients: ['Marinara', 'Italian Sausage', 'Dough', 'Cheese']
-  };
+  //          "Meatzza", "Spicy Mama", "Margherita"]
+
+
+  // You can easily add to the array
+
+  // const pizzas = [...featured, 'veg', ...specialty];
+  // console.log(pizzas);
+  // output: ["Deep Dish", "Pepperoni", "Hawaiian", "veg", 
+  //          "Meatzza", "Spicy Mama", "Margherita"]
+
+
+  // Copy an array
+
+  const pizzas = [...featured, 'veg', ...specialty];
+
+  // const fridayPizzas = pizzas; 
+  // Above example is not a copy but a reference which can 
+  // lead to unexpected issues.
+
+  // const fridayPizzas = [].concat(pizzas); // One (ugly) way to do it
+
+  const fridayPizzas = [...pizzas] 
+  // Spread the pizzas array into the new fridayPizzas array.
+  // Changing the new array will not be destructive to 
+  // the initial array.
+  console.log(fridayPizzas);
+  // output: ["Deep Dish", "Pepperoni", "Hawaiian", "veg", 
+  //          "Meatzza", "Spicy Mama", "Margherita"]
 
 </script>
 </body>
