@@ -6,9 +6,42 @@
 </head>
 <body>
 <script>
-  
+
   const inventors = ['Einstein', 'Newton', 'Galileo'];
   const newInventors = ['Musk', 'Jobs'];
+
+  // Combining the two arrays above without creating a new variable
+
+  // An older way was to use the apply() method with push
+  // Apply takes in `inventors` as its thisArg and `newInventors`
+  // as its second arg which accepts a single array of arguments.
+
+  // inventors.push.apply(inventors, newInventors);
+  // console.log(inventors);
+  // output: ["Einstein", "Newton", "Galileo", "Musk", "Jobs"]
+
+  // Now use the spread syntax
+
+  inventors.push(...newInventors);
+  console.log(inventors);
+  // output without spread syntax:
+  // ["Einstein", "Newton", "Galileo", Array(2)] (not what we want)
+
+  // output with spread syntax:
+  // ["Einstein", "Newton", "Galileo", "Musk", "Jobs"]
+
+
+  
+  // Spread syntax can be used when passing in arguments
+
+  const name = ['Homer', 'Simpson'];
+
+  function sayHi(first, last) {
+    alert(`Hey there ${first} ${last}`);
+  }
+
+  sayHi(...name); 
+  // output: an alert box Hey there Homer Simpson
 
 </script>
 </body>

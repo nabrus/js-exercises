@@ -79,7 +79,7 @@
 
   const id = 632429;
   const commentIndex = comments.findIndex(comment => comment.id === id);
-
+  console.log(commentIndex); // 2
   const newComments = [...comments.slice(0,commentIndex), ...comments.slice(commentIndex + 1)];
 
   console.log(newComments); // output: [{…}, {…}, {…}] 
