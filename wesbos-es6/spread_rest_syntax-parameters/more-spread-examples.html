@@ -6,11 +6,40 @@
 </head>
 <body>
   <div class="people">
-    <p>Wes</p>
-    <p>Kait</p>
-    <p>Randy</p>
+    <p>Wyatt</p>
+    <p>Betty</p>
+    <p>Mose</p>
   </div>
 <script>
+  
+  /* Example 1.
+
+    An alternative to Array.from() for creating an
+    array from a NodeList. Then using map to list
+    textContent of <p>s.
+
+  */
+
+  // Array.from() example
+  // const people = Array.from(document.querySelectorAll('.people p'));
+
+  // Spread operator example
+  const people = [...document.querySelectorAll('.people p')];
+  // console.log(people);
+  /* output
+
+    (3) [p, p, p]
+    0: p
+    1: p
+    2: p
+    length: 3
+    __proto__: Array(0)  <- 
+
+  */
+  const names = people.map(person => person.textContent);
+  console.log(names); // ["Wyatt", "Betty", "Mose"]
+
+
 
 
   const deepDish = {
@@ -19,7 +48,41 @@
     ingredients: ['Marinara', 'Italian Sausage', 'Dough', 'Cheese']
   };
 
+  /* Example 2.
 
+    Creating a new array from an object property.
+
+  */
+
+  const shoppingList = ['Milk', 'Flour', ...deepDish.ingredients];
+  console.log(shoppingList);
+  // output: ["Milk", "Flour", "Marinara", "Italian Sausage", 
+  //          "Dough", "Cheese"] 
+  // note: true copy not a reference to deepDish
+
+
+
+  /* Example 3.
+
+    Removing an object from an array of objects.
+    Note: Without the spread syntax used with slice()
+    you'd end up with an array of two arrays.
+
+  */
+
+  const comments = [
+    { id: 209384, text: 'I love your dog!' },
+    { id: 523423, text: 'Cuuute! 🐐' },
+    { id: 632429, text: 'You are so dumb' },
+    { id: 192834, text: 'Nice work on this wes!' },
+  ];
+
+  const id = 632429;
+  const commentIndex = comments.findIndex(comment => comment.id === id);
+
+  const newComments = [...comments.slice(0,commentIndex), ...comments.slice(commentIndex +1)];
+
+  console.log(newComments); // output: [{…}, {…}, {…}] 
 
 </script>
 </body>
