@@ -7,6 +7,57 @@
 <body>
 <script>
 
+/*
+  The rest parameter syntax allows us to represent 
+  an indefinite number of arguments as an array.
+
+  In comparison to the spread syntax, rest is 
+  essentially the opposite. So where the spread 
+  syntax takes an array and unpacks it into multiple 
+  items or takes a string and unpacks it into individual 
+  characters. The rest parameter takes multiple things 
+  and packs it into a single array.
+*/
+
+// Rest params used in two places, in functions and 
+// in destructuring
+
+// Used in FUNCTIONS when you need to take an unknown 
+// number of one of the arguments.
+
+function convertCurrency(rate, ...amount) {
+  // console.log(rate, amount);
+  // output: 1.54 (5) [10, 23, 52, 1, 56]
+  // ... amount is the rest of the items put into an array
+  return amount.map(amt => amt * rate);
+}
+
+const amounts = convertCurrency(1.54, 10, 23, 52, 1, 56); 
+console.log(amounts); // output will be an array of the 
+// converted amounts:
+// [15.4, 35.42, 80.08, 1.54, 86.24000000000001]
+
+
+
+// Used in DESTRUCTURING - bundling up the rest of some 
+// items to an array.
+
+const runner = ["Wyatt Urban", 123, 5.5, 5, 3, 6, 35];
+
+const [name, id, ...races] = runner;
+
+console.log(name);  // Wyatt Urban
+console.log(id);    // 123
+console.log(races); // [5.5, 5, 3, 6, 35] <- an array of the rest
+
+const superHeroes = ["Iron-Man", "Spider-Man", "Ant-Man", "Hulk", "Black Panther"];
+
+const [lead, rookie, ...heroes] = superHeroes;
+
+console.log(lead, rookie, heroes);
+// output: Iron-Man Spider-Man (3) ["Ant-Man", "Hulk", "Black Panther"]
+
+
 </script>
 </body>
 </html>
