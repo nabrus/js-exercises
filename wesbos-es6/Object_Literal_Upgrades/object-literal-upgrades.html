@@ -6,11 +6,110 @@
 </head>
 <body>
 <script>
-  const first = "mose";
-  const last = "urban";
-  const age = 2;
+  const first = "Mose";
+  const last = "Urban";
+  const age = 10;
   const breed = "American Short Hair";
-  
+  // Instead of creating the following object
+  // with such a verbose structure. Such as the 
+  // property name being identical to the value 
+  // (variable in this case)...
+  const cat = {
+    first: first,
+    last: last,
+    age: age,
+    breed: breed 
+  };
+// You can now instead just list them once when
+// the property is the same name as the value... 
+  const catObj = {
+    first,
+    last,
+    age,
+    breed
+  }
+  // {first: "Mose", last: "Urban", age: 10, 
+  // breed: "American Short Hair"}
+
+  // and can be used only when its the case of the names matching.
+  const catObj1 = {
+    firstName: first,
+    last,
+    age,
+    breed, 
+    pals: ["Wyatt", "Jeffy"]
+  }
+  // {firstName: "Mose", last: "Urban", age: 10, 
+  // breed: "American Short Hair", pals: Array
+
+
+
+  // Another upgrade is in method definitions inside an object
+
+  const modal = {
+    create: function() {
+
+    },
+
+    open: function() {
+
+    },
+
+    close: function() {
+
+    },
+  }
+
+  // Can now instead eliminate the function keyword like so...
+
+  const newModal = {
+    create(params) {
+
+    },
+
+    open() {
+
+    },
+
+    close() {
+
+    },
+
+  }
+
+
+
+
+  // Computed Property Names
+  // You can specify an expression, surrounded by a [ ] pair, 
+  // in the key-name position of an object-literal declaration.
+
+  // following functions gives the inverse of provided hex code
+  function invertColor(color) {
+    return "#" + ("000000" + (0xFFFFFF ^ parseInt(color.substring(1),16)).toString(16)).slice(-6);
+  }
+
+  const key = "pocketColor";
+  const value = "#ffc600";
+
+  const tShirt = {
+    [key]: value,
+    [key + "Opp"]: invertColor(value), // my solution
+    [`${key}Opposite`]: invertColor(value) // wes' solution
+  };
+
+  // another example - where we need to creat an object of 
+  // the matching keys to values
+  const keys = ["size", "color", "weight"];
+  const values = ["medium", "red", 100];
+
+  const shirts = {
+    [keys.shift()]: values.shift(),  // The shift() method removes the first
+    [keys.shift()]: values.shift(),  // element from an array and returns
+    [keys.shift()]: values.shift(),  // that removed element. This method 
+  }                                  // changes the length of the array.
+
+  // shirts: {size: "medium", color: "red", weight: 100}
 
 </script>
 </body>
