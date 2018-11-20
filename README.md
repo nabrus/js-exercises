@@ -21,10 +21,15 @@ This repository is a container for my ongoing learning of JavaScript. All exampl
     *  [The `for...of` loop intro](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/Iterables_n_Looping/for-of-intro.html): Examples of different ways for looping over an iterable. Introducing the `for...of` loop.
     *  [More Examples](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/Iterables_n_Looping/for-of-examples.html): Deeper dive into what an *iterable* is.
     *  [Objects](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/Iterables_n_Looping/for-of-object.html): Iterating over an object.
+
 *  [New Array Methods](https://github.com/nabrus/js-exercises/tree/master/wesbos-es6/array_of_improvements)
     *  [`.from()` & `.of()`](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/array_of_improvements/array-from-and-of.html)
     *  [`.find()` & `.findIndex()`](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/array_of_improvements/array-finding.html)
     *  [`.some()` & `.every()`](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/array_of_improvements/array-some-and-every.html)
+
+*  [Spread & Rest syntax (parameters)](https://github.com/nabrus/js-exercises/tree/master/wesbos-es6/spread_rest_syntax-parameters)
+    *  [Spread Syntax Intro](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/spread_rest_syntax-parameters/spread-intro.html)
+    *  [Spread Exercise](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/spread_rest_syntax-parameters/jumping-letters.html): Using **spread** on a string to animate the letters when hovering on them.
 
 ### Source Material
 *  [MDN web docs](https://developer.mozilla.org)
