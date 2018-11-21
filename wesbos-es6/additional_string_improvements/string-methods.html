@@ -13,14 +13,19 @@ const accountNumber = '825242631RT0001';
 
 const make = 'BMW';
 const model = 'x5';
-const colour = 'Royal Blue';
+const color = 'Royal Blue';
+
+
 
 // .startsWith()
+
 // Syntax: str.startsWith(searchString[, position])
+
 // The startsWith() method determines whether a string 
 // begins with the characters of a specified string, 
 // returning true or false as appropriate.
 console.log(course.startsWith('RFB')); // true
+// case sensitive 
 console.log(course.startsWith('rfb')); // false
 
 console.log(flightNumber.startsWith('AC')); // false
@@ -28,24 +33,64 @@ console.log(flightNumber.startsWith('AC')); // false
 // which to begin searching.
 console.log(flightNumber.startsWith('AC', 3)); // true
 
+
+
 // .endsWith()
+
 // Syntax: str.endsWith(searchString[, length])
+
 // The endsWith() method determines whether a string ends with 
 // the characters of a specified string, returning true or false 
 // as appropriate.
+console.log(flightNumber.endsWith('jz')); // true
+// The optional length parameter can be used. If provided it's 
+// used as the length of provided string. If omitted, the default 
+// value is the length of the string.
+// So for example, does the accountNumber end with RT in just the 
+// first 11 numbers... 
+console.log(accountNumber.endsWith('RT', 11)); // true
+
+
 
 // .includes()
 
+// Syntax: str.includes(searchString[, position])
+
+// The includes() method determines whether one string may 
+// be found within another string, returning true or false 
+// as appropriate.
+console.log(flightNumber.includes('AC')); // true
+// again, case sensitive
+console.log(flightNumber.includes('ac')); // false
+// Optional position param:
+// The position within the string at which to begin searching 
+// for searchString. (defaults to 0).
+console.log(accountNumber.includes(5, 2)) // true
+console.log(accountNumber.includes(3, -7)); // true
+
+
+
 // .repeat()
 
+// Syntax: str.repeat(count);
+
+// The repeat() method constructs and returns a new string which
+// contains the specified number of copies of the string on which 
+// it was called, concatenated together.
+console.log('abc'.repeat(5)); // abcabcabcabcabc
+
+// a good use case, a left pad function
 function leftPad(str, length = 20) {
   return `→ ${' '.repeat(length - str.length)}${str}`;
 }
 
 console.log(leftPad(make));
 console.log(leftPad(model));
-console.log(leftPad(colour));
+console.log(leftPad(color));
 
+// ha ha
+console.log(`${'foo' * 5}`.repeat(10) + ' Batman!'); 
+// NaNNaNNaNNaNNaNNaNNaNNaNNaNNaN Batman!
 
 </script>
 
