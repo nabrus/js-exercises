@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Template Strings!</title>
+</head>
+<body>
+<script>
+
+  const name = 'Mose';
+  const age = 10;
+  // Concatenating variables in strings...
+  const sentence = 'My cat ' + name + ' is ' + (age * 4 + 17) + ' years old in cat years.';
+  // Template literals (Template strings)...
+  const newSentence = `My cat ${name} is ${age * 4 + 17} years old in cat years.`
+
+  console.log(sentence);    // My cat Mose is 57 years old in cat years.
+  console.log(newSentence); // My cat Mose is 57 years old in cat years.
+
+  // NOTE: you can run JS inside of template literals, just like 
+  // in the age expression in `sentence`. So, expressions, functions, etc. 
+
+</script>
+</body>
+</html>

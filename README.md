@@ -10,8 +10,8 @@ This repository is a container for my ongoing learning of JavaScript. All exampl
 
 *  [Default Parameters](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/Default_Params/default-parameters.html)
 
-*  [Tagged Template Literals](https://github.com/nabrus/js-exercises/tree/master/wesbos-es6/template_strings)
-    *  [Dictionary obj example](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/template_strings/tagged-templates-dictonary.html): Adding abbr tags to a sentence.
+*  [Template Strings](https://github.com/nabrus/js-exercises/tree/master/wesbos-es6/template_strings)
+    *  [Tagged Template Exercise](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/template_strings/tagged-templates-dictonary.html): Dictionary obj example. Adding abbr tags to a sentence.
 
 *  [String Improvements](https://github.com/nabrus/js-exercises/tree/master/wesbos-es6/additional_string_improvements)
     *  [New String Methods](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/additional_string_improvements/string-methods.html): `.startsWith()`, `.endsWith()`, `.includes()`, and `.repeat()`.
