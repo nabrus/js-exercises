@@ -8,6 +8,8 @@ This repository is a container for my ongoing learning of JavaScript. All exampl
     *  [Exercise 1](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/arrow-func-ex1.html)
     *  [Exercise 2](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/arrow-func-ex2.html)
 
+*  [Default Parameters](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/Default_Params/default-parameters.html)
+
 *  [Tagged Template Literals](https://github.com/nabrus/js-exercises/tree/master/wesbos-es6/template_strings)
     *  [Dictionary obj example](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/template_strings/tagged-templates-dictonary.html): Adding abbr tags to a sentence.
 
