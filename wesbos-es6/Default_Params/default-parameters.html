@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Default Parameters</title>
+</head>
+<body>
+<script>
+
+  /* 
+    Default function parameters allow named parameters 
+    to be initialized with default values if no value or 
+    undefined is passed.
+  */
+
+
+  // function calculateBill(total, tax, tip) {
+  //   return total + (total * tax) + (total * tip);
+  // }
+
+  // const totalBill = calculateBill(100, 0.13, 0.18);
+  // console.log(totalBill); // 131
+
+
+
+  // If we always want to assume tax and tip rates - we could...
+  function calculateBill(total, tax, tip) {
+    if (tax === undefined) {
+      tax = 0.13;
+    }
+    if (tip === undefined) {
+      tip = 0.18;
+    }
+    return total + (total * tax) + (total * tip);
+  }
+
+  const totalBill = calculateBill(100);
+  console.log(totalBill); // 131
+
+
+  // Now using default parameters
+  function calculateBills(total, tax = 0.13, tip = 0.18) {
+    return total + (total * tax) + (total * tip);
+  }
+
+  const billTotal = calculateBills(100);
+  console.log(billTotal); // 131
+
+  // If using some but not all defaults, undefined should be used.
+  // A space will throw an error...
+
+  // const bigTip = calculateBills(100, ,0.25);
+  // console.log(bigTip); // Uncaught SyntaxError: Unexpected token ,
+  
+  const bigTip = calculateBills(100, undefined, 0.25);
+  console.log(bigTip); // 138
+
+</script>
+</body>
+</html>
