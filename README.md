@@ -36,6 +36,10 @@ This repository is a container for my ongoing learning of JavaScript. All exampl
 *  [Spread & Rest syntax (parameters)](https://github.com/nabrus/js-exercises/tree/master/wesbos-es6/spread_rest_syntax-parameters)
     *  [Spread Syntax Intro](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/spread_rest_syntax-parameters/spread-intro.html)
     *  [Spread Exercise](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/spread_rest_syntax-parameters/jumping-letters.html): Using **spread** on a string to animate the letters when hovering on them.
+    *  [Spread Examples](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/spread_rest_syntax-parameters/more-spread-examples.html): Used as an alternative to `Array.from()`, creating a new array from an object property, and removing an object form an array of objects.
+    *  [More Spread Examples](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/spread_rest_syntax-parameters/spreading-into-a-function.html): Combining two arrays and passing arguments to a function.
+    *  [Rest Parameters](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/spread_rest_syntax-parameters/rest-params.html): Used in functions and in destructuring.
+  
 
 ### Source Material
 *  [MDN web docs](https://developer.mozilla.org)
