@@ -34,8 +34,8 @@
     .box h2 {
       position: absolute;
       width:100%;
-      font-size: 100px;
-      transform:translateX(-200%);
+      font-size: 90px;
+      transform:translateX(-210%);
       transition: all 0.5s;
       top:0;
     }
@@ -61,6 +61,31 @@
   </div>
 
   <script>
+
+    const box = document.querySelector('.box');
+
+    // Regular function syntax is used below because of 
+    // the `this` binding to box. Using an arrow function
+    // would use lexical scope—inherited from the enclosing
+    // scope, which would be the window (global).
+    box.addEventListener('click', function() {
+      let first = 'opening';
+      let second = 'open';
+      
+      // Reversing the order of animation 
+      if (this.classList.contains(first)) {
+        [first, second] = [second, first]; // destructuring
+      }
+      
+      // console.log(this); // <div class="box">...</div> (after being clicked)
+      this.classList.toggle(first);
+      // arrow function used so the this binding is inherited 
+      // from the enclosing function.
+      setTimeout(() => {
+        this.classList.toggle(second);
+      }, 500);
+    });
+
   </script>
 
 </body>
