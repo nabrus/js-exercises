@@ -4,9 +4,10 @@ This repository is a container for my ongoing learning of JavaScript. All exampl
 
 ## [ES6](https://github.com/nabrus/js-exercises/tree/master/wesbos-es6) Index
 
-*  Arrow functions
-    *  [Exercise 1](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/arrow-func-ex1.html)
-    *  [Exercise 2](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/arrow-func-ex2.html)
+*  [Arrow Functions](https://github.com/nabrus/js-exercises/tree/master/wesbos-es6/arrow_functions)
+    *  [`this` Keyword](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/arrow_functions/arrow-func-this.html): Lexical scope—arrow functions bind `this` to the enclosing (function or global) scope.
+    *  [Exercise 1](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/arrow_functions/arrow-func-ex1.html): Using arrow functions with array methods—`.filter()`, `.map()`, and `.reduce()`.
+    *  [Exercise 2](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/arrow_functions/arrow-func-ex2.html): Using it with `.filter()` again. 
 
 *  [Default Parameters](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/Default_Params/default-parameters.html)
 
