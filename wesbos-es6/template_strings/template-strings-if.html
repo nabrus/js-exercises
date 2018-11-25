@@ -6,12 +6,29 @@
 </head>
 <body>
 <script>
+
+  // Example of an if statement inside of a Template String, in 
+  // the form of a ternary operator. 
+
+  // Note: Same as how an if statement is inside a React render 
+  // template.
+
   const song = {
     name: 'Dying to live',
     artist: 'Tupac',
-    featuring: 'Biggie Smalls'
+    //featuring: 'Biggie Smalls'
   };
 
+  const markup = `
+    <div class="song">
+      <p>
+        ${song.name} — ${song.artist}
+        ${song.featuring ? `(Featuring ${song.featuring})` : ''} 
+      </p>
+    </div>
+  `;
+
+  document.body.innerHTML = markup;
 
 </script>
 </body>
