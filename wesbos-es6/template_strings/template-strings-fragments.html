@@ -6,6 +6,9 @@
 </head>
 <body>
 <script>
+
+  // Using Template Strings for multiple lines
+
   const person = {
     name: 'Steve',
     job: 'Web Developer',
@@ -13,6 +16,25 @@
     bio: 'Steve is a really cool guy that loves web development!',
   };
 
+  // When not using template literals, Backslashes are needed when
+  // spreading text in a string over multiple lines. 
+  var text = "hello there, \
+    how are you \
+  ";
+
+  // Example using template strings for multi-line markup string
+  const markup = `
+    <div class="person">
+      <h2>
+        ${person.name},
+        <span class="job">${person.job}</span>
+      </h2>
+      <p class="location">${person.city}</p>
+      <p class="bio">${person.bio}</p>
+    </div>
+  `;
+
+  document.body.innerHTML = markup;
 
 </script>
 </body>
