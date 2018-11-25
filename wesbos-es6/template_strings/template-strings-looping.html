@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Template Strings!</title>
+</head>
+<body>
+<script>
+
+  // Nesting Template Strings inside of each other.
+
+  // Looping over an array of cats and creating a list 
+  // item for each one.
+  const cats = [
+    { name: 'Mose', age: 10 },
+    { name: 'Garfield', age: 40 },
+    { name: 'Snowball', age: '?' }
+  ];
+
+  const markup = `
+    <ul class="cats">
+      ${cats.map(cat => `
+        <li>
+          ${cat.name} 
+          is 
+          ${cat.age}
+          years old.
+        </li>`).join('')} 
+    </ul>
+  `;
+
+  document.body.innerHTML = markup;
+
+</script>
+</body>
+</html>
