@@ -13,6 +13,10 @@ This repository is a container for my ongoing learning of JavaScript. All exampl
 
 *  [Template Strings](https://github.com/nabrus/js-exercises/tree/master/wesbos-es6/template_strings)
     *  [Template Literals (Strings)](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/template_strings/template-strings-intro.html): Introduction.
+    *  [HTML Fragments](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/template_strings/template-strings-fragments.html): Example using template strings for a multi-line markup string.
+    *  [Nesting Template Strings](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/template_strings/template-strings-looping.html): Looping over an array and creating a list item for each element.
+    *  [`if` Statement](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/template_strings/template-strings-if.html): Using a *ternary operator* inside a template string.
+    *  [Render Function](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/template_strings/template-strings-render-functions.html): Render an `<ul>` list from an array of keywords using a function and template strings.
     *  [Tagged Template Exercise](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/template_strings/tagged-templates-dictonary.html): Dictionary obj example. Adding abbr tags to a sentence.
 
 *  [String Improvements](https://github.com/nabrus/js-exercises/tree/master/wesbos-es6/additional_string_improvements)
