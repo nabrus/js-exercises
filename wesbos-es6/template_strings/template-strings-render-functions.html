@@ -7,15 +7,30 @@
 <body>
 <script>
 
+  // `Render function` to create separate components that 
+  // handle different complex data and components in markup.
+
+  // Implement the array of keywords thats nested inside of beer
+  // as a list.
+
   const beer = {
     name: 'Belgian Wit',
     brewery: 'Steam Whistle Brewery',
     keywords: ['pale', 'cloudy', 'spiced', 'crisp']
   };
 
+  function renderKeywords(keywords) {
+    return `
+      <ul>
+        ${keywords.map(keyword => `<li>${keyword}</li>`).join('')}
+      </ul>
+    `;
+  }
+
   const markup = `
     <div class="beer">
       <h2>${beer.name}</h2>
+      ${renderKeywords(beer.keywords)}
       <p class="brewery">${beer.brewery}</p>
     </div>
   `;
