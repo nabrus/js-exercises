@@ -17,12 +17,31 @@
     the function used for the tag can be whatever you want.
   */
 
-  // Function run by the browser with all the info provided in 
-  // the template string, runs logic, and returns what `sentence` 
-  // will actually be equal to. 
-  function highlight() {
-    return 'cool'; 
+  /*
+    Function run by the browser with all the info provided in 
+    the template string (the strings—text in-between the variables,
+    the values, etc), runs logic, and returns what `sentence` 
+    will actually be equal to. 
+
+    Note: the value of the strings array is always one more than 
+    the value of the values array. For instance, even if there 
+    was no string after ${age}, `strings: Array[3]` would still
+    show in console. And it would list the third as empty ("").
+  */
+
+  function highlight(strings, ...values) { // ...rest parameter syntax
+    let str = "";
+    strings.forEach((string, i) => {
+      str += string + (values[i] || ""); // last one in loop would be undefined.
+    });                                  // see note above
+    return str;
   }
+
+  // Example showing you can return anything—output: cool
+
+  // function highlight() {
+  //   return 'cool';  
+  // }
 
   const name = 'Mose';
   const age = 10;
