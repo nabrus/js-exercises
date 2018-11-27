@@ -7,11 +7,24 @@
 <body>
 <script>
 
+  /*
+    Template literals are string literals allowing embedded 
+    expressions. You can use multi-line strings and string 
+    interpolation features with them. They were called "template strings" 
+    in prior editions of the ES2015 specification.
+
+    Template literals can contain placeholders. These are indicated 
+    by the dollar sign and curly braces (${expression}). The 
+    expressions in the placeholders and the text between them 
+    get passed to a function. The default function just concatenates 
+    the parts into a single string.
+  */
+
   const name = 'Mose';
   const age = 10;
   // Concatenating variables in strings...
   const sentence = 'My cat ' + name + ' is ' + (age * 4 + 17) + ' years old in cat years.';
-  // Template literals (Template strings)...
+  // Template literals (Template strings), enclosed by back-ticks (``)...
   const newSentence = `My cat ${name} is ${age * 4 + 17} years old in cat years.`
 
   console.log(sentence);    // My cat Mose is 57 years old in cat years.
