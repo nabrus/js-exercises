@@ -7,9 +7,28 @@
 <body>
 <script>
 
+  /*
+    A more advanced form of template literals are tagged templates. 
+    Tags allow you to parse template literals with a function. The 
+    first argument of a tag function contains an array of string 
+    values. The remaining arguments are related to the expressions. 
+    In the end, your function can return your manipulated string 
+    (or it can return something completely different). The name of 
+    the function used for the tag can be whatever you want.
+  */
+
+  // Function run by the browser with all the info provided in 
+  // the template string, runs logic, and returns what `sentence` 
+  // will actually be equal to. 
+  function highlight() {
+    return 'cool'; 
+  }
+
   const name = 'Mose';
   const age = 10;
-  const sentence = `My cat's name is ${name} and he is ${age} years old`;
+  // Placing the name of the function (highlight) in front of 
+  // the template string is called `tagging` it.
+  const sentence = highlight`My cat's name is ${name} and he is ${age} years old`;
   console.log(sentence);
 
 </script>
