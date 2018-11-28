@@ -78,9 +78,8 @@
   }
 
 
-
-
   // Computed Property Names
+  
   // You can specify an expression, surrounded by a [ ] pair, 
   // in the key-name position of an object-literal declaration.
 
@@ -92,13 +91,15 @@
   const key = "pocketColor";
   const value = "#ffc600";
 
+  // Compute property keys inside an object literal
   const tShirt = {
     [key]: value,
     [key + "Opp"]: invertColor(value), // my solution
     [`${key}Opposite`]: invertColor(value) // wes' solution
   };
 
-  // another example - where we need to create an object of 
+  // Another example of computed property keys:
+  // where we need to create an object of 
   // the matching keys to values
   const keys = ["size", "color", "weight"];
   const values = ["medium", "red", 100];
