@@ -3,6 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <title>Tagged Templates</title>
+
+  <style>
+    .hl {
+      background: yellow;
+    }
+  </style>
+
 </head>
 <body>
 <script>
@@ -32,12 +39,14 @@
   function highlight(strings, ...values) { // ...rest parameter syntax
     let str = "";
     strings.forEach((string, i) => {
-      str += string + (values[i] || ""); // last one in loop would be undefined.
-    });                                  // see note above
+      str += `${string} <span contenteditable class="hl">${values[i] || ""}</span>`;  
+    });                                  
     return str;
   }
+  // contenteditable attribute—indicates element can be edited by user.
 
-  // Example showing you can return anything—output: cool
+  // The example below demonstrates anything can be returned
+  // output: cool
 
   // function highlight() {
   //   return 'cool';  
@@ -48,7 +57,7 @@
   // Placing the name of the function (highlight) in front of 
   // the template string is called `tagging` it.
   const sentence = highlight`My cat's name is ${name} and he is ${age} years old`;
-  console.log(sentence);
+  document.body.innerHTML = sentence;
 
 </script>
 </body>
