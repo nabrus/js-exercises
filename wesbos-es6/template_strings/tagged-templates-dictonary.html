@@ -25,12 +25,15 @@
     JS: 'JavaScript'
   };
 
+  // Returns a new array of values that if the value is
+  // an abbreviation, wrap it in <appr> tags.
   function addAbbreviations(strings, ...values) {
     const abbreviated = values.map(value => {
+      // check if there is a value in dict, if so return in <abbr> tags
       if(dict[value]) {
         return `<abbr title="${dict[value]}">${value}</abbr>`
       }
-      return value;
+      return value; // returns the non-dict values
     });
     
     return strings.reduce((sentence, string, i) => {
