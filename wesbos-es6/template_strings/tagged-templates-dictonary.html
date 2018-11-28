@@ -16,13 +16,15 @@
   </div>
 
 <script>
+
+  // Add abbr tags to a sentence.
+
   const dict = {
     HTML: 'Hyper Text Markup Language',
     CSS: 'Cascading Style Sheets',
     JS: 'JavaScript'
   };
 
-  // add abbr tags to sentence 
   function addAbbreviations(strings, ...values) {
     const abbreviated = values.map(value => {
       if(dict[value]) {
