@@ -47,7 +47,7 @@ This repository is a container for my ongoing learning of JavaScript. All exampl
     *  [More Spread Examples](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/spread_rest_syntax-parameters/spreading-into-a-function.html): Combining two arrays and passing arguments to a function.
     *  [Rest Parameters](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/spread_rest_syntax-parameters/rest-params.html): Used in functions and in destructuring.
 
-*  [Object Literal Upgrades](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/Object_Literal_Upgrades/object-literal-upgrades.html): Object property names, object method definitions, computed property names, and an example of creating an object out of two arrays (keys, values).
+*  [Object Literal Upgrades](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/Object_Literal_Upgrades/object-literal-upgrades.html): Object property names, object method definitions, and computed property names.
 
 ### Source Material
 *  [MDN web docs](https://developer.mozilla.org)
