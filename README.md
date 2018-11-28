@@ -19,7 +19,7 @@ This repository is a container for my ongoing learning of JavaScript. All exampl
     *  [Render Function](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/template_strings/template-strings-render-functions.html): Render an `<ul>` list from an array of keywords using a function and template strings.
     *  [Tagged Templates](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/template_strings/tagged-templates.html): A more advanced form of template literals, tags allow you to parse template literals with a function.
     *  [Tagged Template Exercise](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/template_strings/tagged-templates-dictonary.html): Dictionary obj example. Adding abbr tags to a sentence.
-    *  [Sanitizing Data](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/template_strings/tagged-templates-sanitize.html): An example using tagged templates to sanitize data using DOMPurify. A library that prevents **XSS** attacks. 
+    *  [Sanitizing Data](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/template_strings/tagged-templates-sanitize.html): An example using tagged templates to sanitize data using [DOMPurify](https://www.npmjs.com/package/dompurify). A library that prevents **XSS** attacks. 
 
 *  [String Improvements](https://github.com/nabrus/js-exercises/tree/master/wesbos-es6/additional_string_improvements)
     *  [New String Methods](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/additional_string_improvements/string-methods.html): `.startsWith()`, `.endsWith()`, `.includes()`, and `.repeat()`.
