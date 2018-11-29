@@ -49,6 +49,9 @@ This repository is a container for my ongoing learning of JavaScript. All exampl
 
 *  [Object Literal Upgrades](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/Object_Literal_Upgrades/object-literal-upgrades.html): Object property names, object method definitions, and computed property names.
 
+*  [Promises](https://github.com/nabrus/js-exercises/tree/master/wesbos-es6/promises)
+    *  [Introduction](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/promises/promises-intro.html)
+
 ### Source Material
 *  [MDN web docs](https://developer.mozilla.org)
 *  [ES6 FOR EVERYONE!](https://es6.io/) from fullstack developer Wes Bos.
