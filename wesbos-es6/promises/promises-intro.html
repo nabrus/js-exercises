@@ -27,14 +27,14 @@
     callback functions for the success and failure cases of the Promise.
   */
 
- /*
-  The catch() method returns a Promise and deals with rejected cases only. 
-  It behaves the same as calling Promise.prototype.then(undefined, 
-  onRejected) (in fact, calling obj.catch(onRejected) internally calls 
-  obj.then(undefined, onRejected)). This means, that you have to 
-  provide onRejected function even if you want to fallback to undefined 
-  result value - for example obj.catch(() => {}).
- */
+   /*
+    The catch() method returns a Promise and deals with rejected cases only. 
+    It behaves the same as calling Promise.prototype.then(undefined, 
+    onRejected) (in fact, calling obj.catch(onRejected) internally calls 
+    obj.then(undefined, onRejected)). This means, that you have to 
+    provide onRejected function even if you want to fallback to undefined 
+    result value - for example obj.catch(() => {}).
+   */
 
   const postsPromise = fetch("http://wesbos.com/wp-jsan/wp/v2/posts");
   
