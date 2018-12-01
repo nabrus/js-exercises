@@ -15,7 +15,36 @@
     callbacks, instead of passing callbacks into a function.
   */
   
- 
+  /*
+    The Fetch API provides a JavaScript interface for accessing and manipulating parts of the HTTP pipeline, such as requests and 
+    responses. It also provides a global fetch() method that provides
+    an easy, logical way to fetch resources asynchronously across the 
+    network.
+  */
+
+  /*
+    The then() method returns a Promise. It takes up to two arguments: 
+    callback functions for the success and failure cases of the Promise.
+  */
+
+ /*
+  The catch() method returns a Promise and deals with rejected cases only. 
+  It behaves the same as calling Promise.prototype.then(undefined, 
+  onRejected) (in fact, calling obj.catch(onRejected) internally calls 
+  obj.then(undefined, onRejected)). This means, that you have to 
+  provide onRejected function even if you want to fallback to undefined 
+  result value - for example obj.catch(() => {}).
+ */
+
+  const postsPromise = fetch("http://wesbos.com/wp-jsan/wp/v2/posts");
+  
+  postsPromise
+    .then(data => data.json())
+    .then(data => { console.log(data) })
+    .catch(err => console.log(err))
+
+  // json misspelled in link, error thrown
+
 
 </script>
 </body>
