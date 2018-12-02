@@ -30,6 +30,8 @@ This repository is a container for my ongoing learning of JavaScript. All exampl
     *  [Swapping Variables](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/destructuring/swapping-vars-destructuring.html): Easily switching variables using destructuring.
     *  [Destructuring in Action](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/destructuring/destructuring-and-functions.html): More examples including *Named Parameters*.
 
+*  [Object Literal Upgrades](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/Object_Literal_Upgrades/object-literal-upgrades.html): Object property value shorthand *destructuring*, object method definitions, and *computed property* names.
+
 *  [Iterables and Looping](https://github.com/nabrus/js-exercises/tree/master/wesbos-es6/Iterables_n_Looping)
     *  [The `for...of` loop intro](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/Iterables_n_Looping/for-of-intro.html): Examples of different ways for looping over an iterable. Introducing the `for...of` loop.
     *  [More Examples](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/Iterables_n_Looping/for-of-examples.html): Deeper dive into what an *iterable* is.
@@ -47,7 +49,6 @@ This repository is a container for my ongoing learning of JavaScript. All exampl
     *  [More Spread Examples](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/spread_rest_syntax-parameters/spreading-into-a-function.html): Combining two arrays and passing arguments to a function.
     *  [Rest Parameters](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/spread_rest_syntax-parameters/rest-params.html): Used in functions and in destructuring.
 
-*  [Object Literal Upgrades](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/Object_Literal_Upgrades/object-literal-upgrades.html): Object property names, object method definitions, and computed property names.
 
 *  [Promises](https://github.com/nabrus/js-exercises/tree/master/wesbos-es6/promises)
     *  [Introduction](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/promises/promises-intro.html)
