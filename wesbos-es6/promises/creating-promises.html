@@ -7,7 +7,58 @@
 <body>
 <script>
 
-  
+  /*
+    Creating your own promise using the promise constructor.
+
+    Promise Constructor syntax:
+    new Promise( `executor` function(resolve, reject) { ... } );
+
+    executor:
+      A function that is passed with the arguments resolve and 
+      reject. The executor function is executed immediately by 
+      the Promise implementation, passing resolve and reject 
+      functions (the executor is called before the Promise 
+      constructor even returns the created object). The resolve and 
+      reject functions, when called, resolve or reject the promise,
+      respectively. The executor normally initiates some asynchronous 
+      work, and then, once that completes, either calls the resolve 
+      function to resolve the promise or else rejects it if an error 
+      occurred. If an error is thrown in the executor function, the promise 
+      is rejected. The return value of the executor is ignored.
+  */
+
+  // Example shows resolving some process after 1 second using 
+  // setTimeout(...) to simulate async code. We call resolve(...) 
+  // when what we were doing asynchronously was successful...
+  const p = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("The Dude abides");
+    }, 1000);
+  });
+
+  p
+    .then(data => {
+      console.log(data); // The Dude abides
+    });
+
+  // and reject(...) when it failed. Note: .catch(...) is added. 
+  const p1 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      reject(Error("Err The Dude doesn't abide")); // Wrapping in an error obj
+    }, 1000);                // will provide more details of where the error
+  });                        // actually occurred: (creating-promises.html:45)
+
+  p1
+    .then(data => {
+      console.log(data);
+    })
+    .catch(err => {
+      console.error(err); 
+    }); // Error: Err The Dude doesn't abide           creating-promises.html:54
+        //   at setTimeout (creating-promises.html:45)
+        // p1.then.catch.err @ creating-promises.html:54
+        // Promise.catch (async)
+        //  (anonymous)      @ creating-promises.html:53
 
 </script>
 </body>
