@@ -57,4 +57,5 @@ This repository is a container for my ongoing learning of JavaScript. All exampl
 
 ### Source Material
 *  [MDN web docs](https://developer.mozilla.org)
+*  [You Don't Know JS (book series)](https://github.com/getify/You-Dont-Know-JS) by Kyle Simpson
 *  [ES6 FOR EVERYONE!](https://es6.io/) from fullstack developer Wes Bos.
