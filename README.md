@@ -51,6 +51,7 @@ This repository is a container for my ongoing learning of JavaScript. All exampl
 
 *  [Promises](https://github.com/nabrus/js-exercises/tree/master/wesbos-es6/promises)
     *  [Introduction](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/promises/promises-intro.html)
+    *  [Creating Promises](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/promises/creating-promises.html): Using the promise constructor—`new Promise( /* executor */ function(resolve, reject) { ... } );`.
 
 ### Source Material
 *  [MDN web docs](https://developer.mozilla.org)
