@@ -33,7 +33,7 @@ This repository is a container for my ongoing learning of JavaScript. All exampl
 *  [Object Literal Upgrades](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/Object_Literal_Upgrades/object-literal-upgrades.html): Object property value shorthand *destructuring*, object method definitions, and *computed property* names.
 
 *  [Iterables and Looping](https://github.com/nabrus/js-exercises/tree/master/wesbos-es6/Iterables_n_Looping)
-    *  [The `for...of` loop intro](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/Iterables_n_Looping/for-of-intro.html): Examples of different ways for looping over an iterable. Introducing the `for...of` loop.
+    *  [The `for...of` loop intro](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/Iterables_n_Looping/for-of-intro.html): Examples of different ways for looping over an iterable. Introducing the `for...of` loop—best used on iterating over array values directly instead of the indices. Keywords such as `break` & `continue` can be used.
     *  [More Examples](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/Iterables_n_Looping/for-of-examples.html): Deeper dive into what an *iterable* is.
     *  [Objects](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/Iterables_n_Looping/for-of-object.html): Iterating over an object using `for...in`.
 
