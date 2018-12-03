@@ -35,7 +35,7 @@ This repository is a container for my ongoing learning of JavaScript. All exampl
 *  [Iterables and Looping](https://github.com/nabrus/js-exercises/tree/master/wesbos-es6/Iterables_n_Looping)
     *  [The `for...of` loop intro](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/Iterables_n_Looping/for-of-intro.html): Examples of different ways for looping over an iterable. Introducing the `for...of` loop.
     *  [More Examples](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/Iterables_n_Looping/for-of-examples.html): Deeper dive into what an *iterable* is.
-    *  [Objects](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/Iterables_n_Looping/for-of-object.html): Iterating over an object.
+    *  [Objects](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/Iterables_n_Looping/for-of-object.html): Iterating over an object using `for...in`.
 
 *  [New Array Methods](https://github.com/nabrus/js-exercises/tree/master/wesbos-es6/array_of_improvements)
     *  [`.from()` & `.of()`](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/array_of_improvements/array-from-and-of.html)
