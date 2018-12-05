@@ -28,11 +28,30 @@
         } else if (this.interests.length === 2) {
           hobbies += this.interests[0] + ' and ' + this.interests[1] + '.';
         } else {
-          for (let index = 0; index < this.interests.length; index++) {
-            if (index === this.interests.length - 1) {
-              hobbies += 'and ' + this.interests[index] + '.';
+          // for (let index = 0; index < this.interests.length; index++) {
+          //   if (index === this.interests.length - 1) {
+          //     hobbies += 'and ' + this.interests[index] + '.';
+          //   } else {
+          //     hobbies += this.interests[index] + ', ';
+          //   }
+          // }
+
+          // using a for...in loop
+          // for (let index in this.interests) {
+          //   console.log(index);
+          //   if (index === this.interests.length - 1) {
+          //     hobbies += 'and ' + this.interests[index] + '.';
+          //   } else {
+          //     hobbies += this.interests[index] + ', ';
+          //   }
+          // }
+
+          // using a for...of loop
+          for (let hobby of this.interests) {
+            if (this.interests !== hobby) {
+              hobbies += `and ${hobby}.`;
             } else {
-              hobbies += this.interests[index] + ', ';
+              hobbies += `${hobby}, `;
             }
           }
         }
