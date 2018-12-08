@@ -7,6 +7,12 @@
 <body>
 <script>
 
+  // Another use for promises is when you need some 
+  // sort of flow control. For example querying a database
+  // on the backend in something like node.js.
+
+  // Simulating a database with the following two arrays.
+
   const posts = [
     { title: 'I love JavaScript', author: 'Wes Bos', id: 1 },
     { title: 'CSS!', author: 'Chris Coyier', id: 2 },
@@ -19,7 +25,15 @@
     { name: 'Addy Osmani', twitter: '@addyosmani', bio: 'Googler' },
   ];
 
+  // Using a promise because data isn't accessed immediately, the data
+  // will go back and forth from a database
+  function getPostID(id) {
+    return new Promise((resolve, reject) => {
+      
+    });
+  }
 
+  getPostID(2)
 
 </script>
 </body>
