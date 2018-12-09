@@ -26,14 +26,42 @@
   ];
 
   // Using a promise because data isn't accessed immediately, the data
-  // will go back and forth from a database
+  // will go back and forth from a database. Again using setTimeout()
+  // to simulate async code.
+
+  // Create a new promise
   function getPostID(id) {
     return new Promise((resolve, reject) => {
-      
+      // Using a setTimeout() to mimic a database
+      setTimeout(() => {
+        // Find the post we want
+        const post = posts.find(post => post.id === id);
+        if(post) {
+          resolve(post); // Send the post back
+        } else {
+          reject(Error("No Post Was Found!"));
+        }
+      }, 200); 
+    });
+  }
+
+  function hydrateAuthor(post) {
+    return new Promise((resolve, reject) => {
+      const authorDetails = authors.find(person => person.name === post.name);
+      if(authorDetails) {
+        post.author = authorDetails;
+        resolve(post);
+      } else {
+        reject(Error("No Such Author"));
+      }
     });
   }
 
   getPostID(2)
+    .then(post => {
+      console.log(post);
+      return hydrateAuthor(post);
+    })
 
 </script>
 </body>
