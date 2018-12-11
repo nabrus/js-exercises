@@ -6,6 +6,8 @@
 </head>
 <body>
 <script>
+
+  // Example of requests all at the same time instead of steps.
   
   const weather = new Promise((resolve) => {
     setTimeout(() => {
@@ -18,6 +20,20 @@
       resolve(['I like cake', 'BBQ is good too!']);
     }, 500);
   });
+
+  // Instead of chaining .then(..), we can use .all(..) 
+  // pass in an array of promises and call .then() against that.
+  Promise
+    .all([weather, tweets])
+    .then(responses => {
+      // Use destructuring here to get two separate variables
+      // for a more readable response
+      const [weatherInfo, tweetsInfo] = responses;
+      console.log(weatherInfo, tweetsInfo);
+    })
+  // With .all(..), we wait for all promises to resolve before 
+  // running .then(..). So the example above will take 2 
+  // seconds to resolve.
 
 
 
