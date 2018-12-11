@@ -54,7 +54,7 @@ This repository is a container for my ongoing learning of JavaScript. All exampl
     *  [Introduction](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/promises/promises-intro.html)
     *  [Creating Promises](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/promises/creating-promises.html): Using the promise constructor:    
     `new Promise( /* executor */ function(resolve, reject) { ... } );`
-    *  [Chaining Promises](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/promises/chaining-promises.html): Example of chaining two promises in a simulated database query. 
+    *  [Chaining Promises](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/promises/chaining-promises.html): Example of chaining two promises in a simulated database query in steps. Waiting for the first step for info needed to process the second step.
 
 ### Source Material
 *  [MDN web docs](https://developer.mozilla.org)
