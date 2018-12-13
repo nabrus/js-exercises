@@ -6,7 +6,59 @@
 </head>
 <body>
 <script>
-  const steve = Symbol('Steve');
+
+  /*
+    The 7th primitive type, symbol. The others being string, number, 
+    object, boolean, null, and undefined.
+
+    Symbols are unique identifiers, that help avoid naming collisions. 
+    So they can be used when creating a property in a unique way for 
+    example. 
+  */
+
+  const steve = Symbol("Steve");  // "Steve" being a descriptor, not a value
+  const person = Symbol("Steve"); // Same descriptor but both are unique.
+
+  // wes === person -> false
+  // wes == person  -> also false
+
+  // The following shows using Symbol for like data, making the 
+  // 'Olivia's unique from each other. 
+  const classRoom = {
+    [Symbol("Jeff")]: { grade: 50, gender: "male" },
+    [Symbol("Olivia")]: { grade: 80, gender: "female" },
+    [Symbol("Olivia")]: { grade: 80, gender: "female" },
+  } 
+
+  // Note: Symbols are NOT enumerable, so they cannot be looped over.
+
+  for(person in classRoom) {
+    console.log(person); // Nothing will log
+  }
+  // Because of this, it's sometimes used to store private data.
+
+  // To get access to Symbols, getOwnPropertySymbols is used.
+  const syms = Object.getOwnPropertySymbols(classRoom); 
+  // syms stores an array of the Symbols
+  const data = syms.map(sym => classRoom[sym]);
+  console.log(data); // accesses the data of each Symbol
+
+  /*
+    MDN definition:
+    The data type "symbol" is a primitive data type having the quality 
+    that, values of this type can be used to make object properties that 
+    are anonymous. This data type is used as the key for an object 
+    property when the property is intended to be private, for the internal 
+    use of a class or an object type. For example, keys of type symbol 
+    exist in various built-in JavaScript objects. Similarly, custom classes 
+    can also create private members this way. The symbol data type is 
+    highly specialized in purpose, and remarkable for its lack of 
+    versatility; an instance of Symbol can be assigned to an L-value, 
+    it can be examined for identity, and that's all; no other operators 
+    apply. (Contrast this with an instance of "Number", for example the 
+    integer "42", which has a panoply of operators that compare or combine 
+    the value with others of its type.)
+  */
 
 </script>
 </body>
