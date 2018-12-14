@@ -49,12 +49,14 @@ This repository is a container for my ongoing learning of JavaScript. All exampl
     *  [More Spread Examples](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/spread_rest_syntax-parameters/spreading-into-a-function.html): Combining two arrays and passing arguments to a function.
     *  [Rest Parameters](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/spread_rest_syntax-parameters/rest-params.html): Used in functions and in destructuring.
 
-
 *  [Promises](https://github.com/nabrus/js-exercises/tree/master/wesbos-es6/promises)
     *  [Introduction](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/promises/promises-intro.html)
     *  [Creating Promises](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/promises/creating-promises.html): Using the promise constructor:    
     `new Promise( /* executor */ function(resolve, reject) { ... } );`
     *  [Chaining Promises](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/promises/chaining-promises.html): Example of chaining two promises in a simulated database query in steps. Waiting for the first step for info needed to process the second step.
+    *  [Multiple Promises](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/promises/multiple-promises.html): Working with multiple promises all at the same time instead of in steps.
+
+*  [Symbols](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/symbols/symbols.html): Examples of the primitive data type "symbol", why and how it's used.   
 
 ### Source Material
 *  [MDN web docs](https://developer.mozilla.org)
