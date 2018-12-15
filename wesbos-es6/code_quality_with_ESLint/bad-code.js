@@ -4,9 +4,9 @@ var weather = new Promise((resolve) => {
   }, 2000);
 });
 
-let tweets = new Promise((resolve, reject) => {
+let tweets = new Promise((resolve) => {
   setTimeout(() => {
-    resolve(['I like cake', 'BBQ is good too!']);
+    resolve(['I like cake','BBQ is good too!']);
   }, 500);
 });
 
@@ -18,7 +18,7 @@ Promise
   });
 
 const postsPromise = fetch('http://wesbos.com/wp-json/wp/v2/posts');
-const streetCarsPromise = fetch('http://data.ratp.fr/api/datasets/1.0/search/?q=paris');
+const streetCarsPromise = fetch( "http://data.ratp.fr/api/datasets/1.0/search/?q=paris");
 
 Promise
   .all([postsPromise, streetCarsPromise])
