@@ -13,6 +13,6 @@ console.log(key, url, old, cat);
 
 sayHi("Steve");
 
-const ages = [1, 14, 56, 5];
-
+const ages = [1, 14, 56, 5, 14, 1, 1, 1];
+// using lodash to get the uniq array of ages
 console.log(uniq(ages));
