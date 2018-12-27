@@ -59,7 +59,7 @@ This repository is a container for my ongoing learning of JavaScript. All exampl
 *  [Symbols](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/symbols/symbols.html): Examples of the primitive data type *symbol*, why and how it's used. 
 
 *  [Modules](https://github.com/nabrus/js-exercises/tree/master/wesbos-es6/JS_modules_and_npm/es6modules): An introduction to JavaScript modules and webpack tooling.
-    * [Creating Your Own Modules](https://github.com/nabrus/js-exercises/tree/master/wesbos-es6/JS_modules_and_npm/es6modules/src): Importing and exporting, both *default export* and *named export*, in modules.
+    * [Creating Your Own Modules](https://github.com/nabrus/js-exercises/tree/master/wesbos-es6/JS_modules_and_npm/es6modules/src): Importing and exporting, both `default export` and *named* `export`, in modules.
 
 ### Source Material
 *  [MDN web docs](https://developer.mozilla.org)
