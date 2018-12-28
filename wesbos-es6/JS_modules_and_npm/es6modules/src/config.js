@@ -39,6 +39,7 @@ export { age as old, cat };
 // `as` keyword used to alias (rename)
 
 
+// Export Default
 // exporting as the default. Note: default exports get renamed
 // to whatever name given when imported. So when importing this
 // example, `apiKey` can be changed to something else.
