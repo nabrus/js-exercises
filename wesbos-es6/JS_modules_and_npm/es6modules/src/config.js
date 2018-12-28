@@ -1,4 +1,19 @@
 /*
+  Default Export and Named Export
+
+  default export: generally used to export the main
+  part of what the module does. When importing a default export
+  any variable name can be used.
+
+  named export: Named exports are useful to export several values.
+  During the import, it is mandatory to use the same name of the
+  corresponding object.
+
+  Note: Modules can have only one default export, but can have
+  multiple named exports.
+*/
+
+/*
   Note: variables are not global with modules. They are scoped
   to either their function, block, or the module. This is
   a benefit of modules, self contained files that helps prevent
@@ -22,21 +37,6 @@ const cat = "Mose";
 
 export { age as old, cat };
 // `as` keyword used to alias (rename)
-
-/*
-  Default Export and Named Export
-
-  default export: generally used to export the main
-  part of what the module does. When importing a default export
-  any variable name can be used.
-
-  named export: Named exports are useful to export several values.
-  During the import, it is mandatory to use the same name of the
-  corresponding object.
-
-  Note: Modules can have only one default export, but can have
-  multiple named exports.
-*/
 
 
 // exporting as the default. Note: default exports get renamed
