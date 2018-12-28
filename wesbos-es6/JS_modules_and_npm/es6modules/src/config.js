@@ -21,7 +21,7 @@ const age = 1000;
 const cat = "Mose";
 
 export { age as old, cat };
-// `as` keyword used to rename
+// `as` keyword used to alias (rename)
 
 /*
   Default Export and Named Export
