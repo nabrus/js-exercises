@@ -24,7 +24,7 @@
 // variables
 export const apiKey = "abc123";
 
-export const url = "http:/wesbos.com";
+export const url = "https://nabrus.github.io";
 
 // functions
 export function sayHi(name) {
