@@ -1,4 +1,4 @@
-// import slug from "slug"; // performance issues with webpack
+// import slug from "slug"; // performance issues with webpack-slug is large
 import base64 from "base-64";
 import { url } from "./config";
 
