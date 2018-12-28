@@ -1,7 +1,7 @@
 /*
   Note: variables are not global with modules. They are scoped
   to either their function, block, or the module. This is
-  a benefit of modules, self contained files that helps avoid
+  a benefit of modules, self contained files that helps prevent
   pollution of the global namespace and potential naming collisions.
 */
 
