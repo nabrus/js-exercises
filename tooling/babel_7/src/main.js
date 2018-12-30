@@ -41,3 +41,6 @@ const han = new Rebels("Han Solo");
 luke.force = "yes";
 console.log(luke.force);
 console.log(han.greeting());
+
+let { x, y, ...z } = { x: 1, y: 2, a: 3, b: 4 };
+export v from 'mod'; // experimental code, plugin required
