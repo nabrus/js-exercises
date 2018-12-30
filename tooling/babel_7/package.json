@@ -1,0 +1,16 @@
+{
+  "name": "babel_7",
+  "version": "1.0.0",
+  "description": "testing out babel 7",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src -d compiled"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3"
+  }
+}
