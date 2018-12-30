@@ -31,7 +31,7 @@ class Rebels {
 
   // Methods
   greeting() {
-    return `Hey, I'm ${this.name} and i dislike the empire.`;
+    return `Hey, I'm ${this.name} and I hate the empire.`;
   }
 }
 
