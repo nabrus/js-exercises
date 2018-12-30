@@ -5,9 +5,11 @@
   <title>System JS</title>
 </head>
 <body>
-  <script src="https://jspm.io/system@0.19.js"></script>
+  <script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+  <script src="https://jspm.io/system.js"></script>
   <script>
-
+    SystemJS.config({ transpiler: "babel" });
+    SystemJS.import("./main.js");
   </script>
 </body>
 </html>
