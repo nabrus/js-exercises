@@ -6,7 +6,34 @@
 </head>
 <body>
 <script>
-  
+  // Constructor function
+  function Dog(name, breed) {
+    this.name = name;
+    this.breed = breed;
+  }
+  Dog.prototype.bark = function () {
+    console.log(`Bark Bark! My name is ${this.name}`);
+  }
+
+  // bark method declared on Dog constructor is
+  // inherited to all instances of Dog
+  const sandy = new Dog("Sandy", "German Shepherd");
+  sandy.bark(); // Bark Bark! My name is Sandy
+  const bingo = new Dog("Bingo", "Pug");
+  bingo.bark(); // Bark Bark! My name is Bingo
+
+  // Methods added to the constructor's prototype after 
+  // the instances are still inherited
+  Dog.prototype.bark = function () {
+    console.log(`Bark!! My name is ${this.name} and I'm a ${this.breed}`);
+  }
+  sandy.bark(); // Bark!! My name is Sandy and I'm a German Shepherd
+
+  Dog.prototype.cuddle = function() {
+    console.log(`I love you owner`);
+  }
+  bingo.cuddle(); // I love you owner
+
 </script>
 </body>
 </html>
