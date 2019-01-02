@@ -2,23 +2,52 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Inheritance Review</title>
+  <title>Classes Basics</title>
 </head>
 <body>
 <script>
-  
-  function Dog(name, breed) {
-    this.name = name;
-    this.breed = breed;
+/*
+  Class declaration syntax
+
+  class Dog {
+    ...
   }
 
-  Dog.prototype.bark = function() {
-    console.log(`Bark Bark! My name is ${this.name}`);
-  };
+  Class expression syntax:
 
-  Dog.prototype.cuddle = function() {
+  const Dog = class {
+    ...
+  }
+*/  
+
+  class Dog {
+    constructor(name, breed) {
+      this.name = name;
+      this.breed = breed;
+    }
+    bark() {
+      console.log(`Bark Bark! My name is ${this.name}`);
+    }
+    cuddle() {
     console.log(`I love you owner!`);
-  };
+    }
+    // static method
+    // Only called on the class not on an instance
+    static info() {
+      console.log("A dog thinks it's better than cats.");
+    }
+    // getters
+    get description() {
+      return `${this.name} is of the ${this.breed} family.`;
+    }
+    get nicknames() {
+      return this.nick.toUpperCase();
+    }
+    // setters
+    set nicknames(value) {
+      this.nick = value.trim();
+    }
+  }
 
   const sandy = new Dog("Sandy", "German Shepherd");
   const bingo = new Dog("Bingo", "Pug");
