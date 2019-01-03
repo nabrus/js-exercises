@@ -7,6 +7,44 @@
 <body>
 <script>
 
+  // Parent class (super-class)
+  class Animal {
+    constructor(name) {
+      this.name = name;
+      this.thirst = 100;
+      this.belly = [];
+    }
+
+    // methods
+    drink() {
+      this.thirst -= 10;
+      return this.thirst;
+    }
+
+    eat(food) {
+     this.belly.push(food);
+     return this.belly;
+    }
+  }
+
+  // child class (sub-class)
+  class Dog extends Animal {
+    constructor(name, breed) {
+      super(name);        // super() essentially is Animal()—it calls the
+      this.breed = breed; // parent class' constructor
+    }
+
+    // methods
+    bark() {
+      console.log(`Bark bark!! I'm a ${this.breed} named ${this.name}.`);
+    }
+  }
+
+  // Instance of 'Animal' class
+  const rhino = new Animal("Rhiney");
+  // Instance of 'Dog' sub-class
+  const sandy = new Dog("Sandy", "German Shepherd");
+
 </script>
 </body>
 </html>
