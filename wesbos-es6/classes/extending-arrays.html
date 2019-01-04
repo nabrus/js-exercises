@@ -8,8 +8,15 @@
 <script>
 
   class MovieCollection extends Array {
-    constructor(name, ...items) {
-      
+    constructor(name, ...items) { // use rest syntax
+      // super is like using 'new Array(1, 2, 3, and so on)'
+      super(...items); // use spread syntax other wise you get an Array of an Array
+    }
+
+    // methods
+    // remember, push() inherited with all the other Array methods
+    add(movie) {
+      this.push(movie);
     }
   }
   const movies = new MovieCollection("Wyatt's picks",
@@ -19,6 +26,8 @@
     { name: "Fred Claus", stars: 8 }
   );
 
+  movies.add({ name: "Nut Job 2", stars: 5 });
+  
 </script>
 </body>
 </html>
