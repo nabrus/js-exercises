@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Extending</title>
+</head>
+<body>
+<script>
+
+  class MovieCollection extends Array {
+    constructor(name, ...items) {
+      
+    }
+  }
+  const movies = new MovieCollection("Wyatt's picks",
+    { name: "Bee Movie", stars: 10 },
+    { name: "Star Wars", stars: 1 },
+    { name: "Secret Life of Pets", stars: 7 },
+    { name: "Fred Claus", stars: 8 }
+  );
+
+</script>
+</body>
+</html>
