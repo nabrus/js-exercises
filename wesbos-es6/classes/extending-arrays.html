@@ -2,10 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Extending</title>
+  <title>Extending Arrays</title>
 </head>
 <body>
 <script>
+
+  // Extending arrays from the native built-ins 
 
   class MovieCollection extends Array {
     constructor(name, ...items) { // use rest syntax
@@ -19,15 +21,38 @@
     add(movie) {
       this.push(movie);
     }
+
+    topRated(limit = 10) {
+      return this.sort((a, b) => (a.stars > b.stars ? -1 : 1)).slice(0, limit);
+    }
   }
   const movies = new MovieCollection("Wyatt's picks",
     { name: "Bee Movie", stars: 10 },
     { name: "Star Wars", stars: 1 },
     { name: "Secret Life of Pets", stars: 7 },
-    { name: "Fred Claus", stars: 8 }
+    { name: "Fred Claus", stars: 8 },
   );
 
   movies.add({ name: "Nut Job 2", stars: 5 });
+
+  console.log(movies.topRated());
+  /* Output:
+    MovieCollection(5) [{…}, {…}, {…}, {…}, {…}, name: 5]
+    0: {name: "Bee Movie", stars: 10}
+    1: {name: "Fred Claus", stars: 8}
+    2: {name: "Secret Life of Pets", stars: 7}
+    3: {name: "Nut Job 2", stars: 5}
+    4: {name: "Star Wars", stars: 1}
+  */
+
+  // Or the top 2
+  console.log(movies.topRated(2));
+  /* Output:
+    MovieCollection(2) [{…}, {…}, name: 2]
+    0: {name: "Bee Movie", stars: 10}
+    1: {name: "Fred Claus", stars: 8} 
+  */
+
 
   /*
     Side note:
