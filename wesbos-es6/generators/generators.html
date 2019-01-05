@@ -7,11 +7,19 @@
 <body>
 <script>
 
-  function listPeople() {
-    console.log("Steve");
-    console.log("Mose");
-    console.log("Wyatt");
+  // Generators: Syntax
+  function* listPeople() {
+    yield "Steve";
+    yield "Wyatt";
+    yield "Mose";
   }
+
+  let myList = listPeople();
+
+  console.log(myList.next()); // {value: "Steve", done: false}
+  console.log(myList.next()); // {value: "Wyatt", done: false}
+  console.log(myList.next()); // {value: "Mose", done: false}
+  console.log(myList.next()); // {value: undefined, done: true}
 
 </script>
 </body>
