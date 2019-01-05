@@ -8,11 +8,26 @@
 <script>
  
   /*
-    One use case for generators is the ability to do waterfall-like Ajax requests. You've probably run into a situation before where you first need to hit an Ajax request where you search for something, and then when that search comes back, it maybe gives you a user ID. Given that ID, you have to hit a second Ajax request based on that ID. When that comes back, maybe you get a list of photos for that user, and you need specific information about the first photo, or something that came back based on that photo ID.
+    "One use case for generators is the ability to do waterfall-like Ajax
+    requests. You've probably run into a situation before where you first 
+    need to hit an Ajax request where you search for something, and then when
+    that search comes back, it maybe gives you a user ID. Given that ID, you
+    have to hit a second Ajax request based on that ID. When that comes back,
+    maybe you get a list of photos for that user, and you need specific 
+    information about the first photo, or something that came back based on 
+    that photo ID."
 
     /search/wes -> /user/123 -> /photo/456
 
-    It's kind of like a waterfall. We need the information from the previous one in order to do the next one. You know that that can lead to what's called callback hell, where you have nested code inside of each other. There's libraries like async that are really good for dealing with that, however the browser is getting much better at being able to do it natively. We're going to look at an example of how you can do it with generators.
+    "It's kind of like a waterfall. We need the information from the previous 
+    one in order to do the next one. You know that that can lead to what's 
+    called callback hell, where you have nested code inside of each other. 
+    There's libraries like async that are really good for dealing with that,
+    however the browser is getting much better at being able to do it 
+    natively. We're going to look at an example of how you can do it with 
+    generators."
+
+    —Wes Bos, ES6 for Everyone
   */
 
 </script>
