@@ -21,6 +21,68 @@
   console.log(myList.next()); // {value: "Mose", done: false}
   console.log(myList.next()); // {value: undefined, done: true}
 
+  // Note: the output returns objects. `done` property describes 
+  // if generator is done.
+
+  // Dynamic values with variables example
+  // Note: the reference to the variable `i` is scoped inside
+  // the block of the function. It keeps it's variables until
+  // it finishes.
+  function* listNumbers() {
+    let i = 0;
+    yield i;
+    i++;
+    yield i;
+    i++;
+    yield i;
+  }
+
+  const nums = listNumbers();
+
+  console.log(nums.next()); // {value: 0, done: false}
+  console.log(nums.next()); // {value: 1, done: false}
+  console.log(nums.next()); // {value: 2, done: false}
+  console.log(nums.next()); // {value: undefined, done: true}
+
+  // Iterate through an array.
+  const inventors = [
+    { first: 'Albert', last: 'Einstein', year: 1879 },
+    { first: 'Isaac', last: 'Newton', year: 1643 },
+    { first: 'Galileo', last: 'Galilei', year: 1564 },
+    { first: 'Marie', last: 'Curie', year: 1867 },
+    { first: 'Johannes', last: 'Kepler', year: 1571 },
+    { first: 'Nicolaus', last: 'Copernicus', year: 1473 },
+    { first: 'Max', last: 'Planck', year: 1858 },
+  ];
+
+  function* loop(arr) {
+    for (const inventor of arr) {
+      yield inventor; // creates seven yields when looping
+    }
+  }
+
+  const inventorGen = loop(inventors); 
+
+  console.log(inventorGen.next().value); 
+  // {first: "Albert", last: "Einstein", year: 1879}
+  console.log(inventorGen.next().value);
+  // {first: "Isaac", last: "Newton", year: 1643}
+  console.log(inventorGen.next().value);
+  // {first: "Galileo", last: "Galilei", year: 1564}
+  console.log(inventorGen.next().value);
+  // {first: "Marie", last: "Curie", year: 1867}
+  console.log(inventorGen.next().value);
+  // {first: "Johannes", last: "Kepler", year: 1571}
+  console.log(inventorGen.next().value);
+  // {first: "Nicolaus", last: "Copernicus", year: 1473}
+  console.log(inventorGen.next().value);
+  // {first: "Max", last: "Planck", year: 1858}
+  console.log(inventorGen.next().value);
+  // undefined
+
+  // Note: `.value` tacked to `.next()` to just output the
+  // value, without showing `done`.
+
 </script>
 </body>
 </html>
