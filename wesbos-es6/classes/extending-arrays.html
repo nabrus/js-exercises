@@ -11,6 +11,7 @@
     constructor(name, ...items) { // use rest syntax
       // super is like using 'new Array(1, 2, 3, and so on)'
       super(...items); // use spread syntax other wise you get an Array of an Array
+      this.name = name;
     }
 
     // methods
@@ -27,7 +28,50 @@
   );
 
   movies.add({ name: "Nut Job 2", stars: 5 });
-  
+
+  /*
+    Side note:
+
+    This makes for a good example to 
+    reiterate on how `for...in` and `for...of` loops 
+    work.
+
+    The `for...in` loop iterates over all non-Symbol,
+    enumerable properties of an object. Including 
+    anything added to the prototype or an added
+    property.
+  */
+
+  // So, `for in` will loop over the 5 items
+  // and the property `name`
+  for (const movie in movies) {
+    console.log(movie);
+  }
+  /* Output:
+    0
+    1
+    2
+    3
+    4
+    name
+  */
+
+  // The `for...of` only iterates over the iterable
+  // properties of an object. 
+  for (const movie of movies) {
+    console.log(movie);
+  }
+  /* Output returns the objects:
+    {name: "Bee Movie", stars: 10}
+    {name: "Star Wars", stars: 1}
+    {name: "Secret Life of Pets", stars: 7}
+    {name: "Fred Claus", stars: 8}
+    {name: "Nut Job 2", stars: 5}
+  */
+
+  // So you can add properties to an array, but
+  // skip over them with a `for...of` loop.
+
 </script>
 </body>
 </html>
