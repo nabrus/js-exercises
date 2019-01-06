@@ -7,7 +7,31 @@
 <body>
 <script>
 
-  
+  function* lyrics() {
+    yield `But don't tell my heart`;
+    yield `My achy breaky heart`;
+    yield `I just don't think he'd understand`;
+    yield `And if you tell my heart`;
+    yield `My achy breaky heart`;
+    yield `He might blow up and kill this man`;    
+  }
+
+  // Create a generator then use .next() to go through each or...
+  const achy = lyrics();
+
+  // ...instead use the `for...of` loop
+  for (const line of achy) {
+    console.log(line);
+  }
+
+  /* Output:
+    But don't tell my heart
+    My achy breaky heart
+    I just don't think he'd understand
+    And if you tell my heart
+    My achy breaky heart
+    He might blow up and kill this man
+  */
 
 </script>
 </body>
