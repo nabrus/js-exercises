@@ -63,6 +63,7 @@ This repository is a container for my ongoing learning of JavaScript. All exampl
 
 *  [Classes](https://github.com/nabrus/js-exercises/tree/master/wesbos-es6/classes)
     * [A Review On Prototypal Inheritance](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/classes/inheritance-review.html)
+    * [Classes Intro](): `class`, `get`ters & `set`ters, and `static` method syntax.
 
 ### Source Material
 *  [MDN web docs](https://developer.mozilla.org)
