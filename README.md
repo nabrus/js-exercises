@@ -62,8 +62,8 @@ This repository is a container for my ongoing learning of JavaScript. All exampl
     * [Creating Your Own Modules](https://github.com/nabrus/js-exercises/tree/master/wesbos-es6/JS_modules_and_npm/es6modules/src): Importing and exporting, both `default export` and *named* `export`, in modules.
 
 *  [Classes](https://github.com/nabrus/js-exercises/tree/master/wesbos-es6/classes)
-    * [A Review On Prototypal Inheritance](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/classes/inheritance-review.html)
-    * [Classes Intro](): `class`, `get`ters & `set`ters, and `static` method syntax.
+    * [A Review On Prototypal Inheritance](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/classes/inheritance-review.html): Creating an object using a constructor function with methods defined on the constructor's prototype. 
+    * [Classes Introduction](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/classes/classes.html): Creating a `class` with `get`ters, `set`ters, and a `static` method.
 
 ### Source Material
 *  [MDN web docs](https://developer.mozilla.org)
