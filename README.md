@@ -53,7 +53,7 @@ This repository is a container for my ongoing learning of JavaScript. All exampl
     *  [Introduction](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/promises/promises-intro.html)
     *  [Creating Promises](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/promises/creating-promises.html): Using the promise constructor:    
     `new Promise( /* executor */ function(resolve, reject) { ... } );`
-    *  [Chaining Promises](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/promises/chaining-promises.html): Example of chaining two promises in a simulated database query in steps. Waiting for the first step for info needed to process the second step.
+    *  [Chaining Promises](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/promises/chaining-promises.html): Example of chaining two promises in steps via simulating a database query. Awaiting the first step to fulfill in order to use the data returned in processing the second step.
     *  [Multiple Promises](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/promises/multiple-promises.html): Working with multiple promises all at the same time instead of in steps.
 
 *  [Symbols](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/symbols/symbols.html): Examples of the primitive data type *symbol*, why and how it's used. 
