@@ -13,11 +13,16 @@
     operations happening together. With promises, we can do this with the
     function Promise.all(..).
 
-    Promise.all(..) accepts an array of promises as its argument and returns a single promise. That single promise will settle in one of two ways:
+    Promise.all(..) accepts an array of promises as its argument and returns
+    a single promise. That single promise will settle in one of two ways:
 
-      * If every promise in the argument array resolves, the single promise returned from Promise.all(..) will resolve with an array containing the resolve value from each promise in the argument array.
+      * If every promise in the argument array resolves, the single promise
+      returned from Promise.all(..) will resolve with an array containing the
+      resolve value from each promise in the argument array.
 
-      * If any promise from the argument array rejects, the single promise returned from Promise.all(..) will immediately reject with the reason that promise rejected.
+      * If any promise from the argument array rejects, the single promise 
+      returned from Promise.all(..) will immediately reject with the reason 
+      that promise rejected.
   */
 
   // Example
