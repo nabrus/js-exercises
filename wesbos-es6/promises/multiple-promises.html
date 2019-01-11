@@ -54,16 +54,20 @@
   // running .then(..). So the example above will take 2 
   // seconds to resolve.
 
-  // Example using an API.
+  // Example using an API. **Note: local server needed for this to work, 
+  // like browser-sync.**
 
   const postsPromise = fetch('http://wesbos.com/wp-json/wp/v2/posts');
   const streetCarsPromise = fetch('http://data.ratp.fr/api/datasets/1.0/search/?q=paris');
 
   Promise
-    .all([postsPromise, streetCarsPromise])
-    .then(responses => {
+    .all([postsPromise, streetCarsPromise]) // when both resolve...
+    .then(responses => { // ...run resolve.json on them
+      return Promise.all(responses.map(res => res.json())); 
+    }) // which basically resolves instantly 
+    .then(responses => { // then final promise is called
       console.log(responses);
-    })
+    });
 
 
 </script>
