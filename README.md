@@ -67,12 +67,9 @@ This repository is a container for my ongoing learning of JavaScript. Review mat
     *  [Extending Classes](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/classes/extending-classes.html): Using `extends` to create a child (sub) class from a parent (super) class. `super` keyword used inside the child class to call the parents constructor.
     *  [Extending Arrays](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/classes/extending-arrays.html): Extending arrays from the native built-ins. A review of `for...of` and `for...in` loops using this example.
 
-*  [Generators](https://github.com/nabrus/js-exercises/tree/master/wesbos-es6/generators):
-
-Syntax
 ```js
 function* gen() { 
-  yield 1;
+    yield 1;
   yield 2;
   yield 3;
 }
@@ -80,6 +77,8 @@ function* gen() {
 var g = gen(); // "Generator { }"
 
 ```
+ 
+*  [Generators](https://github.com/nabrus/js-exercises/tree/master/wesbos-es6/generators)
 
 ### Source Material
 *  [MDN web docs](https://developer.mozilla.org)
