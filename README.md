@@ -69,6 +69,13 @@ This repository is a container for my ongoing learning of JavaScript. Review mat
 
 *  [Generators](https://github.com/nabrus/js-exercises/tree/master/wesbos-es6/generators)
 
+```
+{ 
+    "firstName: "Help"
+}
+
+```
+
 ### Source Material
 *  [MDN web docs](https://developer.mozilla.org)
 *  [You Don't Know JS (book series)](https://github.com/getify/You-Dont-Know-JS) by Kyle Simpson.
