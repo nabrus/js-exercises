@@ -69,7 +69,7 @@ This repository is a container for my ongoing learning of JavaScript. Review mat
 
 ```js
 function* gen() { 
-    yield 1;
+  yield 1;
   yield 2;
   yield 3;
 }
