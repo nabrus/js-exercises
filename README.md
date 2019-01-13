@@ -65,7 +65,15 @@ This repository is a container for my ongoing learning of JavaScript. Review mat
     * [A Review On Prototypal Inheritance](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/classes/inheritance-review.html): Creating an object using a constructor function with methods defined on the constructor's prototype. 
     * [Classes Introduction](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/classes/classes.html): Creating a `class` with `get`ters, `set`ters, and a `static` method.
     *  [Extending Classes](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/classes/extending-classes.html): Using `extends` to create a child (sub) class from a parent (super) class. `super` keyword used inside the child class to call the parents constructor.
-    *  [Extending Arrays](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/classes/extending-arrays.html): Extending arrays from the native built-ins. A review of `for...of` and `for...in` loops using this example. 
+    *  [Extending Arrays](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/classes/extending-arrays.html): Extending arrays from the native built-ins. A review of `for...of` and `for...in` loops using this example.
+
+*  [Generators](https://github.com/nabrus/js-exercises/tree/master/wesbos-es6/generators): `function* gen() { 
+                      yield 1;
+                      yield 2;
+                      yield 3;
+                    }
+
+                    var g = gen(); // "Generator { }"` 
 
 ### Source Material
 *  [MDN web docs](https://developer.mozilla.org)
