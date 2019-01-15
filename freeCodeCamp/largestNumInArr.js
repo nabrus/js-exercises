@@ -11,11 +11,18 @@
 */
 
 // my solution
+// function largestOfFour(arr) {
+//   let newArr = [];
+//   for (const num of arr) {
+//      newArr.push(Math.max(...num));
+//   }
+//   return newArr;
+// }
+
+// refactored
 function largestOfFour(arr) {
   let newArr = [];
-  for (const num of arr) {
-     newArr.push(Math.max(...num));
-  }
+  arr.forEach(num => newArr.push(Math.max(...num)));
   return newArr;
 }
 
