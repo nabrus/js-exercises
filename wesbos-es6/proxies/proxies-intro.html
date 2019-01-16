@@ -11,7 +11,47 @@
     The Proxy object is used to define custom behavior for fundamental
     operations (e.g. property lookup, assignment, enumeration, function
     invocation, etc).
+
+    handler
+      Placeholder object which contains traps.
+
+    traps
+      The methods that provide property access. This is analogous to the concept of traps in operating systems.
+
+    target
+      Object which the proxy virtualizes. It is often used as storage backend
+      for the proxy. Invariants (semantics that remain unchanged) regarding
+      object non-extensibility or non-configurable properties are verified
+      against the target.
+
+    Syntax: `var p = new Proxy(target, handler);`
+
+    Parameters
+    `target`
+      A target object to wrap with Proxy. It can be any sort of object,
+      including a native array, a function or even another proxy.
+
+    `handler`
+      An object whose properties are functions which define the behavior
+      of the proxy when an operation is performed on it.
   */
+
+  const person = { name: "Steve", age: 100 };
+  const personProxy = new Proxy(person, {
+    get(target, name) {
+      // console.log("Someone is asking for ", target, name);
+      return target[name].toUpperCase(); // STEVEN
+    },
+
+    set(target, name, value) {
+      if (typeof value === "string") {
+        target[name] = value.trim() + "   :P";
+      }
+    }
+  });
+
+  personProxy.name = "Steven";
+  personProxy.cool = "     oohhhh snap    ";
 
 </script>
 </body>
