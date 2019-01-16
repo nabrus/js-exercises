@@ -24,7 +24,7 @@ repeatStringNumTimes("abc", 3);
 
 // recursion 
 function repeatStr(str, num) {
-  if (num <= 0) {
+  if (num < 0) {
     return "";
   } else if (num === 1) {
     return str;
@@ -35,3 +35,11 @@ function repeatStr(str, num) {
 
 repeatStr("abc", 3);
 
+
+
+// freeCodeCamp advanced solution:  using .repeat(...)
+function repeatString(str, num) {
+  return num > 0 ? str.repeat(num) : '';
+}
+
+repeatString("abc", 3);
