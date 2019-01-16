@@ -36,6 +36,8 @@
       of the proxy when an operation is performed on it.
   */
 
+  // Again, Proxies allow you to overwrite the default behavior for many
+  // of an object's default operations.
   const person = { name: "Steve", age: 100 };
   const personProxy = new Proxy(person, {
     get(target, name) {
