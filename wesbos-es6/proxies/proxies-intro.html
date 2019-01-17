@@ -40,11 +40,20 @@
   // of an object's default operations.
   const person = { name: "Steve", age: 100 };
   const personProxy = new Proxy(person, {
+    /* The handler object is a placeholder object which contains
+       traps for Proxy.
+
+       All traps are optional. If a trap has not been defined, the
+       default behavior is to forward the operation to the target.
+    */
+
+    // The handler.get() method is a trap for getting property values.
     get(target, name) {
       // console.log("Someone is asking for ", target, name);
       return target[name].toUpperCase(); // STEVEN
     },
 
+    // The handler.set() method is a trap for setting property values.
     set(target, name, value) {
       if (typeof value === "string") {
         target[name] = value.trim() + "   :P";
