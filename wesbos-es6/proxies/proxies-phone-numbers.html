@@ -6,6 +6,28 @@
 </head>
 <body>
 <script>
+
+  /*
+    Another example of when you might use a handler.
+
+    Using set(...) and get(...) traps to step in between on the
+    proxy.
+  */
+
+  const phoneHandler = {
+    // set(...) trap here takes in any format and changes it to all numbers
+    set(target, name, value) {
+      target[name] = value.match(/[0-9]/g).join("");
+    },
+    // get(...) trap here intercepts and formats the num into (123)-123-1234
+    get(target, name) {
+      return target[name].replace(/(\d{3})(\d{3})(\d{4})/, "($1)-$2-$3");
+    }
+  }
+
+  const phoneNumbers = new Proxy({}, phoneHandler);
+  // Pass in a blank object to set values on, instead of passing in an
+  // existing object.
   
 </script>
 </body>
