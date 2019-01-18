@@ -7,10 +7,8 @@
 
 // My solution
 function truncateString(str, num) {
-  const shorter = str.slice(0, num);
-  console.log(str.length >= num ? `${shorter}...` : str);
-  return str.length >= num ? `${shorter}...` : str;
-
+  const shortStr = str.slice(0, num);
+  return num >= str.length ? str : `${shortStr}...`;
 }
 
 truncateString("A-tisket a-tasket A green and yellow basket", 8);
