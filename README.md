@@ -68,6 +68,7 @@ This repository is a container for my ongoing learning of JavaScript. Review mat
     *  [Extending Arrays](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/classes/extending-arrays.html): Extending arrays from the native built-ins. A review of `for...of` and `for...in` loops using this example.
 
 ```js
+// Generator Syntax
 function* gen() { 
   yield 1;
   yield 2;
