@@ -29,6 +29,12 @@
   const phoneNumbers = new Proxy({}, phoneHandler);
   // Pass in a blank object to set values on, instead of passing in an
   // existing object.
+
+  phoneNumbers.cell = "555 -334 7865";
+  phoneNumbers.cell; // (555)-334-7865
+  
+  phoneNumbers.work = "*567*333 9987";
+  phoneNumbers.work; // (567)-333-9987
   
 </script>
 </body>
