@@ -29,4 +29,6 @@ function booWho(bool) {
   return typeof bool === "boolean";
 }
 
+// Note: freeCodeCamps solution was same as my refactor.
+
 booWho(null);
