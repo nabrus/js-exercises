@@ -12,10 +12,14 @@
   Handle Here Is My Spout.
 */
 
+// My solution: passes tests
 function titleCase(str) {
-  let arr = str.split(" ");
-  let capital = arr.map(word => word[0].toUpperCase());
-  console.log(capital);
+  const arr = str.split(" ");
+  const capital = arr.map(word => word[0].toUpperCase() + word.slice(1, word.length).toLowerCase());
+  return capital.join(" ");
 }
 
-titleCase("I'm a little tea pot");
+titleCase("I'm a little tea pot"); // I'm A Little Tea Pot
+titleCase("sHoRt AnD sToUt"); // Short And Stout
+titleCase("HERE IS MY HANDLE HERE IS MY SPOUT"); // Here Is My Handle Here
+// Is My Spout
