@@ -13,6 +13,8 @@
 */
 
 function titleCase(str) {
+  let arr = str.split(" ");
+  arr.map(word => )
   return str;
 }
 
