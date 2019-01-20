@@ -14,8 +14,8 @@
 
 function titleCase(str) {
   let arr = str.split(" ");
-  arr.map(word => )
-  return str;
+  let capital = arr.map(word => word[0].toUpperCase());
+  console.log(capital);
 }
 
 titleCase("I'm a little tea pot");
