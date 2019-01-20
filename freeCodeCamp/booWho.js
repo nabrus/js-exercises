@@ -15,8 +15,18 @@
   booWho("false") should return false.
 */
 
+// My solution: initial attempt (works)
+// function booWho(bool) {
+//   if (typeof bool === "boolean") {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+
+// refactor
 function booWho(bool) {
-  return bool;
+  return typeof bool === "boolean";
 }
 
-booWho(null)
+booWho(null);
