@@ -10,16 +10,28 @@
   should return undefined.
 */
 
+// My solution: passed tests
 function findElement(arr, func) {
-  let num = 0;
-  let answer = arr.filter(func);
+  const num = 0;
+  const answer = arr.filter(func);
 
-  if (func === num) {
-    console.log(undefined);
-  } else {
-    console.log(answer);
-  }
+  // if (answer !== undefined) {
+  //   return answer[0];
+  // }
+  // refactor
+  return answer === num ? undefined : answer[0];
 }
 
-findElement([1, 2, 3, 4], num => num % 2 === 0);
-findElement([1, 3, 5, 8, 9, 10], function(num) { return num % 2 === 0; })
+// function findElement(arr, func) {
+//   for (let num = 0; num < arr.length; num++) {
+//     if (func > 0) {
+//       console.log(func);
+//     } else {
+//       console.log(undefined);
+//     }
+//   }
+// }
+
+findElement([1, 2, 3, 4], num => num % 2 === 0); // 2
+findElement([1, 3, 5, 8, 9, 10], function(num) { return num % 2 === 0; }); // 8
+findElement([1, 3, 5, 9], function(num) { return num % 2 === 0; }); // undefined
