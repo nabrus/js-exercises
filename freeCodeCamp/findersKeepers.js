@@ -12,7 +12,14 @@
 
 function findElement(arr, func) {
   let num = 0;
-  return num;
+  let answer = arr.filter(func);
+
+  if (func === num) {
+    console.log(undefined);
+  } else {
+    console.log(answer);
+  }
 }
 
 findElement([1, 2, 3, 4], num => num % 2 === 0);
+findElement([1, 3, 5, 8, 9, 10], function(num) { return num % 2 === 0; })
