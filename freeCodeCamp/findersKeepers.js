@@ -12,24 +12,28 @@
 
 // My solution: passed tests
 function findElement(arr, func) {
-  const num = 0;
   const answer = arr.filter(func);
 
+  // works but sloppy code
   // if (answer !== undefined) {
   //   return answer[0];
   // }
-  // refactor
-  return answer === num ? undefined : answer[0];
+
+  return answer ? answer[0] : undefined;
 }
 
+// freeCodeCamps solution: Basic
 // function findElement(arr, func) {
-//   for (let num = 0; num < arr.length; num++) {
-//     if (func > 0) {
-//       console.log(func);
-//     } else {
-//       console.log(undefined);
+//   let num = 0;
+
+//   for(var i = 0; i < arr.length; i++) {
+//     num = arr[i];
+//     if (func(num)) {
+//       return num;
 //     }
 //   }
+
+//   return undefined;
 // }
 
 findElement([1, 2, 3, 4], num => num % 2 === 0); // 2
