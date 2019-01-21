@@ -7,7 +7,32 @@
 <body>
 <script>
 
-  
+  // Using people coming in to be seated for brunch as an analogy
+  // to help understand `Set`.
+
+  const brunch = new Set();
+  // Start adding people as they come in.
+  brunch.add("Jerry");
+  brunch.add("Elaine");
+  brunch.add("George");
+  // Ready to open! Take the values and start to use them.
+  const line = brunch.values();
+  console.log(line.next().value); // Jerry
+  console.log(line.next().value); // Elaine
+  console.log(line); // SetIterator {"George"}
+  // Notice `line.next()` removes  the value from Set.
+
+  // More people start to show up - added to the `Set` not line.
+  // Notice that you can still add after the `Set` and line were created
+  // and iterate through them.
+  brunch.add("Kramer");
+  brunch.add("Uncle Leo");
+  brunch.add("Newman");
+  console.log(line); // SetIterator {"George", "Kramer", "Uncle Leo", "Newman"}
+
+  console.log(line.next().value); // George
+  console.log(line.next().value); // Kramer
+  console.log(line.next().value); // Uncle Leo
 
 </script>
 </body>
