@@ -2,15 +2,49 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Brunch with Sets</title>
+  <title>WeakSet</title>
 </head>
 <body>
 <script>
 
+  /*
+    WeakSet objects are collections of objects. An object in the WeakSet may
+    occur only once; it is unique in the WeakSet's collection.
+
+    The main differences to the Set object are:
+
+    In contrast to Sets, WeakSets are collections of objects only and not of
+    arbitrary values of any type.
+
+    The WeakSet is weak: References to objects in the collection are held
+    weakly. If there is no other reference to an object stored in the WeakSet,
+    they can be garbage collected. That also means that there is no list of
+    current objects stored in the collection. WeakSets are not enumerable.
+  */
+
+  // The WeakSet object lets you store weakly held objects in a collection.
+
   let dog1 = { name: "Rubble", age: 3 };
   let dog2 = { name: "Sky", age: 1 };
 
+  const weakSauce = new WeakSet([dog1, dog2]);
+  console.log(weakSauce); // WeakSet {{…}, {…}}
+  console.log(weakSauce.has(dog1)); // true
+  console.log(weakSauce.has(dog2)); // true
 
+  // Again, WeakSets are not enumerable.
+  // for (const dog of weakSauce) {
+  //   console.log(dog); // Uncaught TypeError: weakSauce is not iterable
+  // }
+
+  // Also, no `.clear()` method, because of the garbage collection when
+  // there is no reference to the object. For example if `dog2` was deleted,
+  // there would be no reference to it and it would get garbage collected 
+  // from memory. Taken out of the WeakSet.
+
+  console.log(weakSauce);
+  dog1 = null;
+  console.log(weakSauce); // Note: garbage collection varies on diff browsers
 
 </script>
 </body>
