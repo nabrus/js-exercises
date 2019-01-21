@@ -24,7 +24,8 @@
     So, a set in JavaScript is like a unique array, meaning that you can only
     ever add the same item once, with a nice API for managing the items inside
     of it. It's different than an array, in that you can't access the items
-    individually and it's not index based.
+    individually and it's not index based. For example, `.size` is used instead
+    of `.length`.
 
     You can think of a set as just a list of items, which we can add to,
     remove from, and loop over.
@@ -34,6 +35,41 @@
   people.add("Steve");
   people.add("Wyatt");
   people.add("Rubble");
+
+  /*
+    people.remove("Steve") - removes items
+    people.clear() - clears the entire set, giving an empty set
+  */
+
+  // Other methods can be called for example `people.values()`
+  // giving the set's properties as `set iterator` which can be
+  // looped over. SetIterator is a kind of `generator`. So the generator API
+  // can be used: `.next()` or `for...of` loops
+  for (const person of people) {
+    console.log(person);
+  }
+  /* 
+    Steve
+    Wyatt
+    Rubble
+  */
+
+  // Declaring a `Set` with the values in it. Notice values are wrapped
+  // in an iterable (array, array-ish obj, another set, etc).
+  const students = new Set(["Steve", "Wyatt", "R2 D2"]);
+
+  // Passing in an array when creating a `Set`.
+  const dogs = ["Rubble", "Rocky", "Chase", "Sky"];
+  const dogSet = new Set(dogs);
+
+  // Using `.has(...)`
+  console.log(dogSet.has("Rocky")); // true
+  console.log(dogSet.has("Skies")); // false
+
+  // Reminder, sets are not index based, so the following does not
+  // return "Wyatt"
+  console.log(students[1]); // undefined
+
 
 </script>
 </body>
