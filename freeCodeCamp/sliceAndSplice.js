@@ -43,6 +43,7 @@ function frankenSplice(arr1, arr2, n) {
   // console.log(newArr2);
 
   arr1.forEach(num => newArr2.splice(n, 0, num));
+  n += 1;
   console.log(newArr2);
 }
 
