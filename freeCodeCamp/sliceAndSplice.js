@@ -20,10 +20,29 @@
 //   return arr4;
 // }
 
+// Refactored after reading first two hints
+function frankenSplice1(arr1, arr2, n) {
+  const newArr2 = arr2.slice();
+  newArr2.splice(n, 0, ...arr1);
+  return newArr2;
+}
 
 function frankenSplice(arr1, arr2, n) {
   const newArr2 = arr2.slice();
-  arr1.forEach(num => num.splice(n, 0, newArr2));
+
+  // for (let i = 0; i < arr1.length; i += 1) {
+  //   newArr2.splice(n, 0, i);
+  // }
+  // console.log(newArr2);
+
+  // let i = 0;
+  // while (i < arr1.length) {
+  //   newArr2.splice(n, 0, arr1[i]);
+  //   i += 1;
+  // }
+  // console.log(newArr2);
+
+  arr1.forEach(num => newArr2.splice(n, 0, num));
   console.log(newArr2);
 }
 
