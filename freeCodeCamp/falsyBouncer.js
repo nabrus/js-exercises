@@ -6,18 +6,27 @@
   Hint: Try converting each value to a Boolean.
 */
 
+// My solution
+
 // function bouncer(arr) {
-//   const nonFalsy = arr.filter(item => typeof item !== "boolean" && item !== false);
+//   const nonFalsy = arr.filter(item => {
+//     if (item) {
+//       return item;
+//     }
+//   });
 //   console.log(nonFalsy);
 // }
 
+// Refactored
 function bouncer(arr) {
-  const nonFalsy = arr.filter(item => {
-    if (item) {
-      return item;
-    }
-  });
-  console.log(nonFalsy);
+  const nonFalsy = arr.filter(item => item);
+  return nonFalsy;
 }
 
 bouncer([7, "ate", "", false, 9]); // [ 7, "ate", 9 ]
+
+bouncer(["a", "b", "c"]); // ["a", "b", "c"]
+
+bouncer([false, null, 0, NaN, undefined, ""]); // []
+
+bouncer([1, null, NaN, 2, undefined]); // [1, 2].
