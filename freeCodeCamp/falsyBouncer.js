@@ -23,6 +23,11 @@ function bouncer(arr) {
   return nonFalsy;
 }
 
+// freeCodeCamp's solution: Advanced
+function bouncer1(arr) {
+  return arr.filter(Boolean);
+}
+
 bouncer([7, "ate", "", false, 9]); // [ 7, "ate", 9 ]
 
 bouncer(["a", "b", "c"]); // ["a", "b", "c"]
