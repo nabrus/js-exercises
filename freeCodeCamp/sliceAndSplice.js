@@ -21,17 +21,23 @@
 // }
 
 // Refactored after reading first two hints
-function frankenSplice1(arr1, arr2, n) {
+function frankenSplice(arr1, arr2, n) {
   const newArr2 = arr2.slice();
   newArr2.splice(n, 0, ...arr1);
   return newArr2;
 }
 
-function frankenSplice(arr1, arr2, n) {
+
+// Solution after following hints
+// `n += 1` is needed because:
+// We increment the index n by one. This will ensure that every item from
+// the arr1 is inserted into newArr2 in the proper index position.
+function frankenSplice1(arr1, arr2, n) {
   const newArr2 = arr2.slice();
 
   // for (let i = 0; i < arr1.length; i += 1) {
-  //   newArr2.splice(n, 0, i);
+  //   newArr2.splice(n, 0, arr[i]);
+  //   n += 1;
   // }
   // console.log(newArr2);
 
@@ -39,12 +45,15 @@ function frankenSplice(arr1, arr2, n) {
   // while (i < arr1.length) {
   //   newArr2.splice(n, 0, arr1[i]);
   //   i += 1;
+  //   n += 1;
   // }
   // console.log(newArr2);
 
-  arr1.forEach(num => newArr2.splice(n, 0, num));
-  n += 1;
-  console.log(newArr2);
+  arr1.forEach(num => {
+    newArr2.splice(n, 0, num);
+    n += 1; // without this you'd get: [ 4, 3, 2, 1, 5, 6 ]
+  });
+  return newArr2;
 }
 
-frankenSplice([1, 2, 3], [4, 5, 6], 1);
+frankenSplice([1, 2, 3], [4, 5, 6], 1); // [ 4, 1, 2, 3, 5, 6 ]
