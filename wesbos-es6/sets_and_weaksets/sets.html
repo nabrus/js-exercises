@@ -64,7 +64,9 @@
   const dogs = ["Rubble", "Rocky", "Chase", "Sky"];
   const dogSet = new Set(dogs);
 
-  // Using `.has(...)`
+  // Set.prototype.has(value)
+  // Returns a boolean asserting whether an element is present with the
+  // given value in the Set object or not.
   console.log(dogSet.has("Rocky")); // true
   console.log(dogSet.has("Skies")); // false
 
