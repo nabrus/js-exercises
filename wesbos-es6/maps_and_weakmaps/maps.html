@@ -8,6 +8,8 @@
 <script>
 
   /*
+    So, if Sets are to Arrays, then Maps are to Objects...
+
     The Map object holds key-value pairs and remembers the original insertion
     order of the keys. Any value (both objects and primitive* values) may be
     used as either a key or a value.
@@ -16,15 +18,66 @@
       an object and has no methods. In JavaScript, there are 6 primitive data
       types: string, number, boolean, null, undefined, symbol. All primitives
       are immutable.
-
-    Syntax: new Map([iterable])
   */
 
+  // Syntax: new Map([iterable])
   const dogs = new Map();
 
+  // Map.prototype.set(key, value)
+  // Sets the value for the key in the Map object. Returns the Map object.
   dogs.set("Rubble", 3);
   dogs.set("Chase", 2);
   dogs.set("Rocky", 10);
+  // dogs - Map(3) {"Rubble" => 3, "Chase" => 2, "Rocky" => 10}
+
+  // Map.prototype.has(key)
+  // Returns a boolean asserting whether a value has been associated to the
+  // key in the Map object or not.
+  console.log(dogs.has("Rubble")); // true
+  console.log(dogs.has("Rockie")); // false
+
+  // Map.prototype.get(key)
+  // Returns the value associated to the key, or undefined if there is none.
+  console.log(dogs.get("Chase")); // 2
+  console.log(dogs.get("Sky")); // undefined
+
+  // Map.prototype.delete(key)
+  // Returns true if an element in the Map object existed and has been removed,
+  // or false if the element does not exist. Map.prototype.has(key) will return
+  // false afterwards.
+  dogs.delete("Rocky"); // true
+  // dogs - Map(2) {"Rubble" => 3, "Chase" => 2}
+
+  // Looping over Map in two ways.
+  // .forEach(..)
+  dogs.forEach((val, key) => console.log(val, key));
+  /*
+    3 "Rubble"
+    2 "Chase"
+  */
+
+  // for...of
+  for (const dog of dogs) {
+    console.log(dog);
+  }
+  /*
+    (2) ["Rubble", 3]
+    (2) ["Chase", 2]
+  */
+
+  // destructor
+  for (const [key, val] of dogs) {
+    console.log(key, val);
+  }
+  /*
+    Rubble 3
+    Chase 2
+  */
+
+  // Map.prototype.clear()
+  // Removes all key/value pairs from the Map object.
+  console.log(dogs.clear()); // undefined
+  // dogs - Map(0) {}
 
 </script>
 </body>
