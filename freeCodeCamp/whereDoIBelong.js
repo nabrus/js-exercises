@@ -12,8 +12,13 @@
 */
 
 function getIndexToIns(arr, num) {
-  // Find my place in this sorted array.
-  return num;
+  // let index = "";
+  const sorted = arr.sort((a, b) => a - b);
+   
+  console.log(index);
 }
 
 getIndexToIns([40, 60], 50);
+getIndexToIns([40, 4, 17, 6], 14);
+getIndexToIns([20, 3, 5], 14);
+getIndexToIns([10, 20, 30, 40, 50], 35); // 3
