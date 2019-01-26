@@ -11,7 +11,7 @@
   (index 2) and greater than 5 (index 1).
 */
 
-// My solutions: using a for...
+// My solutions: using a for(...) loop
 function getIndexToIns(arr, num) {
   const sorted = arr.sort((a, b) => a - b);
   let index = "";
