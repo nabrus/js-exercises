@@ -11,14 +11,30 @@
   (index 2) and greater than 5 (index 1).
 */
 
+// My solutions: using a for...
 function getIndexToIns(arr, num) {
-  // let index = "";
   const sorted = arr.sort((a, b) => a - b);
-   
-  console.log(index);
+  let index = "";
+  for (let i = 0; i < sorted.length; i += 1) {
+    if (sorted[i] >= num) {
+      break;
+    }
+    index = i + 1;
+  }
+  return index;
 }
 
-getIndexToIns([40, 60], 50);
-getIndexToIns([40, 4, 17, 6], 14);
-getIndexToIns([20, 3, 5], 14);
+
+// Using for iterating 
+// function getIndexToIns(arr, num) {
+//   const sorted = arr.sort((a, b) => a - b);
+
+// }
+
+getIndexToIns([40, 60], 50); // 1
+getIndexToIns([40, 4, 17, 6], 14); // 2
+getIndexToIns([20, 3, 5], 14); // 2
 getIndexToIns([10, 20, 30, 40, 50], 35); // 3
+
+const test = [10, 20, 30, 40, 50].forEach((num, i) => console.log(num > 40, i));
+
