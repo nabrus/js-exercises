@@ -12,32 +12,36 @@
 */
 
 // My solutions: using a for(...) loop
-function getIndexToIns(arr, num) {
-  const sorted = arr.sort((a, b) => a - b);
-  let index = 0;
-  for (let i = 0; i < sorted.length; i += 1) {
-    if (sorted[i] >= num) {
-      index = i;
-      break;
-    } else if (sorted[i] < num) {
-      index = i + 1;
-    }
-  }
-  // return index;
-  console.log(index);
-}
-
-// Using for iterating 
 // function getIndexToIns(arr, num) {
 //   const sorted = arr.sort((a, b) => a - b);
-
+//   let index = 0;
+//   for (let i = 0; i < sorted.length; i += 1) {
+//     if (sorted[i] >= num) {
+//       index = i;
+//       break;
+//     } else if (sorted[i] < num) {
+//       index = i + 1;
+//     }
+//   }
+//   // return index;
+//   console.log(index);
 // }
 
-getIndexToIns([40, 60], 50); // 1
-getIndexToIns([40, 4, 17, 6], 14); // 2
-getIndexToIns([20, 3, 5], 14); // 2
-getIndexToIns([10, 20, 30, 40, 50], 35); // 3
-getIndexToIns([2, 5, 10], 15); // 3
-getIndexToIns([], 1); // 0
+// Using for iterating 
+function getIndexToIns(arr, num) {
+  const sorted = arr.sort((a, b) => a - b);
+  const answer = sorted.forEach((item, i) => {
+    
+  });
 
-// const test = [10, 20, 30, 40, 50].forEach((num, i) => console.log(num > 40, i));
+}
+
+// getIndexToIns([40, 60], 50); // 1
+// getIndexToIns([40, 4, 17, 6], 14); // 2
+// getIndexToIns([20, 3, 5], 14); // 2
+// getIndexToIns([10, 20, 30, 40, 50], 35); // 3
+// getIndexToIns([2, 5, 10], 15); // 3
+// getIndexToIns([], 1); // 0
+
+const test = [10, 20, 30, 40, 50].forEach((num, i) => console.log(num > 40, i));
+test;
