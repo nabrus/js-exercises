@@ -17,13 +17,17 @@ function getIndexToIns(arr, num) {
   let index = "";
   for (let i = 0; i < sorted.length; i += 1) {
     if (sorted[i] >= num) {
+      index = i;
       break;
+    } else if (sorted[i] < num) {
+      index = i + 1;
+    } else if (sorted.length === 0) {
+      index = 0;
     }
-    index = i + 1;
   }
-  return index;
+  // return index;
+  console.log(index);
 }
-
 
 // Using for iterating 
 // function getIndexToIns(arr, num) {
@@ -35,6 +39,7 @@ getIndexToIns([40, 60], 50); // 1
 getIndexToIns([40, 4, 17, 6], 14); // 2
 getIndexToIns([20, 3, 5], 14); // 2
 getIndexToIns([10, 20, 30, 40, 50], 35); // 3
+getIndexToIns([2, 5, 10], 15); // 3
+getIndexToIns([], 1); // 0
 
-const test = [10, 20, 30, 40, 50].forEach((num, i) => console.log(num > 40, i));
-
+// const test = [10, 20, 30, 40, 50].forEach((num, i) => console.log(num > 40, i));
