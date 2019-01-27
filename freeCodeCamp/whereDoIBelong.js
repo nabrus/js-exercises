@@ -14,15 +14,13 @@
 // My solutions: using a for(...) loop
 function getIndexToIns(arr, num) {
   const sorted = arr.sort((a, b) => a - b);
-  let index = "";
+  let index = 0;
   for (let i = 0; i < sorted.length; i += 1) {
     if (sorted[i] >= num) {
       index = i;
       break;
     } else if (sorted[i] < num) {
       index = i + 1;
-    } else if (sorted.length === 0) {
-      index = 0;
     }
   }
   // return index;
