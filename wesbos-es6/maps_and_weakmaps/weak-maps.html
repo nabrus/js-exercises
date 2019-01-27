@@ -30,7 +30,38 @@
   */
 
   // Example showing the difference between a regular Map and a WeakMap.
-  
+  // 2 objects
+  let dog1 = { name: "Rubble" };
+  let dog2 = { name: "Chase" };
+
+  // 2 maps
+  const strong = new Map();
+  const weak = new WeakMap();
+
+  // add to each map
+  strong.set(dog1, "Rubble on the double!");
+  weak.set(dog2, "Chase is on the case!");
+
+  // strong - Map(1) {{…} => "Rubble on the double!"}
+  // weak - WeakMap {{…} => "Chase is on the case!"}
+
+  // strong.size - 1
+  // weak.size - undefined
+
+  // delete them
+  dog1 = null;
+  dog2 = null;
+
+  console.log(strong); // Map(1) {{…} => "Rubble on the double!"}
+  console.log(weak); // WeakMap {}
+
+  // The `strong` map still holds on to the object that no longer exists
+  // which is a memory leak because we don't have any way to reference it.
+
+  // The WeakMap (`weak`) has totally clean it up, garbage collection has
+  // taken place. No reference to the object exists. A use case of why you
+  // might use a WeakMap over a Map.
+
 
 </script>
 </body>
