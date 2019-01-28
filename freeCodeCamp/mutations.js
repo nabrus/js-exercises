@@ -15,8 +15,22 @@
 function mutation(arr) {
   let arr1 = [...arr[0].toLowerCase()];
   let arr2 = [...arr[1].toLowerCase()];
+  let idx = "";
 
+  for (let i = 0; i < arr1.length; i += 1) {
+    for (let y = 0; y < arr2.length; y += 1) {
+      if (arr2.indexOf(arr1[i]) !== -1) {
+        idx = true;
+      } else {
+        idx = false;
+      }
+    }
+  }
+  console.log(idx);
   return arr;
 }
 
-mutation(["HEllo", "hey"]);
+mutation(["hey", "hey"]);
+mutation(["zyxwvutsrqponmlkjihgfedcba", "qrstu"]); // true
+mutation(["hello", "neo"]); // false
+mutation(["voodoo", "no"]); // false
