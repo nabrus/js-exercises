@@ -13,7 +13,10 @@
 */
 
 function mutation(arr) {
+  let arr1 = [...arr[0].toLowerCase()];
+  let arr2 = [...arr[1].toLowerCase()];
+
   return arr;
 }
 
-mutation(["hello", "hey"]);
+mutation(["HEllo", "hey"]);
