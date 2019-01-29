@@ -16,21 +16,17 @@ function mutation(arr) {
   let arr1 = [...arr[0].toLowerCase()];
   let arr2 = [...arr[1].toLowerCase()];
   let idx = "";
+  let yes = [];
 
   for (let i = 0; i < arr1.length; i += 1) {
-    for (let y = 0; y < arr2.length; y += 1) {
-      if (arr2.indexOf(arr1[i])) {
-        idx = true;
-      } else {
-        idx = false;
-      }
-      // console.log(arr2.indexOf(-1));
+    if (arr2.indexOf(arr1[i]) !== -1) {
+      yes.push(arr1[i]);
     }
   }
-  console.log(idx);
+  console.log(yes);
 }
 
-// mutation(["hey", "hey"]);
-// mutation(["zyxwvutsrqponmlkjihgfedcba", "qrstu"]); // true
-// mutation(["hello", "neo"]); // false
+mutation(["hey", "hey"]);
+mutation(["zyxwvutsrqponmlkjihgfedcba", "qrstu"]); // true
+mutation(["hello", "neo"]); // false
 mutation(["voodoo", "no"]); // false
