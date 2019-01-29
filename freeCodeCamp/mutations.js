@@ -13,17 +13,18 @@
 */
 
 function mutation(arr) {
-  let arr1 = [...arr[0].toLowerCase()];
-  let arr2 = [...arr[1].toLowerCase()];
-  let idx = "";
-  let yes = [];
+  let arr1 = arr[0].toLowerCase();
+  let arr2 = arr[1].toLowerCase();
+  // let idx = "";
+  // let arr3 = arr[1].toLowerCase();
+  // console.log(arr3);
 
-  for (let i = 0; i < arr1.length; i += 1) {
-    if (arr2.indexOf(arr1[i]) !== -1) {
-      yes.push(arr1[i]);
+  for (let i = 0; i < arr2.length; i += 1) {
+    if (arr1.indexOf(arr2[i]) < 0) {
+      console.log(false)
     }
   }
-  console.log(yes);
+  console.log(true);
 }
 
 mutation(["hey", "hey"]);
