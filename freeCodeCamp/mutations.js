@@ -12,12 +12,10 @@
   "line" are present in "Alien".
 */
 
+// My solution:
 function mutation(arr) {
   let arr1 = arr[0].toLowerCase();
   let arr2 = arr[1].toLowerCase();
-  // let idx = "";
-  // let arr3 = arr[1].toLowerCase();
-  // console.log(arr3);
 
   for (let i = 0; i < arr2.length; i += 1) {
     if (arr1.indexOf(arr2[i]) < 0) {
@@ -25,6 +23,28 @@ function mutation(arr) {
     }
   }
   console.log(true);
+}
+
+// freeCodeCamp solutions
+// Basic
+function mutation1(arr) {
+  var test = arr[1].toLowerCase();
+  var target = arr[0].toLowerCase();
+  for (var i=0;i<test.length;i++) {
+    if (target.indexOf(test[i]) < 0)
+      return false;
+  }
+  return true;
+ }
+
+ // Intermediate
+ function mutation2(arr) {
+  return arr[1].toLowerCase()
+    .split('')
+    .every(function(letter) {
+      return arr[0].toLowerCase()
+        .indexOf(letter) != -1;
+    });
 }
 
 mutation(["hey", "hey"]);
