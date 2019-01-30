@@ -25,7 +25,7 @@ function mutation(arr) {
   console.log(true);
 }
 
-// solution I was working towards - .every(..) was what I was missing
+// solution I was working towards initially - .every(..) was what I was missing
 function mutation(arr) {
   return [...arr[1].toLowerCase()]
     .every(letter => arr[0]
