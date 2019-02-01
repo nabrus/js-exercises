@@ -20,6 +20,19 @@
 //   console.log(newArr);
 // }
 
+// refactor to eliminate .splice(..), it mutates orig array
+// This is the advanced freeCodeCamp solution
+// function chunkArrayInGroups(arr, size) {
+//   const newArr = [];
+//   let i = 0;
+
+//   while (i < arr.length) {
+//     newArr.push(arr.slice(i, i + size));
+//     i += size;
+//   }
+//   console.log(newArr);
+// }
+
 function chunkArrayInGroups(arr, size) {
   
 }
