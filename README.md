@@ -80,9 +80,9 @@ var g = gen(); // "Generator { }"
 ```
  
 *  [Generators](https://github.com/nabrus/js-exercises/tree/master/wesbos-es6/generators)
-    [Basics](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/generators/generators.html)
-    [Ajax Requests](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/generators/generators-sync-ish-ajax.html): Yielding code until a request is returned before moving to the next.
-    [Looping](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/generators/looping-generators.html): Using a `for...of` loop.
+    *  [Basics](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/generators/generators.html)
+    *  [Ajax Requests](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/generators/generators-sync-ish-ajax.html): Yielding code until a request is returned before moving to the next.
+    *  [Looping](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/generators/looping-generators.html): Using a `for...of` loop.
 
 ### Source Material
 *  [MDN web docs](https://developer.mozilla.org)
