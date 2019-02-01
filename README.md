@@ -1,6 +1,6 @@
 # JavaScript Exercises and Examples
 
-This repository is a container for my ongoing learning of JavaScript. Review material, lessons, examinations, etc are stored here.
+This repository is a container for my continuous study of JavaScript. Review material, lessons, examinations, etc are stored here.
 
 ## [ES6](https://github.com/nabrus/js-exercises/tree/master/wesbos-es6) Index
 
