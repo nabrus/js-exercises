@@ -68,4 +68,4 @@ function chunkArrayInGroups(arr, size) {
 // }
 
 
-chunkArrayInGroups(["a", "b", "c", "d"], 2);
+chunkArrayInGroups(["a", "b", "c", "d"], 3); // [["a", "b", "c"], ["d"]]
