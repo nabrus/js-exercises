@@ -84,6 +84,8 @@ var g = gen(); // "Generator { }"
     *  [Ajax Requests](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/generators/generators-sync-ish-ajax.html): Yielding code until a request is returned before moving to the next.
     *  [Looping](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/generators/looping-generators.html): Using a `for...of` loop.
 
+*  [Proxies](https://github.com/nabrus/js-exercises/tree/master/wesbos-es6/proxies): `const p = new Proxy(target, handler);`
+
 ### Source Material
 *  [MDN web docs](https://developer.mozilla.org)
 *  [You Don't Know JS (book series)](https://github.com/getify/You-Dont-Know-JS) by Kyle Simpson.
