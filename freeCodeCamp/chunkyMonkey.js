@@ -31,6 +31,7 @@ function chunkArrayInGroups(arr, size) {
     i += size;
   }
   console.log(newArr);
+  return newArr;
 }
 
 
