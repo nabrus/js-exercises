@@ -85,6 +85,9 @@ var g = gen(); // "Generator { }"
     *  [Looping](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/generators/looping-generators.html): Using a `for...of` loop.
 
 *  [Proxies](https://github.com/nabrus/js-exercises/tree/master/wesbos-es6/proxies): `const p = new Proxy(target, handler);`
+    *  [Introduction](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/proxies/proxies-intro.html)
+    *  [1st Example](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/proxies/proxies-phone-numbers.html): Handling phone numbers, using `set(...)` and `get(...)` traps.
+    *  [2nd Example](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/proxies/proxies-case-safety.html): A check and warning of common mistakes that can be made in shared code.
 
 ### Source Material
 *  [MDN web docs](https://developer.mozilla.org)
