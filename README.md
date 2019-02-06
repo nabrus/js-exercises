@@ -89,6 +89,8 @@ var g = gen(); // "Generator { }"
     *  [1st Example](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/proxies/proxies-phone-numbers.html): Handling phone numbers, using `set(...)` and `get(...)` traps.
     *  [2nd Example](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/proxies/proxies-case-safety.html): A check and warning of common mistakes that can be made in shared code.
 
+*  [`Set` and `WeakSet` Objects](https://github.com/nabrus/js-exercises/tree/master/wesbos-es6/sets_and_weaksets)
+
 ### Source Material
 *  [MDN web docs](https://developer.mozilla.org)
 *  [You Don't Know JS (book series)](https://github.com/getify/You-Dont-Know-JS) by Kyle Simpson.
