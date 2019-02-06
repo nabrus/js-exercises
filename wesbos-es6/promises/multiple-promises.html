@@ -62,10 +62,10 @@
 
   Promise
     .all([postsPromise, streetCarsPromise]) // when both resolve...
-    .then(responses => { // ...run resolve.json on them
+    .then(responses => {                    // ...run resolve.json on them
       return Promise.all(responses.map(res => res.json())); 
-    }) // which basically resolves instantly 
-    .then(responses => { // then final promise is called
+    })                                      // which basically resolves instantly 
+    .then(responses => {                    // then final promise is called
       console.log(responses);
     });
 
