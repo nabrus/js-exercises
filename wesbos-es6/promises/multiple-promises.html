@@ -8,6 +8,12 @@
 <script>
 
   /*
+
+    The Promise.all() method returns a single Promise that resolves when all
+    of the promises passed as an iterable have resolved or when the iterable
+    contains no promises. It rejects with the reason of the first promise that
+    rejects. -MDN Definition 
+
     To maximize efficiency we should use concurrency, multiple asynchronous
     operations happening together. With promises, we can do this with the
     function Promise.all(..).
@@ -39,7 +45,7 @@
   //   }, 500);
   // });
 
-  // // Instead of chaining .then(..), we can use .all(..) 
+  // // Instead of chaining .then(..), we can use Promise.all(..) 
   // // pass in an array of promises and call .then() against that.
   // Promise
   //   .all([weather, tweets])
@@ -49,7 +55,7 @@
   //     const [weatherInfo, tweetsInfo] = responses;
   //     console.log(weatherInfo, tweetsInfo);
   //   })
-  // With .all(..), we wait for all promises to resolve before 
+  // With Promise.all(..), we wait for all promises to resolve before 
   // running .then(..). So the example above will take 2 
   // seconds to resolve.
 
