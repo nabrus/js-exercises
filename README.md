@@ -90,7 +90,7 @@ var g = gen(); // "Generator { }"
     *  [2nd Example](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/proxies/proxies-case-safety.html): A check and warning of common mistakes that can be made in shared code.
 
 *  [`Set` and `WeakSet` Objects](https://github.com/nabrus/js-exercises/tree/master/wesbos-es6/sets_and_weaksets)
-    *  [`Set` Object](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/sets_and_weaksets/sets.html): `new Set([iterable]);`
+    *  [`Set` Object Intro](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/sets_and_weaksets/sets.html): `new Set([iterable]);`
 
 ### Source Material
 *  [MDN web docs](https://developer.mozilla.org)
