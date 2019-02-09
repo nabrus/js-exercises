@@ -92,6 +92,7 @@ var g = gen(); // "Generator { }"
 *  [`Set` and `WeakSet` Objects](https://github.com/nabrus/js-exercises/tree/master/wesbos-es6/sets_and_weaksets)
     *  [`Set` Object](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/sets_and_weaksets/sets.html): `new Set([iterable]);`
     *  [`Set` Example](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/sets_and_weaksets/sets-brunch.html)
+    *  [`WeakSet` Object](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/sets_and_weaksets/weak-sets.html): `new WeakSet([iterable]);`
 
 ### Source Material
 *  [MDN web docs](https://developer.mozilla.org)
