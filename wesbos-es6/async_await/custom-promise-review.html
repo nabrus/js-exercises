@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Custom Promises</title>
+</head>
+
+<body>
+  <script>
+
+    // Example of a function that waits some time before the
+    // next task using callback functions. Which can lead to what
+    // is know as "callback hell".
+
+    // breathe(1000, function() {
+    //   breathe(2000, function() {
+    //     breathe(1000, function() {
+    //       breathe(1000, function() {
+    //         breathe(4000, function() {
+    //           breathe(1000, function() {
+    //             // return something
+    //           });
+    //         });
+    //       });
+    //     });
+    //   });
+    // });
+
+
+    // A solution to avoid this is allow your function to return a `Promise`.
+    // Breathe function takes in the amount of time before running as arg.
+    // The return is the resolved promise
+    function breathe(amount) {
+      return new Promise((resolve, reject) => {
+        if (amount < 500) {
+          reject("That is too small of a value!");
+        }
+        setTimeout(() => resolve(`Done for ${amount} ms`), amount);
+      });
+    }
+
+    breathe(2000).then(res => {
+      console.log(res);
+      return breathe(500); // You can return another breathe function
+    }).then(res => {       // and more `.then`s can be added since the
+      console.log(res);    // you are returning promises.
+      return breathe(2000);
+    }).then(res => {
+      console.log(res);
+      return breathe(1000);
+    }).then(res => {
+      console.log(res);
+      return breathe(750);
+    }).then(res => {
+      console.log(res);
+      return breathe(600);
+    }).then(res => {
+      console.log(res);
+      return breathe(300);
+    }).then(res => {
+      console.log(res);
+      return breathe(1000);
+    }).then(res => {
+      console.log(res);
+    }).catch(err => {    // add .catch for error handling
+      console.error(err);
+      console.error("What a maroon!");
+    })
+
+  </script>
+</body>
+
+</html>
