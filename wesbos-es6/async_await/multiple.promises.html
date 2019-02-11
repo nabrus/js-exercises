@@ -38,6 +38,7 @@
       {login: "stolinski", id: 669383, node_id: "MDQ6VXNlcjY2OTM4Mw=="...}
     */
 
+    // another way of doing it
     async function getData(names) {
       const promises = names.map(name => fetch(`https://api.github.com/users/${name}`).then(r => r.json()));
       const [wes, scott] = await Promise.all(promises);
