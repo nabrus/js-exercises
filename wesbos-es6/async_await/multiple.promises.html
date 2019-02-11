@@ -7,12 +7,49 @@
 
 <body>
   <script>
+
     async function go() {
+      // `.then(res => res.json());` can be tacked on the end of each
+      // to retrieve the json data. With fetch you get the data then
+      // you need to turn it into json. Or...
       const p1 = fetch('https://api.github.com/users/wesbos');
       const p2 = fetch('https://api.github.com/users/stolinski');
+      // Using a `Promise.all(...)` to wait for both to come back
+      const res = await Promise.all([p1, p2]);
+      // ...we can `.map(...)` over them
+      const dataPromises = res.map(r => r.json());
+      // const wesAndScott = await Promise.all(dataPromises);
+      // console.log(wesAndScott) would be first output below
+
+      // destructuring - second output below
+      const [wes, scott] = await Promise.all(dataPromises);
+      console.log(wes, scott);
     }
 
-    go();
+    // go();
+    /* using wesAndScott
+      (2) [{…}, {…}]
+         0: {login: "wesbos", id: 176013, node_id: "MDQ6V...}
+         1: {login: "stolinski", id: 669383, node_id: "MDQ6V...}
+    */
+
+    /* using [wes, scott]
+      {login: "wesbos", id: 176013, node_id: "MDQ6VXNlcjE3NjAxMw==", a...}
+      {login: "stolinski", id: 669383, node_id: "MDQ6VXNlcjY2OTM4Mw=="...}
+    */
+
+    async function getData(names) {
+      const promises = names.map(name => fetch(`https://api.github.com/users/${name}`).then(r => r.json()));
+      const [wes, scott] = await Promise.all(promises);
+      console.log(wes, scott);
+    }
+
+    getData(["wesbos", "stolinski"]);
+    /* 
+      {login: "wesbos", id: 176013, node_id: "MDQ6VXNlcjE3NjAxMw==", a...}
+      {login: "stolinski", id: 669383, node_id: "MDQ6VXNlcjY2OTM4Mw=="...}
+    */
+
   </script>
 </body>
 
