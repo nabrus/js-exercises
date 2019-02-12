@@ -8,7 +8,24 @@
 <body>
   <script>
 
-    
+    /*
+      How to use promises when only callbacks are used.
+
+      An example using Navigator.geolocation* which is an older API that
+      is callback based.
+
+        *The Navigator.geolocation read-only property returns a Geolocation
+        object that gives Web content access to the location of the device.
+        This allows a Web site or app to offer customized results based on the
+        user's location.
+    */
+
+    // How it is used now with callbacks
+    navigator.geolocation.getCurrentPosition(function(pos) {
+      console.log("Allowed");
+    }, function(err) {
+        console.log("Request denied!");
+    });
 
   </script>
 </body>
