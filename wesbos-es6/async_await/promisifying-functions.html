@@ -21,11 +21,29 @@
     */
 
     // How it is used now with callbacks
-    navigator.geolocation.getCurrentPosition(function(pos) {
-      console.log("Allowed");
-    }, function(err) {
-        console.log("Request denied!");
-    });
+    // navigator.geolocation.getCurrentPosition(function(pos) {
+    //   console.log("Allowed");
+    //   console.log(pos);
+    // }, function(err) {
+    //     console.log("Request denied!");
+    //     console.log(err);
+    // });
+
+    // Promisify
+      function getCurrentPosition() { // func name same as method
+        return new Promise((resolve, reject) => {
+          navigator.geolocation.getCurrentPosition(resolve, reject);
+        });
+      }
+
+      async function go() {
+        console.log("Starting...");
+        const pos = await getCurrentPosition();
+        console.log(pos);
+        console.log("Finished.");
+      }
+
+      go();
 
   </script>
 </body>
