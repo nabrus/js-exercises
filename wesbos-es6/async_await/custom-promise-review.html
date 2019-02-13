@@ -42,7 +42,7 @@
     breathe(2000).then(res => {
       console.log(res);
       return breathe(500); // You can return another breathe function
-    }).then(res => {       // and more `.then`s can be added since the
+    }).then(res => {       // and more `.then`s can be added since
       console.log(res);    // you are returning promises.
       return breathe(2000);
     }).then(res => {
