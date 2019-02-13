@@ -7,8 +7,82 @@
 
 <body>
   <script>
-    const strings = ['short', 'medium size', 'this is really really long'];
+
+    /*
+      str.padStart(targetLength [, padString])
+
+      The padStart() method pads the current string with another string
+      (multiple times, if needed) until the resulting string reaches the given
+      length. The padding is applied from the start (left) of the current
+      string.
+
+     */
+
+    // .padStart(..) basic example with just targetLength
+    "steve".padStart(10);
+    // output: "     steve"
+
+    // using the second arg, padString—what to pad it with
+    // note: space is the default padString
+    "steve".padStart(10, "*");
+    // output: "*****steve"
+
+    /*
+      str.padEnd(targetLength [, padString])
+
+      The padEnd() method pads the current string with a given string
+      (repeated, if needed) so that the resulting string reaches a given
+      length. The padding is applied from the end (right) of the current
+      string.
+
+     */
+
+    // .padEnd(..)
+    "steve".padEnd(10);
+    // output: "steve     "
     
+    // With second arg (padString)
+    "steve".padEnd(10, "-");
+    // output: "steve-----"
+
+    // some examples
+    // const strings = ["short", "medium size", "this is really really long"];
+
+    // Right align all strings in an array
+    // strings.forEach(str => console.log(str.padStart(30)));
+
+    /* 
+                               short
+                         medium size
+          this is really really long
+    */
+    
+    // Aligning based on the longest item in array
+    // I made an adjustment to .sort to get this to work. 
+    // Wes' solution didn't work
+    const strings1 = ["short", "medium size", "this is really really long"];
+    const longest = strings1.sort((a, b) => b.length - a.length).map(str => str.length)[0];
+    strings1.forEach(str => console.log(str.padStart(longest)));
+
+    /*
+      this is really really long
+                     medium size
+                           short
+    */
+
+
+    // Wes' example - doesn't get correct result?
+    const strings = ['short', 'medium size', 'this is really really long', 'this is really reall really really really really long'];
+    const longestString = strings.sort(str => str.length).map(str => str.length)[0];
+    strings.forEach(str => console.log(str.padStart(longestString)));
+
+    /*
+      short
+      medium size
+      this is really really long
+      this is really reall really really really really long
+    */
+
   </script>
 </body>
 
