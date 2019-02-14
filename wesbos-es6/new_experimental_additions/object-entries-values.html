@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Object .entries() and .values()</title>
+</head>
+
+<body>
+  <script>
+
+    /*
+      The Object.keys() method returns an array of a given object's own
+      property names, in the same order as we get with a normal loop.
+
+      The Object.values() method returns an array of a given object's own
+      enumerable property values, in the same order as that provided by a
+      for...in loop (the difference being that a for-in loop enumerates
+      properties in the prototype chain as well).
+
+      The Object.entries() method returns an array of a given object's own
+      enumerable property [key, value] pairs, in the same order as that
+      provided by a for...in loop (the difference being that a for-in loop
+      enumerates properties in the prototype chain as well) . The order of the
+      array returned by Object.entries() does not depend on how an object is
+      defined. If there is a need for certain ordering then the array needs to
+      be sorted first like Object.entries(obj).sort((a, b) => a[0] - b[0]);.
+    */
+    
+    const inventory = {
+      backpacks: 10,
+      jeans: 23,
+      hoodies: 4,
+      shoes: 11
+    };
+
+    // Make a nav for the inventory
+
+    // tell us how many values we have
+
+    // Print an inventory list with numbers
+
+  </script>
+</body>
+
+</html>
