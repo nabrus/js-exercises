@@ -25,13 +25,24 @@
       defined. If there is a need for certain ordering then the array needs to
       be sorted first like Object.entries(obj).sort((a, b) => a[0] - b[0]);.
     */
-    
+
     const inventory = {
       backpacks: 10,
       jeans: 23,
       hoodies: 4,
       shoes: 11
     };
+
+    console.log(Object.keys(inventory));
+    /*
+      (4) ["backpacks", "jeans", "hoodies", "shoes"]
+        0: "backpacks"
+        1: "jeans"
+        2: "hoodies"
+        3: "shoes"
+        length: 4
+        __proto__: Array(0)
+    */
 
     // Make a nav for the inventory
 
