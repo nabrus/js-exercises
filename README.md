@@ -95,6 +95,8 @@ var g = gen(); // "Generator { }"
     *  [`WeakSet` Object](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/sets_and_weaksets/weak-sets.html): `new WeakSet([iterable]);`
 
 *  [`async`/`await`](https://github.com/nabrus/js-exercises/tree/master/wesbos-es6/async_await)
+    *  [Native Promises Review](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/async_await/native-promises-review.html)
+    *  [Custom Promises Review](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/async_await/custom-promise-review.html)
 
 ### Source Material
 *  [MDN web docs](https://developer.mozilla.org)
