@@ -62,6 +62,9 @@
         __proto__: Array(0)
     */
     // tell us how many values we have
+    const totalInventory = Object.values(inventory).reduce((a, b) => a + b);
+    console.log(totalInventory); // 48
+  
 
     // Object.entries gives arrays of the key/value pairs
     console.log(Object.entries(inventory));
@@ -75,6 +78,27 @@
         __proto__: Array(0)
     */
     // Print an inventory list with numbers
+    const invList = Object.entries(inventory).forEach(([key, val]) => {
+      console.log(key, val);
+    });
+    /*
+      backpacks 10
+      jeans 23
+      hoodies 4
+      shoes 11
+    */
+
+
+    // for...of can be used to iterate with the benefit of using
+    // the break keyword
+    for (const [key, val] of Object.entries(inventory)) {
+      console.log(key, val);
+      if (key === "jeans") break;
+    }
+    /*
+      backpacks 10
+      jeans 23
+    */
 
   </script>
 </body>
