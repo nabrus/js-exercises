@@ -33,6 +33,7 @@
       shoes: 11
     };
 
+    // Object.keys will give an array of the keys
     console.log(Object.keys(inventory));
     /*
       (4) ["backpacks", "jeans", "hoodies", "shoes"]
@@ -43,11 +44,36 @@
         length: 4
         __proto__: Array(0)
     */
-
     // Make a nav for the inventory
+    const nav = Object.keys(inventory).map(item => `<li>${item}</li>`).join("");
+    console.log(nav);
+    // <li>backpacks</li><li>jeans</li><li>hoodies</li><li>shoes</li>
 
+
+    // Object.values gives an array of values
+    console.log(Object.values(inventory));
+    /*
+      (4) [10, 23, 4, 11]
+        0: 10
+        1: 23
+        2: 4
+        3: 11
+        length: 4
+        __proto__: Array(0)
+    */
     // tell us how many values we have
 
+    // Object.entries gives arrays of the key/value pairs
+    console.log(Object.entries(inventory));
+    /*
+      (4) [Array(2), Array(2), Array(2), Array(2)]
+        0: (2) ["backpacks", 10]
+        1: (2) ["jeans", 23]
+        2: (2) ["hoodies", 4]
+        3: (2) ["shoes", 11]
+        length: 4
+        __proto__: Array(0)
+    */
     // Print an inventory list with numbers
 
   </script>
