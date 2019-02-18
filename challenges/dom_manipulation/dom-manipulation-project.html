@@ -14,6 +14,15 @@
 				max-width: 40em;
 				width: 88%;
 			}
+
+			.accordion-content {
+				display: none;
+			}
+
+			.accordion-content.active {
+				display: block;
+			}
+			
 		</style>
 	</head>
 
@@ -56,7 +65,34 @@
 
 		<!-- Scripts -->
 		<script>
-			// Code goes here...
+			// Listen for clicks on the document 
+			document.addEventListener("click", e => {
+
+				// Bail if not .accordion-toggle class
+				if (!e.target.classList.contains("accordion-toggle")) return;
+
+				// Get the target content
+				const content = document.querySelector(e.target.hash);
+				if (!content) return;
+
+				// Prevent default link behavior. Eliminates jarring visual
+				// page jump.
+				event.preventDefault();
+
+				// If the content is already expanded, collapse it and quit
+				if (content.classList.contains("active")) {
+					content.classList.remove("active");
+					return;
+				}
+
+				// Get all open accordion content, iterate through and close it
+				const active = Array.from(document.querySelectorAll(".accordion-content.active"));
+			  active.forEach(item => item.classList.remove("active"));
+
+				// Open our content
+				content.classList.add("active");
+			});
+
 		</script>
 	</body>
 </html>
