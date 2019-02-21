@@ -98,7 +98,7 @@ var g = gen(); // "Generator { }"
     *  [Native Promises Review](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/async_await/native-promises-review.html)
     *  [Custom Promises Review](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/async_await/custom-promise-review.html)
     *  [`async`/`await`](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/async_await/async-await.html): Basic usage with examples of error handling using either `try...catch` or a higher-order function.
-    *  ["`Promise`ifying" Functions](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/async_await/promisifying-functions.html): How to use promises in a situation where callbacks are used. 
+    *  ["Promisifying" Functions](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/async_await/promisifying-functions.html): How to use promises in a situation where callbacks are used. 
 
 ### Source Material
 *  [MDN web docs](https://developer.mozilla.org)
