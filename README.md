@@ -101,6 +101,7 @@ var g = gen(); // "Generator { }"
     *  ["Promisifying" Functions](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/async_await/promisifying-functions.html): How to use promises in a situation where callbacks are used. 
 
 *  [ESPlus](https://github.com/nabrus/js-exercises/tree/master/wesbos-es6/new_experimental_additions)
+    *  [`padStart()` and `padEnd()`](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/new_experimental_additions/padstart-and-padend.html): String methods that apply padding.
 
 ### Source Material
 *  [MDN web docs](https://developer.mozilla.org)
