@@ -32,6 +32,30 @@
         use as much of the screen area as possible to play the game in.
       */
 
+      // Grabbing the <div> and then the width and height of the viewport
+      // (the inner window, where your doc is displayed) and storing in
+      // variables.
+      const div = document.querySelector("div");
+      let WIDTH = window.innerWidth;
+      let HEIGHT = window.innerHeight;
+
+      // Dynamically alter the width and height of the dev to equal that
+      // of the viewport.
+      div.style.width = `${WIDTH}px`;
+      div.style.height = `${HEIGHT}px`;
+
+      // The above code only resizes the div once.  
+      // Getting the div to resize when the window gets resized using
+      // `Window.onresize`.
+      window.onresize = () => {
+        WIDTH = window.innerWidth;
+        HEIGHT = window.innerHeight;
+        div.style.width = `${WIDTH}px`;
+        div.style.height = `${HEIGHT}px`;
+      }
+
+
+
     </script>
   </body>
 </html>
