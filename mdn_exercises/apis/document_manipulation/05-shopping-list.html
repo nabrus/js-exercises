@@ -72,7 +72,7 @@
 
         // 10. Attach event handler to delete button, so that when clicked it
         // will delete the entire list item it is inside.
-        delBtn.addEventListener("click", () => {
+        delBtn.addEventListener("click", () => { // mdn had the `e` as arg
           list.removeChild(listItem);
         });
 
