@@ -31,6 +31,57 @@
 
     <script>
 
+      /*
+        a simple shopping list example that allows you to dynamically add items
+        to the list using a form input and button. When you add an item to the
+        input and press the button:
+
+          The item should appear in the list.
+
+          Each item should be given a button that can be pressed to delete that
+          item off the list.
+
+          The input should be emptied and focused ready for you to enter
+          another item.
+      */
+
+      // 2. Three vars holding references to <ul>, <input>, and <button>
+      // elements.
+      const list = document.querySelector("ul");
+      const input = document.querySelector("#item");
+      const btn = document.querySelector("button");
+
+      // 3. Function that runs in response to the button being clicked.
+      function addItem() {
+        const val = input.value; // 4. Store value of input element
+        input.value = ""; // 5. Empty the input element, set to an empty string
+
+        // 6. Create 3 new elements: <li>, <span>, and <button>
+        const listItem = document.createElement("li");
+        const span = document.createElement("span");
+        const delBtn = document.createElement("button");
+
+        // 7. Append span and button as children of the list item
+        listItem.appendChild(span);
+        listItem.appendChild(delBtn);
+        span.textContent = val; // 8. Set span text to input element value
+        delBtn.textContent = "Delete"; // 8. Set button text to 'Delete'
+
+        // 9. Append list item as a child of the list
+        list.appendChild(listItem);
+
+        // 10. Attach event handler to delete button, so that when clicked it
+        // will delete the entire list item it is inside.
+        delBtn.addEventListener("click", () => {
+          list.removeChild(listItem);
+        });
+
+        // Focus the input element back, ready for entering next list item
+        input.focus();
+      }
+
+      btn.addEventListener("click", addItem);
+
     </script>
   </body>
 </html>
