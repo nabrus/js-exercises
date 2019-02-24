@@ -32,6 +32,20 @@
         // of the section
         sect.appendChild(linkPara);
 
+        // Make a copy of the paragraph with the link and move add that to 
+        // bottom of the section - `var dupNode = node.cloneNode([deep]);`
+        const dupLinkPara = linkPara.cloneNode(true);
+        sect.appendChild(dupLinkPara);
+
+        // Removing a node when you have a reference to the node to be 
+        // removed and its parent - `Node.removeChild()`
+        sect.removeChild(dupLinkPara);
+        // Removes the dup added at the bottom of section
+
+        // Removing a node based only on a reference to itself
+        linkPara.parentNode.removeChild(linkPara);
+        // Removes linkPara that remained at the bottom of section
+
       </script>
   </body>
 </html>
