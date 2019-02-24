@@ -11,9 +11,28 @@
       </section>
 
       <script>
-      
+
+        // Creating and Placing New Nodes
+        
+        // Selecting the <a> tag using `Document.querySelector()`
         const link = document.querySelector("a");
-        link.textContent = "Mozilla Developer Network";
+        link.textContent = "Mozilla Developer Network"; 
+        link.href = "https://developer.mozilla.org"; 
+
+        // Selecting the <section> tag
+        const sect = document.querySelector("section");
+        // Creating an element using `Document.createElement()`
+        const para = document.createElement("p");
+        para.textContent = "We hope you enjoyed the ride.";
+        // Appending the newly created paragraph at the end of section
+        sect.appendChild(para);
+
+        // Create a text node using `Document.createTextNode()`
+        const text = document.createTextNode(" — the premier source for web development knowledge.");
+        // Grab a reference to the paragraph the link is inside, append 
+        // the text node to it
+        const linkPara = document.querySelector("p");
+        linkPara.appendChild(text);
 
       </script>
   </body>
