@@ -102,6 +102,7 @@ var g = gen(); // "Generator { }"
 
 *  [ESPlus](https://github.com/nabrus/js-exercises/tree/master/wesbos-es6/new_experimental_additions)
     *  [`padStart()` and `padEnd()`](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/new_experimental_additions/padstart-and-padend.html): String methods that apply padding.
+    *  [`Object.entries()` and `Object.values()`](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/new_experimental_additions/object-entries-values.html)
 
 ### Source Material
 *  [MDN web docs](https://developer.mozilla.org)
