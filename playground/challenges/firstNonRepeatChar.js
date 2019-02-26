@@ -12,8 +12,13 @@
 
   If a string contains all repeating characters, it should return an empty
   string ("") or None.
-*/
 
-function firstNonRepeatingLetter(s) {
-  // Add your code here
-}
+  */
+ 
+ function firstNonRepeatingLetter(s) {
+   // Add your code here
+  }
+
+firstNonRepeatingLetter("a"); // a
+firstNonRepeatingLetter("stress"); // t
+firstNonRepeatingLetter("moonmen"); // e
