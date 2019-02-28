@@ -14,11 +14,14 @@
   string ("") or None.
 
   */
- 
- function firstNonRepeatingLetter(s) {
-   // Add your code here
-  }
+
+function firstNonRepeatingLetter(s) {
+  // Split string into an array of characters
+  const arr = s.split("");
+}
 
 firstNonRepeatingLetter("a"); // a
 firstNonRepeatingLetter("stress"); // t
 firstNonRepeatingLetter("moonmen"); // e
+
+console.log(firstNonRepeatingLetter("stress"));
