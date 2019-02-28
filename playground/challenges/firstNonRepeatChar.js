@@ -15,19 +15,33 @@
 
   */
 
+// function firstNonRepeatingLetter(s) {
+//   // Split string into an array of characters
+
+//   for (let i = 0; i < s.length; i++) {
+//     if (s.indexOf(s.charAt(i)) === s.lastIndexOf(s.charAt(i))) {
+//       console.log(s.charAt(i));
+//       break;
+//     }
+//   }
+// }
+
 function firstNonRepeatingLetter(s) {
-  // Split string into an array of characters
+  const bucket = [];
+  let count = [];
 
   for (let i = 0; i < s.length; i++) {
-    if (s.indexOf(s.charAt(i)) === s.lastIndexOf(s.charAt(i))) {
-      console.log(s.charAt(i));
-      break;
+    for (let y = 0; y < s.length; y++) {
+      if (s[i] === s[y]) {
+        count++;
+      }
     }
   }
+  console.log(count);
 }
 
-firstNonRepeatingLetter("a"); // a
+// firstNonRepeatingLetter("a"); // a
 firstNonRepeatingLetter("stress"); // t
-firstNonRepeatingLetter("moonmen"); // e
+// firstNonRepeatingLetter("moonmen"); // e
 
 // console.log(firstNonRepeatingLetter("stress"));
