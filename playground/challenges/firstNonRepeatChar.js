@@ -17,11 +17,17 @@
 
 function firstNonRepeatingLetter(s) {
   // Split string into an array of characters
-  const arr = s.split("");
+
+  for (let i = 0; i < s.length; i++) {
+    if (s.indexOf(s.charAt(i)) === s.lastIndexOf(s.charAt(i))) {
+      console.log(s.charAt(i));
+      break;
+    }
+  }
 }
 
 firstNonRepeatingLetter("a"); // a
 firstNonRepeatingLetter("stress"); // t
 firstNonRepeatingLetter("moonmen"); // e
 
-console.log(firstNonRepeatingLetter("stress"));
+// console.log(firstNonRepeatingLetter("stress"));
