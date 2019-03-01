@@ -27,21 +27,29 @@
 // }
 
 function firstNonRepeatingLetter(s) {
-  const bucket = [];
-  let count = [];
+  const arr = s.toLowerCase().split("");
+  const bucket = [arr, 0];
+  let nonRepeatIndex = [];
 
-  for (let i = 0; i < s.length; i++) {
-    for (let y = 0; y < s.length; y++) {
-      if (s[i] === s[y]) {
-        count++;
-      }
+  // for (let i = 0; i < arr.length; i++) {
+  //   for (let y = 0; y < arr.length; y++) {
+  //     if (arr[i] === arr[y]) {
+  //       bucket.push(arr[i]);
+  //     }
+  //   }
+  // }
+  arr.map(letter => {
+    if (letter === arr[0]) {
+      bucket[1] += 1;
+    } else if (letter !== arr[0]){
+      
     }
-  }
-  console.log(count);
+  });
+  console.log(bucket);
 }
 
 // firstNonRepeatingLetter("a"); // a
-firstNonRepeatingLetter("stress"); // t
+firstNonRepeatingLetter("streess"); // t
 // firstNonRepeatingLetter("moonmen"); // e
 
 // console.log(firstNonRepeatingLetter("stress"));
