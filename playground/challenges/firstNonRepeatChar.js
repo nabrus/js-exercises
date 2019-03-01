@@ -30,6 +30,7 @@ function firstNonRepeatingLetter(s) {
   const arr = s.toLowerCase().split("");
   const bucket = [arr, 0];
   let nonRepeatIndex = [];
+  let count = 0;
 
   // for (let i = 0; i < arr.length; i++) {
   //   for (let y = 0; y < arr.length; y++) {
@@ -39,17 +40,16 @@ function firstNonRepeatingLetter(s) {
   //   }
   // }
   arr.map(letter => {
-    if (letter === arr[0]) {
+    if (letter === bucket[0]) {
       bucket[1] += 1;
-    } else if (letter !== arr[0]){
-      
     }
   });
-  console.log(bucket);
+  console.log(bucket[1]);
+  console.log(count);
 }
 
 // firstNonRepeatingLetter("a"); // a
-firstNonRepeatingLetter("streess"); // t
+firstNonRepeatingLetter("stress"); // t
 // firstNonRepeatingLetter("moonmen"); // e
 
 // console.log(firstNonRepeatingLetter("stress"));
