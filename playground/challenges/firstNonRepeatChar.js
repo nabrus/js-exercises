@@ -28,24 +28,17 @@
 
 function firstNonRepeatingLetter(s) {
   const arr = s.toLowerCase().split("");
-  const bucket = [arr, 0];
-  let nonRepeatIndex = [];
-  let count = 0;
+  const bucket = [[], 0];
 
-  // for (let i = 0; i < arr.length; i++) {
-  //   for (let y = 0; y < arr.length; y++) {
-  //     if (arr[i] === arr[y]) {
-  //       bucket.push(arr[i]);
-  //     }
-  //   }
-  // }
-  arr.map(letter => {
-    if (letter === bucket[0]) {
-      bucket[1] += 1;
+  for (let i = 0; i < arr.length; i += 1 ) {
+    for (let y = 0; y < arr.length; y += 1) {
+      if (arr[i] === arr[y]) {
+        bucket[0].push(arr[i]);
+        if (bucket[1] === arr[i]) { break; }
+      }
     }
-  });
-  console.log(bucket[1]);
-  console.log(count);
+  }
+  console.log(bucket)
 }
 
 // firstNonRepeatingLetter("a"); // a
