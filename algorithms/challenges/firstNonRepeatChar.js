@@ -16,30 +16,40 @@
   */
 
 // function firstNonRepeatingLetter(s) {
-//   // Split string into an array of characters
+//   const lowerCase = s.toLowerCase();
 
-//   for (let i = 0; i < s.length; i++) {
-//     if (s.indexOf(s.charAt(i)) === s.lastIndexOf(s.charAt(i))) {
-//       console.log(s.charAt(i));
-//       break;
+//   if (lowerCase === "") {
+//     return "";
+//   }
+
+//   for (let i = 0; i < s.length; i += 1) {
+//     if (lowerCase.indexOf(lowerCase.charAt(i)) === lowerCase.lastIndexOf(lowerCase.charAt(i))) {
+//       return s.charAt(i);
 //     }
 //   }
 // }
 
+// Using a nested for loop
 function firstNonRepeatingLetter(s) {
-  const arr = s.toLowerCase().split("");
-  const bucket = [[], 0];
+  const arr1 = s.toLowerCase().split("");
+  let result = "";
+  let count = 0;
 
-  for (let i = 0; i < arr.length; i += 1 ) {
-    for (let y = 0; y < arr.length; y += 1) {
-      if (arr[i] === arr[y]) {
-        bucket[0].push(arr[i]);
-        if (bucket[1] === arr[i]) { break; }
+  for (let i = 0; i < arr1.length; i += 1) {
+    count = 0;
+    for (let y = 0; y < arr1.length; y += 1) {
+      if (arr1[i] === arr1[y]) {
+        count += 1;
       }
     }
+    if (count < 2) {
+      result = s[i]; // return the string index for correct case of char
+      break;
+    }
   }
-  console.log(bucket)
+  return result;
 }
+
 
 // firstNonRepeatingLetter("a"); // a
 firstNonRepeatingLetter("stress"); // t
