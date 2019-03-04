@@ -15,63 +15,64 @@
 
   */
 
- 
- // My solution: Using a nested for loop
- function firstNonRepeatingLetter(s) {
-   const arr1 = s.toLowerCase().split("");
-   let result = "";
-   let count = 0;
-   
-   for (let i = 0; i < arr1.length; i += 1) {
-     count = 0;
-     for (let y = 0; y < arr1.length; y += 1) {
-       if (arr1[i] === arr1[y]) {
-         count += 1;
-        }
-      }
-      if (count < 2) {
-        result = s[i]; // return the string index for correct case of char
-        break;
+// My solution: Using nested for loops
+function firstNonRepeatingLetter(s) {
+  const arr1 = s.toLowerCase().split("");
+  let result = "";
+  let count = 0;
+
+  for (let i = 0; i < arr1.length; i += 1) {
+    count = 0;
+    // console.log(arr1[i]);
+    for (let y = 0; y < arr1.length; y += 1) {
+      if (arr1[i] === arr1[y]) {
+        count += 1;
+        // console.log(arr1[y], count);
       }
     }
-    return result;
-  }
-  
-  // Other solutions
-
-  // 1.
-  function firstNonRepeatingLetter(s) {
-    let str = s.toLowerCase();
-    for(let i = 0; i < str.length; i++) {
-      if(str.indexOf(str[i]) === str.lastIndexOf(str[i])) {
-        return s[i];
-      }
+    if (count < 2) {
+      result = s[i]; // return the string index for correct case of char
+      break;
     }
-    return "";
   }
+  return result;
+}
 
-  // 2.
-  function firstNonRepeatingLetter(s) {
-    var t=s.toLowerCase();
-    for (var x=0;x<t.length;x++)
-      if(t.indexOf(t[x]) === t.lastIndexOf(t[x]))
-        return s[x];
-    return "";
+// Other solutions
+
+// 1.
+function firstNonRepeatingLetter1(s) {
+  let str = s.toLowerCase();
+  for (let i = 0; i < str.length; i++) {
+    if(str.indexOf(str[i]) === str.lastIndexOf(str[i])) {
+      return s[i];
+    }
   }
+  return "";
+}
 
-  // 3.
-  function firstNonRepeatingLetter(s) {
-    var unique = {};
-    
-    if(s.length === 0) return '';
-    
-    s.split('').forEach(function(val, i) { 
-      var lowerVal = val.toLowerCase();
-      if(!unique.hasOwnProperty(lowerVal)) {
-        unique[lowerVal] = [];
-      }
-      unique[lowerVal].push(val);
-    });
+// 2.
+function firstNonRepeatingLetter2(s) {
+  var t=s.toLowerCase();
+  for (var x = 0; x < t.length; x++)
+    if (t.indexOf(t[x]) === t.lastIndexOf(t[x]))
+      return s[x];
+  return "";
+}
+
+// 3.
+function firstNonRepeatingLetter3(s) {
+  var unique = {};
+
+  if(s.length === 0) return '';
+
+  s.split('').forEach(function(val, i) { 
+    var lowerVal = val.toLowerCase();
+    if(!unique.hasOwnProperty(lowerVal)) {
+    unique[lowerVal] = [];
+  }
+  unique[lowerVal].push(val);
+});
     
     for(var prop in unique) {
       if(unique[prop].length === 1) return unique[prop][0];
@@ -79,8 +80,12 @@
     
     return '';
     
-  }
-  
-  firstNonRepeatingLetter("a"); // a
-  firstNonRepeatingLetter("stress"); // t
-  firstNonRepeatingLetter("moonmen"); // e
+}
+
+firstNonRepeatingLetter("a"); // a
+firstNonRepeatingLetter("stress"); // t
+firstNonRepeatingLetter("moonmen"); // e
+firstNonRepeatingLetter("sssss"); // "" Count less than two condition not met
+// on repeating string, original empty string returned.
+firstNonRepeatingLetter("MaDdneSs"); // M
+firstNonRepeatingLetter("aaarRRrtTTtAarttOMmmmRRppPzeee"); // O
