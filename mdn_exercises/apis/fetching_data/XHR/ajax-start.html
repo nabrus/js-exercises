@@ -66,8 +66,8 @@
       const verseChoose = document.querySelector('select');
       const poemDisplay = document.querySelector('pre');
 
-      // Event handler function, when <select>s value is changed its
-      // passed to an invoked function `updateDisplay()`.
+      // Event handler function: when <select>s value is changed,
+      // that value is passed to an invoked function `updateDisplay()`.
       verseChoose.onchange = () => {
         const verse = verseChoose.value;
         updateDisplay(verse);
