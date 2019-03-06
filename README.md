@@ -102,7 +102,7 @@ var g = gen(); // "Generator { }"
 
 *  [ESPlus](https://github.com/nabrus/js-exercises/tree/master/wesbos-es6/new_experimental_additions)
     *  [`padStart()` and `padEnd()`](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/new_experimental_additions/padstart-and-padend.html): String methods that apply padding.
-    *  [`Object.entries()` and `Object.values()`](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/new_experimental_additions/object-entries-values.html)
+    *  [`Object.entries()` and `Object.values()`](https://github.com/nabrus/js-exercises/blob/master/wesbos-es6/new_experimental_additions/object-entries-values.html): Methods that return an array of a given object's own enumerable property [key, value] pairs and values.
 
 ### Source Material
 *  [MDN web docs](https://developer.mozilla.org)
