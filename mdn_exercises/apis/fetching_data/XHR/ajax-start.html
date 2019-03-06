@@ -62,6 +62,17 @@
 
     <script>
 
+      // Store a reference to <select> and <pre> elements
+      const verseChoose = document.querySelector('select');
+      const poemDisplay = document.querySelector('pre');
+
+      // Event handler function, when <select>s value is changed its
+      // passed to an invoked function `updateDisplay()`.
+      verseChoose.onchange = () => {
+        const verse = verseChoose.value;
+        updateDisplay(verse);
+      };
+
     </script>
   </body>
 </html>
