@@ -73,6 +73,40 @@
         updateDisplay(verse);
       };
 
+      // Update display function
+      function updateDisplay(verse) {
+       // Changing the variable to correct file format
+       verse = verse.replace(" ", "");
+       verse = verse.toLowerCase();
+       const url = `${verse}.txt`; 
+
+       // XHR request object
+       const request = new XMLHttpRequest();
+
+       // Using `open()` method to specify what HTTP request method
+       // to use to request the resource from the network, and what
+       // its URL is.
+       request.open('GET', url);
+
+       // Set the type of response wanted with responseType property
+       request.responseType = 'text';
+
+       // Using the onload event handler—it's run when the `load` event
+       // fires (when the response has returned). When this has occurred,
+       // the response data will be available in the response property of
+       // the XHR request object.
+       request.onload = () => {
+         poemDisplay.textContent = request.response;
+       };
+
+       // Telling the XHR request to run with `send()`
+       request.send();
+      }
+
+      // Displaying Verse 1 on page load
+      updateDisplay('Verse 1');
+      verseChoose.value = 'Verse 1';
+
     </script>
   </body>
 </html>
