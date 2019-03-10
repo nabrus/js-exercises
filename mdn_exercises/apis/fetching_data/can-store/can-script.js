@@ -6,14 +6,12 @@ var products;
 // once the products have been successfully loaded and formatted as a JSON object
 // using response.json(), run the initialize() function
 fetch('products.json').then(function(response) {
-  if(response.ok) {
-    response.json().then(function(json) {
-      products = json;
-      initialize();
-    });
-  } else {
-    console.log('Network request for products.json failed with response ' + response.status + ': ' + response.statusText);
-  }
+  return response.json();
+}).then(function(json) {
+  products = json;
+  initialize();
+}).catch(function(err) {
+  console.log('Fetch problem: ' + err.message);
 });
 
 // sets up the app logic, declares required variables, contains all the other functions
