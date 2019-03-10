@@ -5,6 +5,7 @@ var products;
 // use fetch to retrieve it, and report any errors that occur in the fetch operation
 // once the products have been successfully loaded and formatted as a JSON object
 // using response.json(), run the initialize() function
+
 // fetch('products.json').then(function(response) {
 //   return response.json();
 // }).then(function(json) {
@@ -174,7 +175,7 @@ function initialize() {
     // // invoke showProduct
     // showProduct(objectURL, product);
 
-    // Useing XHR for request
+    // Using XHR for request
     const xhr = new XMLHttpRequest();
     xhr.open('GET', url);
     xhr.responseType = 'blob';
