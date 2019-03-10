@@ -5,14 +5,30 @@ var products;
 // use fetch to retrieve it, and report any errors that occur in the fetch operation
 // once the products have been successfully loaded and formatted as a JSON object
 // using response.json(), run the initialize() function
-fetch('products.json').then(function(response) {
-  return response.json();
-}).then(function(json) {
-  products = json;
-  initialize();
-}).catch(function(err) {
-  console.log('Fetch problem: ' + err.message);
-});
+// fetch('products.json').then(function(response) {
+//   return response.json();
+// }).then(function(json) {
+//   products = json;
+//   initialize();
+// }).catch(function(err) {
+//   console.log('Fetch problem: ' + err.message);
+// });
+
+// Using XHR
+const request = new XMLHttpRequest();
+request.open('GET', 'products.json');
+request.responseType = 'json';
+
+request.onload = () => {
+  if (request.status === 200) {
+    products = request.response;
+    initialize();
+  } else {
+    console.log('Fetch problem: ' + request.response);
+  }
+};
+
+request.send();
 
 // sets up the app logic, declares required variables, contains all the other functions
 function initialize() {
@@ -148,17 +164,13 @@ function initialize() {
     // Use fetch to fetch the image, and convert the resulting response to a blob
     // Again, if any errors occur we report them in the console.
     fetch(url).then(function(response) {
-      if(response.ok) {
-        response.blob().then(function(blob) {
-          // Convert the blob to an object URL — this is basically an temporary internal URL
-          // that points to an object stored inside the browser
-          var objectURL = URL.createObjectURL(blob);
-          // invoke showProduct
-          showProduct(objectURL, product);
-        });
-      } else {
-        console.log('Network request for "' + product.name + '" image failed with response ' + response.status + ': ' + response.statusText);
-      }
+      return response.blob();
+    }).then(function(blob) {
+    // Convert the blob to an object URL — this is basically an temporary internal URL
+    // that points to an object stored inside the browser
+    var objectURL = URL.createObjectURL(blob);
+    // invoke showProduct
+    showProduct(objectURL, product);
     });
   }
 
