@@ -1,3 +1,4 @@
+/* eslint-disable */
 // create a variable to store the products 'database' in
 var products;
 
