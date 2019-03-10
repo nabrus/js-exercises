@@ -16,7 +16,7 @@ var products;
 
 // Using XHR
 const request = new XMLHttpRequest();
-request.open('GET', 'products.jsan');
+request.open('GET', 'products.json');
 request.responseType = 'json';
 
 request.onload = () => {
@@ -164,15 +164,32 @@ function initialize() {
     var url = 'images/' + product.image;
     // Use fetch to fetch the image, and convert the resulting response to a blob
     // Again, if any errors occur we report them in the console.
-    fetch(url).then(function(response) {
-      return response.blob();
-    }).then(function(blob) {
-    // Convert the blob to an object URL — this is basically an temporary internal URL
-    // that points to an object stored inside the browser
-    var objectURL = URL.createObjectURL(blob);
-    // invoke showProduct
-    showProduct(objectURL, product);
-    });
+
+    // fetch(url).then(function(response) {
+    //   return response.blob();
+    // }).then(function(blob) {
+    // // Convert the blob to an object URL — this is basically an temporary internal URL
+    // // that points to an object stored inside the browser
+    // var objectURL = URL.createObjectURL(blob);
+    // // invoke showProduct
+    // showProduct(objectURL, product);
+
+    // Useing XHR for request
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', url);
+    xhr.responseType = 'blob';
+
+    xhr.onload = () => {
+      if(request.status === 200) {
+        const blob = xhr.response;
+        const objectURL = URL.createObjectURL(blob);
+        showProduct(objectURL, product);
+      } else {
+        console.log('Network request for "' + product.name + '" image failed with response ' + request.status + ': ' + request.statusText);
+      }
+    };
+
+    xhr.send();
   }
 
   // Display a product inside the <main> element
