@@ -16,7 +16,7 @@ var products;
 
 // Using XHR
 const request = new XMLHttpRequest();
-request.open('GET', 'products.json');
+request.open('GET', 'products.jsan');
 request.responseType = 'json';
 
 request.onload = () => {
@@ -24,7 +24,7 @@ request.onload = () => {
     products = request.response;
     initialize();
   } else {
-    console.log('Fetch problem: ' + request.response);
+    console.log('Network request problem: ' + request.status + '; ' + request.statusText);
   }
 };
 
