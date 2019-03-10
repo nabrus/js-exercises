@@ -60,6 +60,18 @@
         // Promise.catch (async)
         //  (anonymous)      @ creating-promises.html:53
 
+  // MDN example of a function with promise functionality, simply
+  // by having it return a promise. XHR used for fetching async request.
+  function myAsyncFunction(url) {
+    return new Promise((resolve, reject) => {
+      const xhr = new XMLHttpRequest();
+      xhr.open("GET", url);
+      xhr.onload = () => resolve(xhr.responseText);
+      xhr.onerror = () => reject(xhr.statusText);
+      xhr.send();
+    });
+  }
+
 </script>
 </body>
 </html>
