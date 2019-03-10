@@ -25,6 +25,7 @@ request.onload = () => {
     initialize();
   } else {
     console.log('Network request problem: ' + request.status + '; ' + request.statusText);
+    // example output: Network request problem: 404; File not found
   }
 };
 
