@@ -5,33 +5,79 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Modal</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <style>
     body {
 
     }
+
+    #modal-container {
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      background-color: rgba(0, 0, 0, 0.9);
+      display: none;
+    }
+
+    #modal {
+      min-width: 300px;
+      min-height: 300px;
+      background-color: white;
+      max-width: 80%;
+      display: grid;
+      align-self: center;
+      justify-self: center;
+      padding: 0 10px 10px 10px;
+      grid-row-gap: 5px;
+      grid-template-rows: auto 1fr auto;
+    }
+
+    #close-modal {
+      justify-self: right;
+      font-size: xx-large;
+    }
+
+    button, #close-modal {
+      cursor: pointer;
+    }
+
   </style>
+
   <script>
-  
+    
+    function toggleModal() {
+      const modal = document.getElementById('modal-container');
+      const displayValue = window.getComputedStyle(modal).getPropertyValue('display');
+
+      if (displayValue === 'none') {
+        modal.style.display = 'grid';
+      } else {
+        modal.style.display = 'none';
+      }
+    }
+
   </script>
 </head>
 <body>
   
-  <div id="modal-container">
-    <div id="modal">
-      <div id="close-modal">&times;</div>
+  <div id="modal-container" onclick="toggleModal()">
+    <div id="modal" onclick="event.stopPropagation()">
+      <!-- event.stopPropagation to stop event bubbling, preventing 
+      the modal to close when an area inside is clicked  -->
+      <div id="close-modal" onclick="toggleModal()">&times;</div>
       <div id="modal-content">
         <h1>The Dude Abides</h1>
         <p>
-          It really tied the room together.
+          Okaaayy, the old man said to take any rug in the house.
         </p>
       </div>
       <div id="modal-actions">
-        <button>Save</button>
+        <button onclick="toggleModal()">Save</button>
       </div>
     </div>
   </div>
 
-  <button>Show Modal</button>
+  <button onclick="toggleModal()">Show Modal</button>
 
 </body>
 </html>
