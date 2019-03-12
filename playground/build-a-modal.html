@@ -43,28 +43,14 @@
 
   </style>
 
-  <script>
-    
-    function toggleModal() {
-      const modal = document.getElementById('modal-container');
-      const displayValue = window.getComputedStyle(modal).getPropertyValue('display');
-
-      if (displayValue === 'none') {
-        modal.style.display = 'grid';
-      } else {
-        modal.style.display = 'none';
-      }
-    }
-
-  </script>
 </head>
 <body>
   
-  <div id="modal-container" onclick="toggleModal()">
+  <div id="modal-container" class="action">
     <div id="modal" onclick="event.stopPropagation()">
       <!-- event.stopPropagation to stop event bubbling, preventing 
-      the modal to close when an area inside is clicked  -->
-      <div id="close-modal" onclick="toggleModal()">&times;</div>
+        the modal to close when an area inside is clicked  -->
+      <div id="close-modal" class="action">&times;</div>
       <div id="modal-content">
         <h1>The Dude Abides</h1>
         <p>
@@ -72,12 +58,30 @@
         </p>
       </div>
       <div id="modal-actions">
-        <button onclick="toggleModal()">Save</button>
+        <button class="action">Save</button>
       </div>
     </div>
   </div>
 
-  <button onclick="toggleModal()">Show Modal</button>
+  <button class="action">Show Modal</button>
 
+    <script>
+  
+      const clickArea = document.querySelectorAll('.action');
+      
+      function toggleModal() {
+        const modal = document.getElementById('modal-container');
+        const displayValue = window.getComputedStyle(clickArea).getPropertyValue('display');
+  
+        if (displayValue === 'none') {
+          modal.style.display = 'grid';
+        } else {
+          modal.style.display = 'none';
+        }
+      }
+
+      clickArea.forEach(btn => btn);
+  
+    </script>
 </body>
 </html>
