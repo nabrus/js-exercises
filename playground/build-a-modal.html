@@ -46,12 +46,12 @@
 </head>
 <body>
   
-  <div id="modal-container" class="action">
+  <div id="modal-container" class="toggle">
     <div id="modal" onclick="event.stopPropagation()">
       <!-- event.stopPropagation to stop event bubbling, preventing 
         the modal to close when an area inside is clicked 
       ** INLINE DO NOT DO ** -->
-      <div id="close-modal" class="action">&times;</div>
+      <div id="close-modal" class="toggle">&times;</div>
       <div id="modal-content">
         <h1>The Dude Abides</h1>
         <p>
@@ -59,16 +59,16 @@
         </p>
       </div>
       <div id="modal-actions">
-        <button class="action">Save</button>
+        <button class="toggle">Save</button>
       </div>
     </div>
   </div>
 
-  <button class="action">Show Modal</button>
+  <button class="toggle">Show Modal</button>
 
     <script>
   
-      const clickArea = document.querySelectorAll('.action');
+      const clickArea = document.querySelectorAll('.toggle');
       
       function toggleModal() {
         const modal = document.getElementById('modal-container');
