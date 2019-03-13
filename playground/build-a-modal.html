@@ -71,7 +71,7 @@
       
       function toggleModal() {
         const modal = document.getElementById('modal-container');
-        const displayValue = window.getComputedStyle(clickArea).getPropertyValue('display');
+        const displayValue = window.getComputedStyle(modal).getPropertyValue('display');
   
         if (displayValue === 'none') {
           modal.style.display = 'grid';
@@ -80,7 +80,7 @@
         }
       }
 
-      
+      clickArea.forEach(item => item.addEventListener('click', toggleModal));
   
     </script>
 </body>
