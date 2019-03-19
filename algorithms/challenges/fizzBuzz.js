@@ -5,7 +5,7 @@
   print"FizzBuzz".
 */
 
-// Basic example logging result
+// My basic solution-logging the result
 function fizzBuzz() {
   for (let i = 1; i <= 100; i += 1) {
     if (i % 5 === 0 && i % 3 === 0) {
