@@ -19,7 +19,7 @@
   const shuffleNewDeck = fetch("https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1");
 
   const drawCardUrlStart = "https://deckofcardsapi.com/api/deck/";
-  const drawCardUrlEnd = "/draw/?count=2";
+  const drawCardUrlEnd = "/draw/?count=4";
   let deckId = "";
 
   // Shuffle deck and set deckId
@@ -34,7 +34,7 @@
   function drawCard() {
     fetch(`${drawCardUrlStart}${deckId}${drawCardUrlEnd}`)
       .then(data => data.json())
-      .then(data => console.log(data.cards[0].value, data.cards[0].suit, data.cards[1].value, data.cards[0].suit))
+      .then(data => console.log(data.cards[0].value, data.cards[0].suit, data.cards[1].value, data.cards[1].suit, data.cards[2].value, data.cards[2].suit, data.cards[3].value, data.cards[3].suit))
       .catch(err => console.log(err));
   }
 
