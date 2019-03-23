@@ -47,7 +47,7 @@
 <body>
   
   <div id="modal-container" class="toggle">
-    <div id="modal" onclick="event.stopPropagation()">
+    <div id="modal">
       <!-- event.stopPropagation to stop event bubbling, preventing 
         the modal to close when an area inside is clicked 
       ** INLINE DO NOT DO ** -->
@@ -59,7 +59,7 @@
         </p>
       </div>
       <div id="modal-actions">
-        <button class="toggle">Save</button>
+        <button class="toggle">Exit</button>
       </div>
     </div>
   </div>
@@ -68,19 +68,27 @@
 
     <script>
   
-      const clickArea = document.querySelectorAll('.toggle');
-      
-      function toggleModal() {
-        const modal = document.getElementById('modal-container');
-        const displayValue = window.getComputedStyle(modal).getPropertyValue('display');
+      function toggleModal(e) {
+        const modalContainer = document.querySelector("#modal-container");
+        const modal = document.querySelector("#modal");
+
+        const displayValue = window.getComputedStyle(modalContainer).getPropertyValue('display');
   
         if (displayValue === 'none') {
-          modal.style.display = 'grid';
+          modalContainer.style.display = 'grid';
         } else {
-          modal.style.display = 'none';
+          modalContainer.style.display = 'none';
         }
-      }
 
+        console.log(e);
+        if (e.target.id === "modal") {
+          e.stopPropagation();
+        }
+        
+      }
+      // onclick="event.stopPropagation()"
+
+      const clickArea = document.querySelectorAll('.toggle');
       clickArea.forEach(item => item.addEventListener('click', toggleModal));
   
     </script>
