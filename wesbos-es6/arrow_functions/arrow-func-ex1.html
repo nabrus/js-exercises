@@ -43,9 +43,10 @@
     // map to an array of seconds
     .map(timeCode => {
       /* Create variable parts. Use split to create two separate number strings
-      (min and sec, example ["5", "17"]). Then chain map on that to convert the strings into numbers `[5, 17]` */
+      (mins and secs, example ["5", "17"]). Then chain map on that to convert the strings into numbers `[5, 17]` */
       const parts = timeCode.split(':').map(part => parseFloat(part));
       return parts[0] * 60 + parts[1];
+      // Multiply mins value by 60 to get seconds then add the secs value.
     }) 
   // reduce to get total
     .reduce((acc, next) => acc + next);
