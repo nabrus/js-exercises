@@ -1,7 +1,7 @@
 // A Chain adding function
 
 /* 
-  A function that adds numbers (params) together.
+  A function that adds numbers (args) together.
   add(1)(2); // returns 3
 
   Can take multible args chained together when called.
@@ -16,7 +16,11 @@
   addTwo; // 2
   addTwo + 5; // 7
   addTwo(3); // 5
-  
+
   Input/Output: valid whold numbers
 
   */
+
+ function add(n){
+    // Let the currying begin!
+  }
