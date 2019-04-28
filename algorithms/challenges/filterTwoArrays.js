@@ -7,7 +7,9 @@
   Must use `Array.prototype.filter()` method.
 */
 
-justCoolStuff()
+function justCoolStuff(arr1, arr2) {
+  return arr1.filter(match => arr2.includes(match));
+}
 
 /* eslint quotes: [2, "single"] */
 
