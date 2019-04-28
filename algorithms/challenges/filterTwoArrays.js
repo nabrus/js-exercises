@@ -1,4 +1,6 @@
 /*
+  Return the matching strings between two arrays.
+
   Function `justCoolStuff()`
 
   Input: Two arrays of strings
