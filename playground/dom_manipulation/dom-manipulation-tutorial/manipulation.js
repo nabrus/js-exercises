@@ -1,3 +1,4 @@
+/* eslint-disable prefer-destructuring */
 // ACCESSING SINGLE ELEMENTS
 const id = document.getElementById("head");
 const q = document.querySelector("div p");
@@ -108,6 +109,101 @@ console.log(middle.nextSibling); // <p>Sibling>/p>
   node and its descendants.
 */
 
-// 1. get text with nodeValue
+// 1. Get text with nodeValue
 const nodeValue = document.getElementById("middle").firstChild.nodeValue;
 console.log(nodeValue); // Tutorial
+
+// 2. Set text with nodeValue: changes the text from "Tutorial" to
+// "nodeValue Text".
+document.getElementById("middle").firstChild.nodeValue = "nodeValue text";
+
+// 3. Get text with textContent
+const textContent = document.querySelectorAll(".text")[1].textContent;
+console.log(textContent); // Medium Tutorial
+
+// 4. Set text with textContent: changes the text from "Medium Tutorial" to
+// "new textContent set".
+document.querySelectorAll(".text")[1].textContent = "new textContent set";
+
+
+// ADD AND REMOVE HTML CONTENT
+/*
+  `Element.innerHTML` property gets or sets the HTML or XML markup contained
+  within the element.
+
+  `Document.createElement()` method creates the HTML element specified by
+  tagName, or an `HTMLUnknownElement` if tagName isn't recognized.
+
+  `Document.createTextNode()` creates a new Text node. This method can be used
+  to escape HTML characters.
+
+  `Node.appendChild()` method adds a node to the end of the list of children of
+  a specified parent node.
+
+  `Node.removeChild()` method removes a child node from the DOM and returns the removed node.
+*/
+
+// 1. Setting content with innerHTML removes the HTML content that's already
+// inside the element and then adds the new one. The following would replace
+// all of the existing elements in the <div> with the added list.
+
+// document.getElementById("division").innerHTML = `
+//   <ul>
+//     <li>Angular</li>
+//     <li>Vue</li>
+//     <li>React</li>
+//   </ul>
+// `;
+
+// 2. Add an HTML element.
+// Create a new `p` element using the createElement method
+const newElement = document.createElement("p");
+// Then create a new text node and append the text node to the newly created.
+const text = document.createTextNode("Text Added!!!");
+newElement.appendChild(text);
+// Then append the new element with the text node into the div with the
+// id "division"
+document.getElementById("division").appendChild(newElement);
+
+// 3. Remove an HTML element.
+// Get the element we want to remove.
+const toBeRemoved = document.getElementById("head"); // h1#head
+// Then get the parent node using the `parentNode` property.
+const parentN = toBeRemoved.parentNode; // div#division
+// Then use removeChild method, with the element to be removed as the arg.
+parentN.removeChild(toBeRemoved);
+
+
+// ATTRIBUTE NODE
+/*
+  `Element.getAttribute()` method of the `Element` interface returns the value
+  of a specified attribute on the element. If the given attribute does not
+  exist, the value returned will either be `null` or `""` (the empty string).
+
+  `Element.setAttribute()` sets the value of an attribute on the specified
+  element. If the attribute already exists, the value is updated; otherwise a
+  new attribute is added with the specified name and value.
+
+  `Element.hasAttribute()` method returns a Boolean value indicating whether
+  the specified element has the specified attribute or not.
+
+  `Element.removeAttribute()` method removes the attribute with the specified name from the element.
+
+  `Element.id` property represents the element's identifier, reflecting the id
+  global attribute. Can be used to get or set the id of an element.
+
+  `element.className` property gets and sets the value of the class attribute
+  of the specified element.
+*/
+
+// 1. Selects the first <div>.
+const d = document.querySelector("div"); // div#division
+
+// Checks if it has an id attribute, returns true/false
+console.log(`Checks id: ${d.hasAttribute("id")}`); // Checks id: true
+
+// Set a new class attribute.
+d.setAttribute("class", "newClass"); // div#division.newClass
+
+// Logs the class name.
+console.log(d.className); // newClass
