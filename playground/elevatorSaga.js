@@ -13,7 +13,7 @@
 
 {
   init: function (elevators, floors) {
-      var elevator = elevators[0]; // Let's use the first elevator
+      const elevator = elevators[0]; // Let's use the first elevator
 
       // Whenever the elevator is idle (has no more queued destinations) ...
       elevator.on("idle", function() {
@@ -21,6 +21,10 @@
           elevator.goToFloor(0);
           elevator.goToFloor(1);
           elevator.goToFloor(2);
+      });
+
+      elevator.on("passing_floor", function(floorNum, direction) {
+        if (floorNum < )
       });
   },
   update: function (dt, elevators, floors) {
