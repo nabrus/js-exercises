@@ -21,6 +21,12 @@
 
   */
 
- function add(n){
-    // Let the currying begin!
+function add(n) {
+  return function (m) {
+    console.log(n + m);
+    return n + m;
   }
+}
+
+// add(2)(2);
+add(2);
