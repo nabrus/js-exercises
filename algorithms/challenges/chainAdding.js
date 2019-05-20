@@ -22,11 +22,24 @@
   */
 
 function add(n) {
-  return function (m) {
-    console.log(n + m);
-    return n + m;
-  }
+  // const oneArg = add(n);
+
+  return secondArg => n + secondArg;
 }
 
+console.log(add(2)(2));
+// add(2);
+
+
+/* without arrow fn */
+// function add(n) {
+//   // const oneArg = add(n);
+
+//   return function (secondArg) {
+//     console.log(n + secondArg);
+//     return n + secondArg;
+//   }
+// }
+
 // add(2)(2);
-add(2);
+// add(2);
