@@ -1,6 +1,6 @@
 // A Chain adding function
 
-/* 
+/*
   A function that adds numbers (args) together.
   add(1)(2); // returns 3
 
@@ -9,7 +9,7 @@
   add(1)(2)(3)(4) // 10
 
   A single call returns the number passed in.
-  add(1); // 1  
+  add(1); // 1
 
   The returned value can be stored in a var and be reused
   const addTwo = add(2);
@@ -22,13 +22,11 @@
   */
 
 function add(n) {
-  // const oneArg = add(n);
-
   return secondArg => n + secondArg;
 }
 
 console.log(add(2)(2));
-// add(2);
+console.log(add(2));
 
 
 /* without arrow fn */
