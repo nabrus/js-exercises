@@ -6,11 +6,29 @@
 */
 
 const _ = {
+
+  // Implement _.clamp(): My solution
+  myClamp(number, lower, upper) {
+    if (number > lower && number < upper) {
+      return number;
+    }
+
+    if (number < lower) {
+      return lower;
+    }
+
+    if (number > upper) {
+      return upper;
+    }
+  },
+
+  // Implement _.clamp(): following codecademy steps
   clamp(number, lower, upper) {
     const lowerClampedValue = Math.max(number, lower);
     const clampedValue = Math.min(lowerClampedValue, upper);
     return clampedValue;
   },
+
 };
 
 
