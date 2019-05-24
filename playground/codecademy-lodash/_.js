@@ -29,8 +29,17 @@ const _ = {
     return clampedValue;
   },
 
-};
+  // Implement .inRange(): My solution
+  inRange(num, endNum, startNum = 0) {
+    [endNum, startNum] = [startNum, endNum];
+    if (startNum > endNum) {
+      [startNum, endNum] = [endNum, startNum];
+    }
+    return num >= startNum && num < endNum ? true : false;
+  },
 
+
+};
 
 // Do not write or modify code below this line.
 module.exports = _;
