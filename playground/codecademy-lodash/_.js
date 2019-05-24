@@ -38,6 +38,11 @@ const _ = {
     return num >= startNum && num < endNum ? true : false;
   },
 
+  // Implement .words(): My solution
+  words(str) {
+    return str.split(" ");
+  },
+
 
 };
 
