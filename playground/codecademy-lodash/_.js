@@ -37,13 +37,13 @@ const _ = {
   //   }
   //   return num >= startNum && num < endNum ? true : false;
   // },
-  
+
   inRange(num, start, end) {
     if (end === undefined) {
       end = start;
       start = 0;
     }
-    
+
     if (start > end) {
       let tmpEnd = end;
       end = start;
