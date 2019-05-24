@@ -30,12 +30,27 @@ const _ = {
   },
 
   // Implement .inRange(): My solution
-  inRange(num, endNum, startNum = 0) {
-    [endNum, startNum] = [startNum, endNum];
-    if (startNum > endNum) {
-      [startNum, endNum] = [endNum, startNum];
+  // inRange(num, endNum, startNum = 0) {
+  //   [endNum, startNum] = [startNum, endNum];
+  //   if (startNum > endNum) {
+  //     [startNum, endNum] = [endNum, startNum];
+  //   }
+  //   return num >= startNum && num < endNum ? true : false;
+  // },
+  
+  inRange(num, start, end) {
+    if (end === undefined) {
+      end = start;
+      start = 0;
     }
-    return num >= startNum && num < endNum ? true : false;
+    
+    if (start > end) {
+      let tmpEnd = end;
+      end = start;
+      start = tmpEnd;
+    }
+
+    return num >= start && num < end;
   },
 
   // Implement .words(): My solution
