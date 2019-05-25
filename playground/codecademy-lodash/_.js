@@ -7,6 +7,8 @@
 
 const _ = {
 
+  /* NUMBER METHODS */
+
   // Implement _.clamp(): My solution
   myClamp(number, lower, upper) {
     if (number > lower && number < upper) {
@@ -22,7 +24,7 @@ const _ = {
     }
   },
 
-  // Implement _.clamp(): following codecademy steps
+  // Implement _.clamp(): following codecademy implement steps
   clamp(number, lower, upper) {
     const lowerClampedValue = Math.max(number, lower);
     const clampedValue = Math.min(lowerClampedValue, upper);
@@ -30,22 +32,23 @@ const _ = {
   },
 
   // Implement .inRange(): My solution
-  // inRange(num, endNum, startNum = 0) {
-  //   [endNum, startNum] = [startNum, endNum];
-  //   if (startNum > endNum) {
-  //     [startNum, endNum] = [endNum, startNum];
-  //   }
-  //   return num >= startNum && num < endNum ? true : false;
-  // },
+  inRange(num, endNum, startNum = 0) {
+    [endNum, startNum] = [startNum, endNum];
+    if (startNum > endNum) {
+      [startNum, endNum] = [endNum, startNum];
+    }
+    return num >= startNum && num < endNum;
+  },
 
-  inRange(num, start, end) {
+  // Codecademy .inRange() ideate list followed
+  inRange1(num, start, end) {
     if (end === undefined) {
       end = start;
       start = 0;
     }
 
     if (start > end) {
-      let tmpEnd = end;
+      const tmpEnd = end;
       end = start;
       start = tmpEnd;
     }
@@ -53,11 +56,35 @@ const _ = {
     return num >= start && num < end;
   },
 
+  // Codecademy .inRange() implement steps
+  inRange2(num, start, end) {
+    if (end === undefined) {
+      end = start;
+      start = 0;
+    }
+
+    if (start > end) {
+      const tmpEnd = end;
+      end = start;
+      start = tmpEnd;
+    }
+
+    const isInRange = num >= start && num < end;
+    return isInRange;
+  },
+
+  /* STRING METHODS */
+
   // Implement .words(): My solution
   words(str) {
     return str.split(" ");
   },
 
+  // Codecademy .words() implement solution steps
+  words1(string) {
+    const words = string.split(" ");
+    return words;
+  },
 
 };
 
