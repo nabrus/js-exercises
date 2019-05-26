@@ -87,20 +87,31 @@ const _ = {
   },
 
   // Implement .pad(): My solution
+  // pad(str, length) {
+  //   if (length <= str.length) return str;
+
+  //   const totalPadding = length - str.length;
+  //   const spaces = Math.floor(totalPadding / 2) + str.length;
+  //   const beginPad = str.padStart(spaces);
+  //   let result = "";
+
+  //   if (length % 2 === 0) {
+  //     result = beginPad.padEnd(spaces + totalPadding / 2);
+  //   } else {
+  //     result = beginPad.padEnd(spaces + Math.ceil(totalPadding / 2));
+  //   }
+  //   return result;
+  // },
+
   pad(str, length) {
     if (length <= str.length) return str;
 
-    const totalPadding = length - str.length;
-    const spaces = Math.floor(totalPadding / 2) + str.length;
-    const beginPad = str.padStart(spaces);
-    let result = "";
+    const startingPad = Math.floor((length - str.length) / 2);
+    const endingPad = str.length + startingPad - length;
+    let paddingResult = str.padStart(startingPad + str.length);
+    paddingResult = str.padEnd(endingPad + startingPad + str.length);
 
-    if (length % 2 === 0) {
-      result = beginPad.padEnd(spaces + totalPadding / 2);
-    } else {
-      result = beginPad.padEnd(spaces + Math.ceil(totalPadding / 2));
-    }
-    return result;
+    return paddingResult;
   },
 };
 
