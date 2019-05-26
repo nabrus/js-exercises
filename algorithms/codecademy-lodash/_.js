@@ -106,12 +106,12 @@ const _ = {
   pad(str, length) {
     if (length <= str.length) return str;
 
-    const startingPad = Math.floor((length - str.length) / 2);
-    const endingPad = str.length + startingPad - length;
-    let paddingResult = str.padStart(startingPad + str.length);
-    paddingResult = str.padEnd(endingPad + startingPad + str.length);
+    const startingPad = Math.floor((length - str.length) / 2); // 2
+    const endingPad = str.length + startingPad - length; // 2
+    const prefix = str.padStart(startingPad + str.length); // 4
+    const paddedResult = prefix.padEnd(endingPad + startingPad + str.length);
 
-    return paddingResult;
+    return paddedResult;
   },
 };
 
