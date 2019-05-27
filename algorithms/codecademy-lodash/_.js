@@ -103,16 +103,25 @@ const _ = {
   //   return result;
   // },
 
+  // Following codecademy ideate steps.
   pad(str, length) {
     if (length <= str.length) return str;
 
-    const startingPad = Math.floor((length - str.length) / 2); // 2
-    const endingPad = str.length + startingPad - length; // 2
-    const prefix = str.padStart(startingPad + str.length); // 4
-    const paddedResult = prefix.padEnd(endingPad + startingPad + str.length);
+    const startingPad = Math.floor((length - str.length) / 2);
+    const endingPad = length - str.length - startingPad;
+    const prefix = str.padStart(startingPad + str.length);
+    const paddedResult = prefix.padEnd(startingPad + str.length + endingPad);
 
     return paddedResult;
   },
+
+  // codecademy's implement steps followed
+  // pad(str, length) {
+  //   if (length <= str.length) return str;
+
+  //   const startPaddingLength = Math.floor((length - str.length) / 2);
+  //   const endPaddingLength = length - str.length - startPaddingLength;
+  // },
 };
 
 
