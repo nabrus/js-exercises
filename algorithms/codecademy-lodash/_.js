@@ -87,41 +87,47 @@ const _ = {
   },
 
   // Implement .pad(): My solution
-  // pad(str, length) {
-  //   if (length <= str.length) return str;
+  pad(str, length) {
+    if (length <= str.length) return str;
 
-  //   const totalPadding = length - str.length;
-  //   const spaces = Math.floor(totalPadding / 2) + str.length;
-  //   const beginPad = str.padStart(spaces);
-  //   let result = "";
+    const totalPadding = length - str.length;
+    const spaces = Math.floor(totalPadding / 2) + str.length;
+    const beginPad = str.padStart(spaces);
+    let result = "";
 
-  //   if (length % 2 === 0) {
-  //     result = beginPad.padEnd(spaces + totalPadding / 2);
-  //   } else {
-  //     result = beginPad.padEnd(spaces + Math.ceil(totalPadding / 2));
-  //   }
-  //   return result;
-  // },
+    if (length % 2 === 0) {
+      result = beginPad.padEnd(spaces + totalPadding / 2);
+    } else {
+      result = beginPad.padEnd(spaces + Math.ceil(totalPadding / 2));
+    }
+    return result;
+  },
 
   // Following codecademy ideate steps.
-  pad(str, length) {
+  pad1(str, length) {
     if (length <= str.length) return str;
 
     const startingPad = Math.floor((length - str.length) / 2);
     const endingPad = length - str.length - startingPad;
     const prefix = str.padStart(startingPad + str.length);
     const paddedResult = prefix.padEnd(startingPad + str.length + endingPad);
+    // const paddedResult = prefix.padEnd(length); // also works
 
     return paddedResult;
   },
 
-  // codecademy's implement steps followed
-  // pad(str, length) {
-  //   if (length <= str.length) return str;
+  // codecademy's implement steps followed - they used .repeat()
+  pad2(str, length) {
+    if (length <= str.length) return str;
 
-  //   const startPaddingLength = Math.floor((length - str.length) / 2);
-  //   const endPaddingLength = length - str.length - startPaddingLength;
-  // },
+    const startPaddingLength = Math.floor((length - str.length) / 2);
+    const endPaddingLength = length - str.length - startPaddingLength;
+    // Concatenate a space repeated number of start padding length with the
+    // string and the number of end padding length using .repeat().
+    const paddingString = " ".repeat(startPaddingLength) + str + " ".repeat(endPaddingLength);
+
+    return paddingString;
+  },
 };
 
 
