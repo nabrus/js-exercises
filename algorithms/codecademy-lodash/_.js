@@ -31,7 +31,7 @@ const _ = {
     return clampedValue;
   },
 
-  // Implement .inRange(): My solution
+  // Implement _.inRange(): My solution
   inRange(num, endNum, startNum = 0) {
     [endNum, startNum] = [startNum, endNum];
     if (startNum > endNum) {
@@ -40,7 +40,7 @@ const _ = {
     return num >= startNum && num < endNum;
   },
 
-  // Codecademy .inRange() ideate list followed
+  // Codecademy _.inRange() ideate list followed
   inRange1(num, start, end) {
     if (end === undefined) {
       end = start;
@@ -56,7 +56,7 @@ const _ = {
     return num >= start && num < end;
   },
 
-  // Codecademy .inRange() implement steps
+  // Codecademy _.inRange() implement steps
   inRange2(num, start, end) {
     if (end === undefined) {
       end = start;
@@ -75,18 +75,18 @@ const _ = {
 
   /* STRING METHODS */
 
-  // Implement .words(): My solution
+  // Implement _.words(): My solution
   words(str) {
     return str.split(" ");
   },
 
-  // Codecademy .words() implement solution steps
+  // Codecademy _.words() implement solution steps
   words1(string) {
     const words = string.split(" ");
     return words;
   },
 
-  // Implement .pad(): My solution
+  // Implement _.pad(): My solution
   pad(str, length) {
     if (length <= str.length) return str;
 
@@ -103,7 +103,7 @@ const _ = {
     return result;
   },
 
-  // Following codecademy ideate steps.
+  // Following codecademy _.pad() ideate steps.
   pad1(str, length) {
     if (length <= str.length) return str;
 
@@ -116,7 +116,7 @@ const _ = {
     return paddedResult;
   },
 
-  // codecademy's implement steps followed - they used .repeat()
+  // codecademy's _.pad() implement steps followed - they used .repeat()
   pad2(str, length) {
     if (length <= str.length) return str;
 
@@ -128,6 +128,10 @@ const _ = {
 
     return paddingString;
   },
+
+  /* OBJECT METHODS */
+
+  // Implement _.has(): My solution
 };
 
 
