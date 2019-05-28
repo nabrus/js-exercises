@@ -133,8 +133,8 @@ const _ = {
 
   // Implement _.has(): My solution
   has(obj, key) {
-    
-  }
+    return obj.hasOwnProperty(key);
+  },
 };
 
 
