@@ -132,6 +132,9 @@ const _ = {
   /* OBJECT METHODS */
 
   // Implement _.has(): My solution
+  has(obj, key) {
+    
+  }
 };
 
 
