@@ -132,8 +132,13 @@ const _ = {
   /* OBJECT METHODS */
 
   // Implement _.has(): My solution
-  has(obj, key) {
-    return obj.hasOwnProperty(key);
+  // has(obj, key) {
+  //   return obj.hasOwnProperty(key);
+  // },
+
+  // Following codecademy's _.has() ideate steps.
+  has (obj, key) {
+    return obj[key] !== undefined;
   },
 };
 
