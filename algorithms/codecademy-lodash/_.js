@@ -148,7 +148,25 @@ const _ = {
   },
 
   // Implement _.invert(): My solution.
+  invert(obj) {
+    const invertedObj = {};
 
+    for (let [key, value] of Object.entries(obj)) {
+      invertedObj[value] = key;
+    }
+    return invertedObj;
+  },
+
+  // Following codecademy's _.invert() implement steps.
+  invert1(object) {
+    const invertedObject = {};
+
+    for (let prop in object) {
+      const originalValue = object[prop];
+      invertedObject[originalValue] = prop;
+    }
+    return invertedObject;
+  },
 };
 
 
