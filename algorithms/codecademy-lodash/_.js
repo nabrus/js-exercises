@@ -2,14 +2,14 @@
   In this Lodash project, you will be implementing some of the most exciting
   functionality from the widely-popular lodash.js library. You will be
   implementing ten methods that add new functionality for numbers, strings,
-  objects, and arrays. -codecademy
+  objects, and arrays using only JS. -codecademy
 */
 
 const _ = {
 
   /* NUMBER METHODS */
 
-  // Implement _.clamp(): My solution
+  // Implement _.clamp(): My solution.
   myClamp(number, lower, upper) {
     if (number > lower && number < upper) {
       return number;
@@ -24,14 +24,14 @@ const _ = {
     }
   },
 
-  // Implement _.clamp(): following codecademy implement steps
+  // Implement _.clamp(): following codecademy implement steps.
   clamp(number, lower, upper) {
     const lowerClampedValue = Math.max(number, lower);
     const clampedValue = Math.min(lowerClampedValue, upper);
     return clampedValue;
   },
 
-  // Implement _.inRange(): My solution
+  // Implement _.inRange(): My solution.
   inRange(num, endNum, startNum = 0) {
     [endNum, startNum] = [startNum, endNum];
     if (startNum > endNum) {
@@ -40,7 +40,7 @@ const _ = {
     return num >= startNum && num < endNum;
   },
 
-  // Codecademy _.inRange() ideate list followed
+  // Codecademy _.inRange() ideate list followed.
   inRange1(num, start, end) {
     if (end === undefined) {
       end = start;
@@ -56,7 +56,7 @@ const _ = {
     return num >= start && num < end;
   },
 
-  // Codecademy _.inRange() implement steps
+  // Codecademy _.inRange() implement steps.
   inRange2(num, start, end) {
     if (end === undefined) {
       end = start;
@@ -75,18 +75,18 @@ const _ = {
 
   /* STRING METHODS */
 
-  // Implement _.words(): My solution
+  // Implement _.words(): My solution.
   words(str) {
     return str.split(" ");
   },
 
-  // Codecademy _.words() implement solution steps
+  // Codecademy _.words() implement solution steps.
   words1(string) {
     const words = string.split(" ");
     return words;
   },
 
-  // Implement _.pad(): My solution
+  // Implement _.pad(): My solution.
   pad(str, length) {
     if (length <= str.length) return str;
 
@@ -116,7 +116,7 @@ const _ = {
     return paddedResult;
   },
 
-  // codecademy's _.pad() implement steps followed - they used .repeat()
+  // codecademy's _.pad() implement steps followed - they used .repeat().
   pad2(str, length) {
     if (length <= str.length) return str;
 
@@ -131,7 +131,7 @@ const _ = {
 
   /* OBJECT METHODS */
 
-  // Implement _.has(): My solution
+  // Implement _.has(): My solution.
   has(obj, key) {
     return obj.hasOwnProperty(key);
   },
@@ -146,6 +146,9 @@ const _ = {
     const hasValue = object[key] !== undefined;
     return hasValue;
   },
+
+  // Implement _.invert(): My solution.
+
 };
 
 
