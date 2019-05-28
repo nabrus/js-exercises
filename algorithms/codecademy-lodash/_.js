@@ -167,6 +167,11 @@ const _ = {
     }
     return invertedObject;
   },
+
+  // Implement _.findKey(): My solution.
+  findKey(obj, fn) {
+    
+  }
 };
 
 
