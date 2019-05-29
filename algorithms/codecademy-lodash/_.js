@@ -198,16 +198,26 @@ const _ = {
   /* ARRAY METHODS */
 
   // Implement _.drop(): My solution.
-  // drop(arr, numToDrop) {
-  //   if (!numToDrop) return arr.slice(1);
-  //   return arr.slice(numToDrop);
-  // },
+  drop(arr, numToDrop) {
+    if (!numToDrop) return arr.slice(1);
+    return arr.slice(numToDrop);
+  },
 
   // Following codecademy's _.drop() ideate steps.
-  drop(arr, numToDrop = 1) {
+  drop1(arr, numToDrop = 1) {
     const newArr = arr.slice(numToDrop);
     return newArr;
   },
+
+  // Following codecademy's _.drop() implement steps.
+  drop2(array, n) {
+    if (!n) {
+      n = 1;
+    }
+    const droppedArray = array.slice(n);
+    return droppedArray;
+  },
+
 };
 
 
