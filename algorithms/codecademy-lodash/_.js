@@ -175,7 +175,7 @@ const _ = {
     }
   },
 
-  // Following codecademy's _.invert() ideate steps.
+  // Following codecademy's _.findKey() ideate steps.
   findKey1(obj, fn) {
     for (let key in obj) {
       if (fn(obj[key])) {
@@ -185,7 +185,7 @@ const _ = {
     return undefined;
   },
 
-  // Following codecademy's _.invert() implement steps.
+  // Following codecademy's _.findKey() implement steps.
   findKey2(object, predicate) {
     for (let key in object) {
       const value = object[key];
@@ -198,9 +198,15 @@ const _ = {
   /* ARRAY METHODS */
 
   // Implement _.drop(): My solution.
-  drop(arr, numToDrop) {
-    if (!numToDrop) return arr.slice(1);
-    return arr.slice(numToDrop);
+  // drop(arr, numToDrop) {
+  //   if (!numToDrop) return arr.slice(1);
+  //   return arr.slice(numToDrop);
+  // },
+
+  // Following codecademy's _.drop() ideate steps.
+  drop(arr, numToDrop = 1) {
+    const newArr = arr.slice(numToDrop);
+    return newArr;
   },
 };
 
