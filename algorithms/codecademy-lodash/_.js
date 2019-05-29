@@ -170,8 +170,30 @@ const _ = {
 
   // Implement _.findKey(): My solution.
   findKey(obj, fn) {
-    
-  }
+    for (let key in obj) {
+      return fn(obj[key]) ? key : undefined;
+    }
+  },
+
+  // Following codecademy's _.invert() ideate steps.
+  findKey1(obj, fn) {
+    for (let key in obj) {
+      if (fn(obj[key])) {
+        return key;
+      }
+    }
+    return undefined;
+  },
+
+  // Following codecademy's _.invert() implement steps.
+  findKey2(object, predicate) {
+    for (let key in object) {
+      const value = object[key];
+      const predicateReturnValue = predicate(value);
+      if (predicateReturnValue) return key;
+    }
+    return undefined;
+  },
 };
 
 
