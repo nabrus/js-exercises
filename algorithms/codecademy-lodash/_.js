@@ -194,6 +194,14 @@ const _ = {
     }
     return undefined;
   },
+
+  /* ARRAY METHODS */
+
+  // Implement _.drop(): My solution.
+  drop(arr, numToDrop) {
+    if (!numToDrop) return arr.slice(1);
+    return arr.slice(numToDrop);
+  },
 };
 
 
