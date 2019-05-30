@@ -218,6 +218,28 @@ const _ = {
     return droppedArray;
   },
 
+  // My solution with help from following codecademy's  _.dropWhile() ideate
+  // steps. **broken**
+  // dropWhile(arr, fn) {
+  //   const falsyElement = arr.findIndex(fn);
+  //   console.log(falsyElement);
+  //   const droppedArr = this.drop(arr, falsyElement);
+  //   return droppedArr;
+  // },
+
+  // Following codecademy's _.dropWhle() implement steps.
+  dropWhile(array, predicate) {
+    const dropNumber = array.findIndex((element, index) => !predicate(element, index, array));
+    const droppedArray = this.drop(array, dropNumber);
+    return droppedArray;
+  },
+
+  // Implement _.chunk(): My solution.
+  chunk(arr, size) {
+    const chunkArr = [];
+
+    
+  },
 };
 
 
