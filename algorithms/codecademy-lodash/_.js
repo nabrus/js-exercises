@@ -235,10 +235,31 @@ const _ = {
   },
 
   // Implement _.chunk(): My solution.
-  chunk(arr, size) {
+  chunk(arr, size = 1) {
     const chunkArr = [];
+    let i = 0;
 
-    
+    while (i < arr.length) {
+      chunkArr.push(arr.slice(i, i + size));
+      i += size;
+    }
+    return chunkArr;
+  },
+
+  // Following codecademy's _.chunk() implement steps.
+  chunk1(array, size = 1) {
+    if (size === undefined) {
+      size = 1;
+    }
+
+    const arrayChunks = [];
+
+    for (let i = 0; i < array.length; i += size) {
+      const arrayChunk = array.slice(i, i + size);
+      arrayChunks.push(arrayChunk);
+    }
+
+    return arrayChunks;
   },
 };
 
