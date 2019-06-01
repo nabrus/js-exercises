@@ -12,6 +12,47 @@
       }
       **************************/
 
+      body {
+        background: #001019;
+      }
+
+      /* CLOCK */
+      .clock {
+        color: #22FD00;
+        font-size: 3rem;
+        display: flex;
+        justify-content: center;
+        margin-top: 200px;
+      }
+
+      /* BUTTONS */
+      .btns-container {
+        margin-top: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .btn {
+        width: 100px;
+        color: whitesmoke;
+        font-size: 20px;
+        padding: 15px;
+        margin: 15px;
+        border-radius: 10%;
+      }
+
+      .start {
+        background: #155115;
+      }
+
+      .stop {
+        background: #840404;
+      }
+
+      .reset {
+        background: #032C44;
+      }
 
     </style>
 
@@ -19,6 +60,20 @@
 
   <body>
     <!-- Original markup <p class="clock"></p> -->
+
+    <main>
+
+      <div class="clock">
+        <h1 class="clock-face">00:00:00</h1>
+      </div>
+
+      <div class="btns-container">
+        <button class="start btn">Start</button>
+        <button class="stop btn">Stop</button>
+        <button class="reset btn">Reset</button>
+      </div>
+
+    </main>
 
     <script>
       /*
