@@ -96,14 +96,15 @@
       const startBtn = document.querySelector('.start');
       const stopBtn = document.querySelector('.stop');
       const resetBtn = document.querySelector('.reset');
-      const clockDisplay = document.querySelector('clock-face');
+      const clockDisplay = document.querySelector('.clock-face');
 
       function startWatch() {
         let counter = 0;
-        let startTime = Date.now();
-        
+        counter += 1;
+        // let startTime = Date.now();
+        clockDisplay.textContent = counter;
+        setInterval(startWatch, 1000);
       }
-
 
       startBtn.addEventListener('click', startWatch);
 
