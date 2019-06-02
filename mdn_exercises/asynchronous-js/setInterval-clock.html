@@ -40,6 +40,7 @@
         padding: 15px;
         margin: 15px;
         border-radius: 10%;
+        cursor: pointer;
       }
 
       .start {
@@ -104,21 +105,24 @@
         Start Button Functionality 
       */
       function startWatch() {
+        /* Directions call for Date.now(). Final solution did not use. ?? */
         let startTime = Date.now(); // current timestamp when clicked
         // in milliseconds
         
         timerDisplay = setInterval(() => {
-          // let timeAfterPress = Date.now() - startTime; // ms after bnt clicked
-          // // Divide by 1000 ms to get seconds
-          // let seconds = Math.round(timeAfterPress / 1000);
-          // counter += 1;
-          // console.log(counter);
-          // counter === 0 ? displayStopwatch(seconds) : displayStopwatch(counter);
+          let timeAfterPress = Date.now() - startTime; // ms after bnt clicked
+          // Divide by 1000 ms to get seconds
+          let seconds = Math.round(timeAfterPress / 1000);
           counter += 1;
-          displayStopwatch(counter);
+          console.log(counter);
+          counter === 0 ? displayStopwatch(seconds) : displayStopwatch(counter);
+          /* Simpler solution */
+          // counter += 1;
+          // displayStopwatch(counter);
         }, 1000);
+      }
 
-        function displayStopwatch(sec) {
+      function displayStopwatch(sec) {
           let secondsLeft = sec;
           // Dividing secondsLeft by secs in an hour
           const hours = Math.floor(secondsLeft / 3600);
@@ -137,7 +141,6 @@
 
           clockDisplay.textContent = display;
         }
-      }
 
       /*
         Stop Timer
@@ -151,15 +154,12 @@
       */
       function resetTimer() {
         counter = 0;
-        document.location.reload();
+        clockDisplay.textContent = '00:00:00';
       }
 
       startBtn.addEventListener('click', startWatch);
       stopBtn.addEventListener('click', stopTimer);
       resetBtn.addEventListener('click', resetTimer);
-
-
-
 
     </script>
 
