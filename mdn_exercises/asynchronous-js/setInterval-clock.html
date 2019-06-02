@@ -97,20 +97,66 @@
       const stopBtn = document.querySelector('.stop');
       const resetBtn = document.querySelector('.reset');
       const clockDisplay = document.querySelector('.clock-face');
+      let timerDisplay;
       let counter = 0;
-
+      
+      /* 
+        Start Button Functionality 
+      */
       function startWatch() {
-        counter += 1;
-        let startTime = Date.now();
-        // console.log(timeAfterPress);
+        let startTime = Date.now(); // current timestamp when clicked
+        // in milliseconds
         
-        setInterval(() => {
-          let timeAfterPress = Date.now() - startTime;
-          clockDisplay.textContent = timeAfterPress;
+        timerDisplay = setInterval(() => {
+          // let timeAfterPress = Date.now() - startTime; // ms after bnt clicked
+          // // Divide by 1000 ms to get seconds
+          // let seconds = Math.round(timeAfterPress / 1000);
+          // counter += 1;
+          // console.log(counter);
+          // counter === 0 ? displayStopwatch(seconds) : displayStopwatch(counter);
+          counter += 1;
+          displayStopwatch(counter);
         }, 1000);
+
+        function displayStopwatch(sec) {
+          let secondsLeft = sec;
+          // Dividing secondsLeft by secs in an hour
+          const hours = Math.floor(secondsLeft / 3600);
+
+          // Update secondsLeft: Find the remainder of secondsLeft divided by
+          // secs in hour (seconds after hours removed)
+          secondsLeft = secondsLeft % 3600;
+
+          // Divide secondsLeft by secs in a minute
+          const minutes = Math.floor(secondsLeft / 60);
+
+          // Update seconds left to get seconds. (seconds after minutes removed)
+          secondsLeft = secondsLeft % 60;
+
+          const display = `${hours < 10 ? '0' : ''}${hours}:${minutes < 10 ? '0' : ''}${minutes}:${secondsLeft < 10 ? '0' : ''}${secondsLeft}`;
+
+          clockDisplay.textContent = display;
+        }
+      }
+
+      /*
+        Stop Timer
+      */
+      function stopTimer() {
+        clearInterval(timerDisplay);
+      }
+
+      /*
+        Reset Timer
+      */
+      function resetTimer() {
+        counter = 0;
+        document.location.reload();
       }
 
       startBtn.addEventListener('click', startWatch);
+      stopBtn.addEventListener('click', stopTimer);
+      resetBtn.addEventListener('click', resetTimer);
 
 
 
