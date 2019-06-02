@@ -102,11 +102,12 @@
       function startWatch() {
         counter += 1;
         let startTime = Date.now();
-        let timeAfterPress = Date.now() - startTime;
-        console.log(timeAfterPress);
+        // console.log(timeAfterPress);
         
-        clockDisplay.textContent = counter;
-        setInterval(startWatch, 1000);
+        setInterval(() => {
+          let timeAfterPress = Date.now() - startTime;
+          clockDisplay.textContent = timeAfterPress;
+        }, 1000);
       }
 
       startBtn.addEventListener('click', startWatch);
