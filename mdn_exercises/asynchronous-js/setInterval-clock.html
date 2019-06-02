@@ -59,7 +59,7 @@
   </head>
 
   <body>
-    <!-- Original markup --><p class="clock"></p> 
+    <!-- Original markup <p class="clock"></p> -->
 
     <main>
 
@@ -82,28 +82,30 @@
       
       /* Original code that displays a digital clock */
 
-      function displayTime() {
-        let date = new Date();
-        let time = date.toLocaleTimeString();
-        document.querySelector('.clock').textContent = time;
-      }
+      // function displayTime() {
+      //   let date = new Date();
+      //   let time = date.toLocaleTimeString();
+      //   document.querySelector('.clock').textContent = time;
+      // }
 
-      displayTime();
-      const createClock = setInterval(displayTime, 1000);
+      // displayTime();
+      // const createClock = setInterval(displayTime, 1000);
 
       /* Stopwatch */
 
-      // const startBtn = document.querySelector('.start');
-      // const stopBtn = document.querySelector('.stop');
-      // const resetBtn = document.querySelector('.reset');
-      // const clockDisplay = document.querySelector('clock-face');
+      const startBtn = document.querySelector('.start');
+      const stopBtn = document.querySelector('.stop');
+      const resetBtn = document.querySelector('.reset');
+      const clockDisplay = document.querySelector('clock-face');
+
+      function startWatch() {
+        let counter = 0;
+        let startTime = Date.now();
+        
+      }
 
 
-
-      // let counter = 0;
-      // let startTime = Date.now();
-
-      // startBnt.
+      startBtn.addEventListener('click', startWatch);
 
 
 
