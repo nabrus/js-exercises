@@ -13,21 +13,24 @@
       **************************/
 
       body {
-        background: #001019;
+        background: black;
       }
 
       /* CLOCK */
       .clock {
+        background: #001019;
         color: #22FD00;
         font-size: 3rem;
         display: flex;
         justify-content: center;
         margin-top: 200px;
+        padding: 6%;
       }
 
       /* BUTTONS */
       .btns-container {
-        margin-top: 20%;
+        background: linear-gradient(grey, black);
+        padding-top: 5%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -98,7 +101,7 @@
       const stopBtn = document.querySelector('.stop');
       const resetBtn = document.querySelector('.reset');
       const clockDisplay = document.querySelector('.clock-face');
-      let timerDisplay;
+      let timerDisplay; // declaring setInterval var for clear ability later
       let counter = 0;
       
       /* 
@@ -116,10 +119,14 @@
           counter += 1;
           console.log(counter);
           counter === 0 ? displayStopwatch(seconds) : displayStopwatch(counter);
-          /* Simpler solution */
+          /* 
+            Simpler solution: just use a counter that increments.
+          */
           // counter += 1;
           // displayStopwatch(counter);
         }, 1000);
+        startBtn.setAttribute("disabled", "disabled"); // disable bnt to stop 
+        // multiple counters with multiple clicks.
       }
 
       function displayStopwatch(sec) {
@@ -147,6 +154,7 @@
       */
       function stopTimer() {
         clearInterval(timerDisplay);
+        startBtn.removeAttribute("disabled"); // Enable startBnt.
       }
 
       /*
