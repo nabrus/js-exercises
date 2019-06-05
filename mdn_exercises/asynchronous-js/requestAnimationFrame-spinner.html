@@ -44,6 +44,21 @@
     let rAF;
     let startTime = null;
 
+    function draw(timestamp) {
+      if (!startTime) {
+        startTime = timestamp;
+      }
+
+      let rotateCount = (timestamp - startTime) / 3;
+      spinner.style.transform = `rotate(${rotateCount}deg)`;
+
+      if (rotateCount > 359) {
+        rotateCount -= 360;
+      }
+
+      rAF = requestAnimationFrame(draw);
+    }
+    
 
   </script>
 
