@@ -44,6 +44,7 @@
     let rotateCount = 0;
     let rAF;
     let startTime = null;
+    let spinning = false;
 
     function draw(timestamp) {
       if (!startTime) {
@@ -60,7 +61,15 @@
       rAF = requestAnimationFrame(draw);
     }
 
-    page.addEventListener('click', draw);
+    page.addEventListener('click', () => {
+      if (spinning) {
+        cancelAnimationFrame(rAF);
+        spinning = false;
+      } else {
+        draw();
+        spinning = true;
+      }
+    });
 
   </script>
 
