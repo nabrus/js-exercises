@@ -137,6 +137,39 @@
       const btn = document.querySelector('button');
       const result = document.querySelector('.result');
 
+      // Random number fn
+      function random(min, max) {
+        const num = Math.floor(Math.random() * (max - min)) + min;
+        return num;
+      }
+
+      // Animate spinner
+      function draw(timestamp) {
+        if(!startTime) {
+          startTime = timestamp;
+        }
+
+        let rotateCount = (timestamp - startTime) / 3;
+        spinner.style.transform = `rotate(${rotateCount}deg)`;
+
+        if (rotateCount > 359) {
+          rotateCount -= 360;
+        }
+
+        rAF = requestAnimationFrame(draw);
+      }
+
+      // Initial state on page load: spinner & results <p> hidden.
+      result.style.display = 'none';
+      spinnerContainer.style.display = 'none';
+
+      // Reset app to original state after game played.
+      function reset() {
+        btn.style.display = 'block';
+        result.textContent = '';
+        result.style.display = 'none';
+      }
+
       
 
     </script>
