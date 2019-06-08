@@ -39,6 +39,7 @@
   
   <script>
 
+    const page = document.querySelector('body');
     const spinner = document.querySelector('div');
     let rotateCount = 0;
     let rAF;
@@ -59,7 +60,7 @@
       rAF = requestAnimationFrame(draw);
     }
 
-    draw();
+    page.addEventListener('click', draw);
 
   </script>
 
