@@ -197,8 +197,10 @@
             result.textContent = 'Player 2 won!!';
           }
 
+          if (e.key === 'a' || e.key === 'l') {
           document.removeEventListener('keydown', keyHandler);
           setTimeout(reset, 5000); // Reset game to original state after 5 secs
+          } 
         };
       }
 
