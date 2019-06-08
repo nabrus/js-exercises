@@ -170,7 +170,37 @@
         result.style.display = 'none';
       }
 
-      
+      // Button event listener
+      btn.addEventListener('click', start);
+
+      // Start game
+      function start() {
+        draw();
+        spinnerContainer.style.display = 'block';
+        btn.style.display = 'none';
+        setTimeout(setEndgame, random(5000, 10000));
+      }
+
+      function setEndgame() {
+        cancelAnimationFrame(rAF);
+        spinnerContainer.style.display = 'none';
+        result.style.display = 'block';
+        result.textContent = 'PLAYERS GO!!';
+
+        document.addEventListener('keydown', keyHandler);
+
+        function keyHandler(e) {
+          console.log(e.key);
+          if (e.key === 'a') {
+            result.textContent = 'Player 1 won!!';
+          } else if (e.key === 'l') {
+            result.textContent = 'Player 2 won!!';
+          }
+
+          document.removeEventListener('keydown', keyHandler);
+          setTimeout(reset, 5000); // Reset game to original state after 5 secs
+        };
+      }
 
     </script>
   </body>
