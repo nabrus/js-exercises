@@ -8,6 +8,8 @@ const botDoorPath = "https://s3.amazonaws.com/codecademy-content/projects/chore-
 const beachDoorPath = "https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/beach.svg";
 const spaceDoorPath = "https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/space.svg";
 
+const randomChoreDoorGenerator = () => {};
+
 // Doors 1-3 Click Event Functions
 doorImage1.onclick = () => {
   doorImage1.src = botDoorPath;
