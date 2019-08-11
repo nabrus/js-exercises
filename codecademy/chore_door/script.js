@@ -8,10 +8,20 @@ const botDoorPath = "https://s3.amazonaws.com/codecademy-content/projects/chore-
 const beachDoorPath = "https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/beach.svg";
 const spaceDoorPath = "https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/space.svg";
 
-const numClosedDoors = 3;
+let numClosedDoors = 3;
 let openDoor1 = " ";
 let openDoor2 = " ";
 let openDoor3 = " ";
+
+// Decreases `numClosedDoors` and checks for game-winning condition:
+// `numClosedDoors === 0`, calling gameOver().
+const playDoor = () => {
+  numClosedDoors -= 1;
+
+  if (numClosedDoors === 0) {
+    gameOver();
+  }
+};
 
 const randomChoreDoorGenerator = () => {
   const choreDoor = Math.floor(Math.random() * numClosedDoors);
@@ -34,14 +44,17 @@ const randomChoreDoorGenerator = () => {
 // Doors 1-3 Click Event Functions
 doorImage1.onclick = () => {
   doorImage1.src = openDoor1;
+  playDoor();
 };
 
 doorImage2.onclick = () => {
   doorImage2.src = openDoor2;
+  playDoor();
 };
 
 doorImage3.onclick = () => {
   doorImage3.src = openDoor3;
+  playDoor();
 };
 
 randomChoreDoorGenerator();
