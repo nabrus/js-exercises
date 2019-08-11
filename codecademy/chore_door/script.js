@@ -1,7 +1,8 @@
-// Closed Doors 1-3
+// Closed Doors 1-3 / Start Button
 const doorImage1 = document.querySelector("#door1");
 const doorImage2 = document.querySelector("#door2");
 const doorImage3 = document.querySelector("#door3");
+const startButton = document.querySelector("#start");
 
 // Door Images
 const botDoorPath = "https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/robot.svg";
@@ -49,7 +50,7 @@ const randomChoreDoorGenerator = () => {
   }
 };
 
-// Doors 1-3 Click Event Functions
+// Door elements 1-3 Click Event Functions
 doorImage1.onclick = () => {
   if (!isClicked(doorImage1)) {
     doorImage1.src = openDoor1;
@@ -69,6 +70,11 @@ doorImage3.onclick = () => {
     doorImage3.src = openDoor3;
     playDoor();
   }
+};
+
+// GAMEOVER!
+const gameOver = () => {
+
 };
 
 randomChoreDoorGenerator();
