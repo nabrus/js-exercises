@@ -28,7 +28,7 @@ const playDoor = () => {
   numClosedDoors -= 1;
 
   if (numClosedDoors === 0) {
-    gameOver();
+    gameOver("win");
   }
 };
 
@@ -73,8 +73,10 @@ doorImage3.onclick = () => {
 };
 
 // GAMEOVER!
-const gameOver = () => {
-
+const gameOver = status => {
+  if (status === "win") {
+    startButton.innerHTML = "You win! Play again?"
+  }
 };
 
 randomChoreDoorGenerator();
