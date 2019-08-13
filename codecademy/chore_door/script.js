@@ -31,11 +31,13 @@ const isClicked = door => {
 
 // Decreases `numClosedDoors` and checks for game-winning condition:
 // `numClosedDoors === 0`, calling gameOver().
-const playDoor = () => {
+const playDoor = door => {
   numClosedDoors -= 1;
 
   if (numClosedDoors === 0) {
     gameOver("win");
+  } else if (isBot(door)) {
+    gameOver();
   }
 };
 
@@ -61,21 +63,21 @@ const randomChoreDoorGenerator = () => {
 doorImage1.onclick = () => {
   if (!isClicked(doorImage1)) {
     doorImage1.src = openDoor1;
-    playDoor();
+    playDoor(openDoor1);
   }
 };
 
 doorImage2.onclick = () => {
   if (!isClicked(doorImage2)) {
     doorImage2.src = openDoor2;
-    playDoor();
+    playDoor(openDoor2);
   }
 };
 
 doorImage3.onclick = () => {
   if (!isClicked(doorImage3)) {
     doorImage3.src = openDoor3;
-    playDoor();
+    playDoor(openDoor3);
   }
 };
 
