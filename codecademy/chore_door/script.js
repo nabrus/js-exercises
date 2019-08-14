@@ -63,28 +63,30 @@ const randomChoreDoorGenerator = () => {
 doorImage1.onclick = () => {
   if (!isClicked(doorImage1)) {
     doorImage1.src = openDoor1;
-    playDoor(openDoor1);
+    playDoor(doorImage1);
   }
 };
 
 doorImage2.onclick = () => {
   if (!isClicked(doorImage2)) {
     doorImage2.src = openDoor2;
-    playDoor(openDoor2);
+    playDoor(doorImage2);
   }
 };
 
 doorImage3.onclick = () => {
   if (!isClicked(doorImage3)) {
     doorImage3.src = openDoor3;
-    playDoor(openDoor3);
+    playDoor(doorImage3);
   }
 };
 
 // GAMEOVER!
 const gameOver = status => {
   if (status === "win") {
-    startButton.innerHTML = "You win! Play again?"
+    startButton.innerHTML = "You win! Play again?";
+  } else {
+    startButton.innerHTML = "Game over! Play again?";
   }
 };
 
