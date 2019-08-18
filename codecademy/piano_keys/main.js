@@ -6,7 +6,7 @@ keys.forEach(key => {
 });
 
 // Write named functions that change the color of the keys below
-
+const keyPlay = e => {};
 
 // Write a named function with event handler properties
 
