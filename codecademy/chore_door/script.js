@@ -83,9 +83,14 @@ doorImage3.onclick = () => {
 };
 
 // Start New Round
-startButton.onclick = () {
+startButton.onclick = () => {
   startRound();
-}
+};
+
+// Start game
+const startRound = () => {
+  
+};
 
 // GAMEOVER!
 const gameOver = status => {
