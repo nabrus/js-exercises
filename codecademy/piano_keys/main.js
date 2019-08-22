@@ -16,8 +16,11 @@ function keyReturn(e) {
 
 // Write a named function with event handler properties
 function keyAction(note) {
-  note.onmousedown = keyPlay;
+  notes.onmousedown = keyPlay;
+  notes.onmouseup = keyReturn;
 }
+notes.forEach(note => keyAction(note));
+
 
 // Write a loop that runs the array elements through the function
 
