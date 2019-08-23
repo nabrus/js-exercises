@@ -7,7 +7,7 @@ keys.forEach(key => {
 
 // Write named functions that change the color of the keys below
 function keyPlay(e) {
-  e.target.style.backgroundColor = "blue";
+  e.target.style.backgroundColor = "cyan";
 }
 
 function keyReturn(e) {
@@ -16,10 +16,11 @@ function keyReturn(e) {
 
 // Write a named function with event handler properties
 function keyAction(note) {
-  notes.onmousedown = keyPlay;
-  notes.onmouseup = keyReturn;
+  note.onmousedown = keyPlay;
+  note.onmouseup = keyReturn;
 }
-notes.forEach(note => keyAction(note));
+
+notes.forEach(keyAction);
 
 
 // Write a loop that runs the array elements through the function
