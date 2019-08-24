@@ -20,11 +20,8 @@ function keyAction(note) {
   note.onmouseup = keyReturn;
 }
 
-notes.forEach(keyAction);
-
-
 // Write a loop that runs the array elements through the function
-
+notes.forEach(keyAction);
 
 // These variables store the buttons that progress the user through the lyrics
 let nextOne = document.getElementById("first-next-line");
@@ -38,13 +35,24 @@ let lastLyric = document.getElementById("column-optional");
 // These statements are "hiding" all the progress buttons, but the first one
 nextTwo.hidden = true;
 nextThree.hidden = true;
-startOver.hidden= true;
+startOver.hidden = true;
 
 // Write anonymous event handler property and function for the first progress button
-
+nextOne.addEventListener("click", () => {
+  nextTwo.hidden = false;
+  nextOne.hidden = true;
+  document.getElementById("letter-note-five").innerHTML = "D";
+  document.getElementById("letter-note-six").innerHTML = "C";
+});
 
 // Write anonymous event handler property and function for the second progress button
-
+nextTwo.addEventListener("click", () => {
+  nextThree.hidden = false;
+  nextTwo.hidden = true;
+  document.getElementById("word-five").innerHTML = "DEAR";
+  document.getElementById("word-six").innerHTML = "FRI-";
+  lastLyric.style.display = "inline-block";
+});
 
 // Write anonymous event handler property and function for the third progress button
 
