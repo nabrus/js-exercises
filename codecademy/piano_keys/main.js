@@ -16,8 +16,13 @@ function keyReturn(e) {
 
 // Write a named function with event handler properties
 function keyAction(note) {
-  note.onmousedown = keyPlay;
-  note.onmouseup = keyReturn;
+  note.onmousedown = keyPlay; // My solution
+  note.onmouseup = keyReturn; // My solution
+
+  // Codecademy vid explains the way I authored is incorrect.
+  // You need to put the fn's inside anonymous fn's. Both ways work though.
+  // note.onmousedown = () => keyPlay(event);
+  // note.onmouseup = () => keyReturn(event);
 }
 
 // Write a loop that runs the array elements through the function
@@ -51,29 +56,34 @@ nextTwo.addEventListener("click", () => {
   nextTwo.hidden = true;
   document.getElementById("word-five").innerHTML = "DEAR";
   document.getElementById("word-six").innerHTML = "FRI-";
-  lastLyric.style.display = "inline-block";
+
   document.getElementById("letter-note-three").innerHTML = "G";
   document.getElementById("letter-note-four").innerHTML = "E";
   document.getElementById("letter-note-five").innerHTML = "C";
   document.getElementById("letter-note-six").innerHTML = "B";
+
+  lastLyric.style.display = "inline-block";
 });
 
 // Write anonymous event handler property and function for the third progress button
 nextThree.addEventListener("click", () => {
   startOver.hidden = false;
   nextThree.hidden = true;
+
   document.getElementById("word-one").innerHTML = "HAP-";
   document.getElementById("word-two").innerHTML = "PY";
   document.getElementById("word-three").innerHTML = "BIRTH";
   document.getElementById("word-four").innerHTML = "DAY";
   document.getElementById("word-five").innerHTML = "TO";
   document.getElementById("word-six").innerHTML = "YOU!";
+
   document.getElementById("letter-note-one").innerHTML = "F";
   document.getElementById("letter-note-two").innerHTML = "F";
   document.getElementById("letter-note-three").innerHTML = "E";
   document.getElementById("letter-note-four").innerHTML = "C";
   document.getElementById("letter-note-five").innerHTML = "D";
   document.getElementById("letter-note-six").innerHTML = "C";
+  
   lastLyric.style.display = "none";
 });
 
