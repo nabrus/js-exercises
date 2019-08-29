@@ -102,7 +102,9 @@ nav {
 .instrument {
   width: 90%;
   overflow: auto;
-
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 2% auto;
+  margin: 5%;
 }
 
 .image {
