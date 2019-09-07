@@ -18,6 +18,11 @@ class Media {
     return this._ratings;
   }
 
+  // Methods
+  toggleCheckOutStatus() {
+    this.isCheckedOut = !this.isCheckedOut;
+  }
+
   // Setter
   set isCheckedOut(status) {
     this._isCheckedOut = status;
