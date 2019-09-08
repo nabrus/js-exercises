@@ -80,7 +80,10 @@ class Movie extends Media {
   }
 }
 
+
 // INSTANCES
+
+// book
 const historyOfEverything = new Book("Bill Bryson", "A Short History of Nearly Everything", 544);
 
 historyOfEverything.toggleCheckOutStatus();
@@ -90,3 +93,6 @@ historyOfEverything.addRating(4);
 historyOfEverything.addRating(5);
 historyOfEverything.addRating(5);
 console.log(historyOfEverything.getAverageRating()); // 4
+
+// movie
+const speed = new Movie("Jan de Bont", "Speed", 116);
