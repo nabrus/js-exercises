@@ -30,10 +30,12 @@ class Media {
     return Math.floor(ratingsSum / this.ratings.length);
   }
 
+  addRating(rating) {
+    this.ratings.push(rating);
+  }
+
   // Setter
   set isCheckedOut(status) {
     this._isCheckedOut = status;
   }
 }
-
-
