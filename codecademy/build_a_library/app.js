@@ -1,3 +1,4 @@
+// PARENT CLASS
 class Media {
   constructor(title) {
     this._title = title;
@@ -39,3 +40,27 @@ class Media {
     this._isCheckedOut = status;
   }
 }
+
+
+// CHILDREN CLASSES
+
+// BOOK
+class Book extends Media {
+  constructor(title, author, pages) {
+    super(title);
+    this._author = author;
+    this._pages = pages;
+  }
+
+  // Getters
+  get author() {
+    return this._author;
+  }
+
+  get pages() {
+    return this._pages;
+  }
+}
+
+// MOVIE
+
