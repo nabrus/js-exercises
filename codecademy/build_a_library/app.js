@@ -23,8 +23,17 @@ class Media {
     this.isCheckedOut = !this.isCheckedOut;
   }
 
+  getAverageRating() {
+    let ratingsSum = this.ratings
+      .reduce((acc, val) => acc + val, 0);
+
+    return Math.floor(ratingsSum / this.ratings.length);
+  }
+
   // Setter
   set isCheckedOut(status) {
     this._isCheckedOut = status;
   }
 }
+
+
