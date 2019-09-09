@@ -80,6 +80,13 @@ class Movie extends Media {
   }
 }
 
+// CD
+class CD extends Media {
+  constructor(album, title, songTitles, runTime) {
+    super(title);
+  }
+}
+
 
 // INSTANCES
 
