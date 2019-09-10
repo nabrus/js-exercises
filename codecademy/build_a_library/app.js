@@ -84,6 +84,27 @@ class Movie extends Media {
 class CD extends Media {
   constructor(album, title, songTitles, runTime) {
     super(title);
+    this._album = album;
+    this._songTitles = [];
+    this._runTime = runTime;
+  }
+
+  // Getters
+  get album() {
+    return this._album;
+  }
+
+  get songTitles() {
+    return this._songTitles;
+  }
+
+  get runTime() {
+    return this._runTime;
+  }
+
+  // Methods
+  addSongs(song) {
+    this.songTitles.push(song);
   }
 }
 
