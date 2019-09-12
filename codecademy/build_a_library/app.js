@@ -110,7 +110,7 @@ class CD extends Media {
   }
 
   shuffle() {
-    
+    let songs = this._songTitles;
   }
 }
 
