@@ -82,16 +82,16 @@ class Movie extends Media {
 
 // CD
 class CD extends Media {
-  constructor(album, title, songTitles, runTime) {
+  constructor(year, title, songTitles, runTime) {
     super(title);
-    this._album = album;
+    this._year = year;
     this._songTitles = [];
     this._runTime = runTime;
   }
 
   // Getters
-  get album() {
-    return this._album;
+  get year() {
+    return this._year;
   }
 
   get songTitles() {
@@ -132,3 +132,13 @@ speed.addRating(1);
 speed.addRating(1);
 speed.addRating(5);
 console.log(speed.getAverageRating()); // 2
+
+// CD
+const music311 = new CD(1993, "Music", 63);
+
+music311.addSongs("Freak Out");
+console.log(music311.songTitles); // [ 'Freak Out' ]
+music311.addSongs("Welcome");
+console.log(music311.songTitles); // [ 'Freak Out', 'Welcome' ]
+
+console.log(music311.title); // Music
