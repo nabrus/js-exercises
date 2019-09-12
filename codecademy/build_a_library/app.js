@@ -108,6 +108,10 @@ class CD extends Media {
   addSongs(song) {
     this.songTitles.push(song);
   }
+
+  shuffle() {
+    
+  }
 }
 
 
