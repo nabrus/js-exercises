@@ -32,7 +32,9 @@ class Media {
   }
 
   addRating(rating) {
-    this.ratings.push(rating);
+    if (rating >= 1 && rating < 5) {
+      this.ratings.push(rating);
+    }
   }
 
   // Setter
@@ -142,3 +144,9 @@ music311.addSongs("Welcome");
 console.log(music311.songTitles); // [ 'Freak Out', 'Welcome' ]
 
 console.log(music311.title); // Music
+
+music311.addRating(8);
+music311.addRating(4);
+music311.addRating(10);
+music311.addRating(3);
+console.log(music311.ratings); // [ 4, 3 ]
