@@ -32,7 +32,7 @@ class Media {
   }
 
   addRating(rating) {
-    if (rating >= 1 && rating < 5) {
+    if (rating >= 1 && rating <= 5) {
       this.ratings.push(rating);
     }
   }
@@ -147,6 +147,6 @@ console.log(music311.title); // Music
 
 music311.addRating(8);
 music311.addRating(4);
-music311.addRating(10);
+music311.addRating(5);
 music311.addRating(3);
-console.log(music311.ratings); // [ 4, 3 ]
+console.log(music311.ratings); // [ 4, 5, 3 ]
