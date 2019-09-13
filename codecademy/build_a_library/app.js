@@ -84,10 +84,11 @@ class Movie extends Media {
 
 // CD
 class CD extends Media {
-  constructor(year, title, songTitles, runTime) {
+  constructor(artist, year, title, songTitles, runTime) {
     super(title);
+    this._artist = artist;
     this._year = year;
-    this._songTitles = [];
+    this._songTitles = songTitles;
     this._runTime = runTime;
   }
 
@@ -105,9 +106,6 @@ class CD extends Media {
   }
 
   // Methods
-  addSongs(song) {
-    this.songTitles.push(song);
-  }
 
   shuffle() {
     let songs = this._songTitles;
