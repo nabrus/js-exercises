@@ -34,6 +34,8 @@ class Media {
   addRating(rating) {
     if (rating >= 1 && rating <= 5) {
       this.ratings.push(rating);
+    } else {
+      console.log("Rating system is 1 to 5, please select again.");
     }
   }
 
@@ -138,16 +140,12 @@ speed.addRating(5);
 console.log(speed.getAverageRating()); // 2
 
 // CD
-const music311 = new CD(1993, "Music", 63);
-
-music311.addSongs("Freak Out");
-console.log(music311.songTitles); // [ 'Freak Out' ]
-music311.addSongs("Welcome");
-console.log(music311.songTitles); // [ 'Freak Out', 'Welcome' ]
+const music311 = new CD(311, 1993, "Music", "Freak Out, Welcome, Visit", 63);
 
 console.log(music311.title); // Music
 
 music311.addRating(8);
+// Rating system is 1 to 5, please select again.
 music311.addRating(4);
 music311.addRating(5);
 music311.addRating(3);
