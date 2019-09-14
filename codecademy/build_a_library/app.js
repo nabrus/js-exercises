@@ -121,6 +121,22 @@ class CD extends Media {
 }
 
 
+// CATALOG
+class Catalog {
+  constructor(myMedia) {
+    this._myMedia = [];
+  }
+
+  get myMedia() {
+    return this._myMedia;
+  }
+
+  set myMedia(media) {
+    this._myMedia.push(media);
+  }
+}
+
+
 // INSTANCES
 
 // book
@@ -163,3 +179,40 @@ music311.shuffle();
 console.log(music311.songTitles);
 music311.shuffle();
 console.log(music311.songTitles);
+
+// Catalog
+const myStuff = new Catalog();
+myStuff.myMedia = music311;
+myStuff.myMedia = speed;
+myStuff.myMedia = historyOfEverything;
+
+console.log(myStuff);
+/*
+Catalog {
+  _myMedia: [
+    CD {
+      _title: 'Music',
+      _isCheckedOut: false,
+      _ratings: [Array],
+      _artist: 311,
+      _year: 1993,
+      _songTitles: [Array],
+      _runTime: 63
+    },
+    Movie {
+      _title: 'Speed',
+      _isCheckedOut: true,
+      _ratings: [Array],
+      _director: 'Jan de Bont',
+      _runTime: 116
+    },
+    Book {
+      _title: 'A Short History of Nearly Everything',
+      _isCheckedOut: true,
+      _ratings: [Array],
+      _author: 'Bill Bryson',
+      _pages: 544
+    }
+  ]
+}
+*/
