@@ -109,8 +109,14 @@ class CD extends Media {
 
   // Methods
 
-  shuffle() {
-    let songs = this._songTitles;
+  shuffle(songTitles) {
+    for (let i = this.songTitles.length - 1; i > 0; i -= 1) {
+      const j = Math.floor(Math.random() * (i + 1));
+      const temp = this.songTitles[i];
+      this.songTitles[i] = this.songTitles[j];
+      this.songTitles[j] = temp;
+    }
+    return this.songTitles;
   }
 }
 
@@ -140,7 +146,7 @@ speed.addRating(5);
 console.log(speed.getAverageRating()); // 2
 
 // CD
-const music311 = new CD(311, 1993, "Music", "Freak Out, Welcome, Visit", 63);
+const music311 = new CD(311, 1993, "Music", ["Freak Out", "Welcome", "Visit"], 63);
 
 console.log(music311.title); // Music
 
@@ -150,3 +156,10 @@ music311.addRating(4);
 music311.addRating(5);
 music311.addRating(3);
 console.log(music311.ratings); // [ 4, 5, 3 ]
+
+music311.shuffle();
+console.log(music311.songTitles);
+music311.shuffle();
+console.log(music311.songTitles);
+music311.shuffle();
+console.log(music311.songTitles);
