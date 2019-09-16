@@ -24,8 +24,27 @@ class School {
   get numberOfStudents() {
     return this._numberOfStudents;
   }
+
+  // Methods
+  quickFacts() {
+
+  }
+
+  pickSubstituteTeacher() {
+
+  }
 }
 
 
 // CHILDREN CLASSES
+class Primary extends School {
+  constructor(name, level, numberOfStudents, pickupPolicy) {
+    super(name, level, numberOfStudents);
+    this._pickupPolicy = pickupPolicy;
+  }
 
+  // Getters
+  get pickupPolicy() {
+    return this._pickupPolicy;
+  }
+}
