@@ -25,6 +25,13 @@ class School {
     return this._numberOfStudents;
   }
 
+  set numberOfStudents(num) {
+    if (isNaN(num)) {
+      return "Invalid input: numberOfStudents must be set to a Number.";
+    }
+    return this._numberOfStudents = num;
+  }
+
   // Methods
   quickFacts() {
 
