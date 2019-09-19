@@ -26,10 +26,11 @@ class School {
   }
 
   set numberOfStudents(num) {
-    if (isNaN(num)) {
-      return "Invalid input: numberOfStudents must be set to a Number.";
+    if (typeof num === "number") {
+      this._numberOfStudents = num;
+    } else {
+      console.log("Invalid input: numberOfStudents must be set to a Number.");
     }
-    return this._numberOfStudents = num;
   }
 
   // Methods
@@ -76,3 +77,14 @@ class High extends School {
     return this._sportsTeams;
   }
 }
+
+const indianaAve = new Primary("Indiana", "Primary", 45, "Yes");
+const school19 = new Primary("Bear", "Primary", 108, "Yes");
+
+console.log(indianaAve.name);
+console.log(indianaAve.numberOfStudents);
+console.log(school19.numberOfStudents);
+
+school19.numberOfStudents = "204";
+
+console.log(school19.numberOfStudents);
