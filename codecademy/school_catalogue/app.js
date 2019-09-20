@@ -35,7 +35,7 @@ class School {
 
   // Methods
   quickFacts() {
-
+    console.log(`${this.name} educates ${this.numberOfStudents} students at the ${this.level} school level.`);
   }
 
   pickSubstituteTeacher() {
@@ -78,7 +78,7 @@ class High extends School {
   }
 }
 
-const indianaAve = new Primary("Indiana", "Primary", 45, "Yes");
+const indianaAve = new Primary("Indiana Ave.", "Primary", 45, "Yes");
 const school19 = new Primary("Bear", "Primary", 108, "Yes");
 
 console.log(indianaAve.name);
@@ -88,3 +88,5 @@ console.log(school19.numberOfStudents);
 school19.numberOfStudents = "204";
 
 console.log(school19.numberOfStudents);
+
+indianaAve.quickFacts();
