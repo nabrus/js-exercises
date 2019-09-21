@@ -38,8 +38,8 @@ class School {
     console.log(`${this.name} educates ${this.numberOfStudents} students at the ${this.level} school level.`);
   }
 
-  pickSubstituteTeacher() {
-
+  pickSubstituteTeacher(substituteTeachers) {
+    
   }
 }
 
