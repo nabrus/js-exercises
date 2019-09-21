@@ -47,8 +47,8 @@ class School {
 // CHILDREN CLASSES
 // Primary
 class Primary extends School {
-  constructor(name, level, numberOfStudents, pickupPolicy) {
-    super(name, level, numberOfStudents);
+  constructor(name, numberOfStudents, pickupPolicy) {
+    super(name, "primary", numberOfStudents);
     this._pickupPolicy = pickupPolicy;
   }
   
@@ -60,18 +60,18 @@ class Primary extends School {
 
 // Middle 
 class Middle extends School {
-  constructor(name, level, numberOfStudents) {
-    super(name, level, numberOfStudents);
+  constructor(name, numberOfStudents) {
+    super(name, "middle", numberOfStudents);
   }
 }
 
 // High
 class High extends School {
-  constructor(name, level, numberOfStudents, sportsTeams) {
-    super(name, level, numberOfStudents);
+  constructor(name, numberOfStudents, sportsTeams) {
+    super(name, "high", numberOfStudents);
     this._sportsTeams = sportsTeams;
   }
-  
+
   // Getters
   get sportsTeams() {
     return this._sportsTeams;
