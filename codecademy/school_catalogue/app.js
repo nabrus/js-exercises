@@ -51,7 +51,7 @@ class Primary extends School {
     super(name, "primary", numberOfStudents);
     this._pickupPolicy = pickupPolicy;
   }
-  
+
   // Getters
   get pickupPolicy() {
     return this._pickupPolicy;
