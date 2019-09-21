@@ -38,11 +38,11 @@ class School {
     console.log(`${this.name} educates ${this.numberOfStudents} students at the ${this.level} school level.`);
   }
 
-  pickSubstituteTeacher(substituteTeachers) {
-    
+  static pickSubstituteTeacher(substituteTeachers) {
+    const randNum = Math.floor(Math.random() * substituteTeachers.length);
+    return substituteTeachers[randNum];
   }
 }
-
 
 // CHILDREN CLASSES
 // Primary
@@ -51,7 +51,7 @@ class Primary extends School {
     super(name, level, numberOfStudents);
     this._pickupPolicy = pickupPolicy;
   }
-
+  
   // Getters
   get pickupPolicy() {
     return this._pickupPolicy;
@@ -71,7 +71,7 @@ class High extends School {
     super(name, level, numberOfStudents);
     this._sportsTeams = sportsTeams;
   }
-
+  
   // Getters
   get sportsTeams() {
     return this._sportsTeams;
@@ -90,3 +90,7 @@ school19.numberOfStudents = "204";
 console.log(school19.numberOfStudents);
 
 indianaAve.quickFacts();
+
+console.log(School.pickSubstituteTeacher(["Henry", "Hena", "Debbie", "Kristen"]));
+console.log(School.pickSubstituteTeacher(["Henry", "Hena", "Debbie", "Kristen"]));
+console.log(School.pickSubstituteTeacher(["Henry", "Hena", "Debbie", "Kristen"]));
