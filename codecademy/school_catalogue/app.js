@@ -78,8 +78,8 @@ class HighSchool extends School {
   }
 }
 
-const indianaAve = new PrimarySchool("Indiana Ave.", "Primary", 45, "Yes");
-const school19 = new PrimarySchool("Bear", "Primary", 108, "Yes");
+const indianaAve = new PrimarySchool("Indiana Ave.", 45, "Yes");
+const school19 = new PrimarySchool("Bear", 108, "Yes");
 
 console.log(indianaAve.name);
 console.log(indianaAve.numberOfStudents);
@@ -90,6 +90,8 @@ school19.numberOfStudents = "204";
 console.log(school19.numberOfStudents);
 
 indianaAve.quickFacts();
+
+const lorraineHansbury = new PrimarySchool("Lorraine Hansbury", 514, "Students must be picked up by a parent, guardian, or a family member over the age of 13.");
 
 console.log(School.pickSubstituteTeacher(["Henry", "Hena", "Debbie", "Kristen"]));
 console.log(School.pickSubstituteTeacher(["Henry", "Hena", "Debbie", "Kristen"]));
