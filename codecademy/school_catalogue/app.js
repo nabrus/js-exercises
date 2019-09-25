@@ -78,6 +78,35 @@ class HighSchool extends School {
   }
 }
 
+class SchoolCatalog {
+  constructor(level, schools) {
+    this._level = level;
+    this._schools = [];
+  }
+
+  // Getters
+  get level() {
+    return this._level;
+  }
+
+  get schools() {
+    return this._schools;
+  }
+
+  set schools(school) {
+    this._schools.push(school);
+  }
+
+  // Methods
+  addSchools(school) {
+    if (this.level === school.level) {
+      this.schools.push(school);
+    } else {
+      console.log("WARNING: Level of schools don't match.");
+    }
+  }
+}
+
 const indianaAve = new PrimarySchool("Indiana Ave.", 45, "Yes");
 const school19 = new PrimarySchool("Bear", 108, "Yes");
 
@@ -104,3 +133,7 @@ console.log(School.pickSubstituteTeacher(["Jamal Crawford", "Lou Williams", "J. 
 const alSmith = new HighSchool("Al E. Smith", 415, ["Baseball", "Basketball", "Volleyball", "Track and Field"]);
 
 console.log(alSmith.sportsTeams);
+
+
+
+console.log(schoolList);
