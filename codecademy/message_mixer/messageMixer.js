@@ -8,7 +8,7 @@ function countCharacter(inputString, inputCharacter) {
     }
   }
   return count; 
-};
+}
 
 function capitalizeFirstCharacterOfWords(string) {
   let arr = string.split(" ");  
@@ -16,13 +16,13 @@ function capitalizeFirstCharacterOfWords(string) {
     let word = arr[i];
     arr[i] = word[0].toUpperCase() + word.substring(1); 
   }
-  return arr.join(" "); 
-};
+  return arr.join(" ");
+}
 
 
 function reverseWord(word) {
   return word.split("").reverse().join("");
-};
+}
 
 function reverseAllWords(sentence) {
   let words = sentence.split(" ");
@@ -30,17 +30,17 @@ function reverseAllWords(sentence) {
     words[i] = reverseWord(words[i]);
   }
   return words.join(" ");
-};
+}
 
 
 function replaceFirstOccurence(string, toBeReplaced, replaceWith) {
   return string.replace(toBeReplaced, replaceWith);
-};
+}
 
 
 function replaceAllOccurrences(string, toBeReplaced, replaceWith) {
   return string.split(toBeReplaced).join(replaceWith);
-};
+}
 
 function encode(string) {
   let replacementObject = { a: "@", s: "$", i: "!", o: "0" };
@@ -48,7 +48,7 @@ function encode(string) {
     string = replaceAllOccurrences(string, key, replacementObject[key]); 
   }	
   return string;
-};
+}
 
 
 function displayMessage() {
