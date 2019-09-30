@@ -50,7 +50,6 @@ function encode(string) {
   return string;
 }
 
-
-
-
 displayMessage();
+
+const MessageMixer = {};
