@@ -20,9 +20,9 @@ MessageMixer.capitalizeFirstCharacterOfWords = function (string) {
 };
 
 
-function reverseWord(word) {
+MessageMixer.reverseWord = function (word) {
   return word.split("").reverse().join("");
-}
+};
 
 function reverseAllWords(sentence) {
   let words = sentence.split(" ");
