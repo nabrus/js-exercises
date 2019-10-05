@@ -33,9 +33,9 @@ MessageMixer.reverseAllWords = function (sentence) {
 };
 
 
-function replaceFirstOccurence(string, toBeReplaced, replaceWith) {
+MessaageMixer.replaceFirstOccurence = function (string, toBeReplaced, replaceWith) {
   return string.replace(toBeReplaced, replaceWith);
-}
+};
 
 
 function replaceAllOccurrences(string, toBeReplaced, replaceWith) {
