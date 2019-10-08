@@ -1,3 +1,6 @@
+const MessageMixer = {
+};
+
 MessageMixer.countCharacter = function (inputString, inputCharacter) {
   let count = 0;
   let string = inputString.toLowerCase();
@@ -52,5 +55,4 @@ MessageMixer.encode = function (string) {
 
 displayMessage();
 
-const MessageMixer = {
-};
+module.exports = MessageMixer;
