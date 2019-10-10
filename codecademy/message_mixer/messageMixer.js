@@ -36,7 +36,7 @@ MessageMixer.reverseAllWords = function (sentence) {
 };
 
 
-MessaageMixer.replaceFirstOccurence = function (string, toBeReplaced, replaceWith) {
+MessageMixer.replaceFirstOccurence = function (string, toBeReplaced, replaceWith) {
   return string.replace(toBeReplaced, replaceWith);
 };
 
@@ -52,7 +52,5 @@ MessageMixer.encode = function (string) {
   }	
   return string;
 };
-
-displayMessage();
 
 module.exports = MessageMixer;
