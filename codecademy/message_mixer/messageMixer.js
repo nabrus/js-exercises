@@ -53,4 +53,8 @@ MessageMixer.encode = function (string) {
   return string;
 };
 
+MessageMixer.palindrome = function (str) {
+  
+}
+
 module.exports = MessageMixer;
