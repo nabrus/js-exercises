@@ -54,7 +54,8 @@ MessageMixer.encode = function (string) {
 };
 
 MessageMixer.palindrome = function (str) {
-  
-}
+  const reversed = MessageMixer.reverseWord(str);
+  return `${str} ${reversed}`;
+};
 
 module.exports = MessageMixer;
