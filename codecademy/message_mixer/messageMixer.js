@@ -58,4 +58,8 @@ MessageMixer.palindrome = function (str) {
   return `${str} ${reversed}`;
 };
 
+MessageMixer.pigLatin = function (sentence, character) {
+  
+};
+
 module.exports = MessageMixer;
