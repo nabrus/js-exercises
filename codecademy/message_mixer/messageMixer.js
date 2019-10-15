@@ -59,7 +59,7 @@ MessageMixer.palindrome = function (str) {
 };
 
 MessageMixer.pigLatin = function (sentence, character) {
-  
+  return sentence.split(" ").join(character + " ");
 };
 
 module.exports = MessageMixer;
