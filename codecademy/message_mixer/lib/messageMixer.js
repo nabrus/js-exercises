@@ -1,11 +1,17 @@
-const MessageMixer = {};
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+var MessageMixer = {};
 
 MessageMixer.countCharacter = function (inputString, inputCharacter) {
-  let count = 0;
-  let string = inputString.toLowerCase();
-  let character = inputCharacter.toLowerCase();
+  var count = 0;
+  var string = inputString.toLowerCase();
+  var character = inputCharacter.toLowerCase();
 
-  for (let i = 0; i < string.length; i++) {
+  for (var i = 0; i < string.length; i++) {
     if (string[i] === character) {
       count += 1;
     }
@@ -15,10 +21,10 @@ MessageMixer.countCharacter = function (inputString, inputCharacter) {
 };
 
 MessageMixer.capitalizeFirstCharacterOfWords = function (string) {
-  let arr = string.split(" ");
+  var arr = string.split(" ");
 
-  for (let i = 0; i < arr.length; i++) {
-    let word = arr[i];
+  for (var i = 0; i < arr.length; i++) {
+    var word = arr[i];
     arr[i] = word[0].toUpperCase() + word.substring(1);
   }
 
@@ -30,9 +36,9 @@ MessageMixer.reverseWord = function (word) {
 };
 
 MessageMixer.reverseAllWords = function (sentence) {
-  let words = sentence.split(" ");
+  var words = sentence.split(" ");
 
-  for (let i = 0; i < words.length; i++) {
+  for (var i = 0; i < words.length; i++) {
     words[i] = MessageMixer.reverseWord(words[i]);
   }
 
@@ -48,14 +54,14 @@ MessageMixer.replaceAllOccurrences = function (string, toBeReplaced, replaceWith
 };
 
 MessageMixer.encode = function (string) {
-  let replacementObject = {
+  var replacementObject = {
     a: "@",
     s: "$",
     i: "!",
     o: "0"
   };
 
-  for (let key in replacementObject) {
+  for (var key in replacementObject) {
     string = MessageMixer.replaceAllOccurrences(string, key, replacementObject[key]);
   }
 
@@ -63,8 +69,8 @@ MessageMixer.encode = function (string) {
 };
 
 MessageMixer.palindrome = function (str) {
-  const reversed = MessageMixer.reverseWord(str);
-  return `${str} ${reversed}`;
+  var reversed = MessageMixer.reverseWord(str);
+  return "".concat(str, " ").concat(reversed);
 };
 
 MessageMixer.pigLatin = function (sentence, character) {
@@ -72,4 +78,5 @@ MessageMixer.pigLatin = function (sentence, character) {
 }; // module.exports = MessageMixer;
 
 
-export default MessageMixer;
+var _default = MessageMixer;
+exports["default"] = _default;

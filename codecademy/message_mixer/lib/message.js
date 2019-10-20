@@ -1,14 +1,18 @@
-// module.exports = MessageMixer;
-import MessageMixer from "./messageMixer";
+"use strict";
 
+var _messageMixer = _interopRequireDefault(require("./messageMixer"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+// module.exports = MessageMixer;
 function displayMessage() {
-  console.log(MessageMixer.countCharacter("What is the color of the sky?", "t"));
-  console.log(MessageMixer.capitalizeFirstCharacterOfWords("What is the color of the sky?"));
-  console.log(MessageMixer.reverseWord("What is the color of the sky?"));
-  console.log(MessageMixer.reverseAllWords("What is the color of the sky?"));
-  console.log(MessageMixer.replaceFirstOccurence("What is the color of the sky?", "sky", "water"));
-  console.log(MessageMixer.encode("What is the color of the sky?"));
-  console.log(MessageMixer.palindrome("Hello there"));
+  console.log(_messageMixer["default"].countCharacter("What is the color of the sky?", "t"));
+  console.log(_messageMixer["default"].capitalizeFirstCharacterOfWords("What is the color of the sky?"));
+  console.log(_messageMixer["default"].reverseWord("What is the color of the sky?"));
+  console.log(_messageMixer["default"].reverseAllWords("What is the color of the sky?"));
+  console.log(_messageMixer["default"].replaceFirstOccurence("What is the color of the sky?", "sky", "water"));
+  console.log(_messageMixer["default"].encode("What is the color of the sky?"));
+  console.log(_messageMixer["default"].palindrome("Hello there"));
 }
 
 displayMessage();
