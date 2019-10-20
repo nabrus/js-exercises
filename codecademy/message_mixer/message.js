@@ -1,6 +1,6 @@
 // module.exports = MessageMixer;
 
-import MessageMixer from "./messageMixer";
+import MessageMixer from "./src/messageMixer";
 
 function displayMessage() {
   console.log(MessageMixer.countCharacter("What is the color of the sky?", "t"));
