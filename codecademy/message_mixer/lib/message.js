@@ -12,7 +12,8 @@ function displayMessage() {
   console.log(_messageMixer["default"].reverseAllWords("What is the color of the sky?"));
   console.log(_messageMixer["default"].replaceFirstOccurence("What is the color of the sky?", "sky", "water"));
   console.log(_messageMixer["default"].encode("What is the color of the sky?"));
-  console.log(_messageMixer["default"].palindrome("Hello there"));
+  console.log(_messageMixer["default"].palindrome("What is the color of the sky?"));
+  console.log(_messageMixer["default"].pigLatin("What is the color of the sky?", "ay "));
 }
 
 displayMessage();
