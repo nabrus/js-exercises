@@ -1,7 +1,7 @@
 const MessageMixer = {
 };
 
-countCharacter = function (inputString, inputCharacter) {
+const countCharacter = function (inputString, inputCharacter) {
   let count = 0;
   let string = inputString.toLowerCase();
   let character = inputCharacter.toLowerCase();
@@ -13,7 +13,7 @@ countCharacter = function (inputString, inputCharacter) {
   return count; 
 };
 
-capitalizeFirstCharacterOfWords = function (string) {
+const capitalizeFirstCharacterOfWords = function (string) {
   let arr = string.split(" ");  
   for (let i = 0; i < arr.length; i++) {  
     let word = arr[i];
@@ -23,7 +23,7 @@ capitalizeFirstCharacterOfWords = function (string) {
 };
 
 
-reverseWord = function (word) {
+const reverseWord = function (word) {
   return word.split("").reverse().join("");
 };
 
