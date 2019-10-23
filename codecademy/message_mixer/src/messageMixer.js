@@ -1,7 +1,7 @@
 const MessageMixer = {
 };
 
-const countCharacter = function (inputString, inputCharacter) {
+function countCharacter (inputString, inputCharacter) {
   let count = 0;
   let string = inputString.toLowerCase();
   let character = inputCharacter.toLowerCase();
@@ -10,40 +10,39 @@ const countCharacter = function (inputString, inputCharacter) {
       count += 1;
     }
   }
-  return count; 
-};
+  return count;
+}
 
-const capitalizeFirstCharacterOfWords = function (string) {
+function capitalizeFirstCharacterOfWords (string) {
   let arr = string.split(" ");  
   for (let i = 0; i < arr.length; i++) {  
     let word = arr[i];
     arr[i] = word[0].toUpperCase() + word.substring(1); 
   }
   return arr.join(" ");
-};
+}
 
 
-const reverseWord = function (word) {
+function reverseWord (word) {
   return word.split("").reverse().join("");
-};
+}
 
-MessageMixer.reverseAllWords = function (sentence) {
+function reverseAllWords (sentence) {
   let words = sentence.split(" ");
   for (let i = 0; i < words.length; i++) {
     words[i] = MessageMixer.reverseWord(words[i]);
   }
   return words.join(" ");
-};
+}
 
-
-MessageMixer.replaceFirstOccurence = function (string, toBeReplaced, replaceWith) {
+function replaceFirstOccurence (string, toBeReplaced, replaceWith) {
   return string.replace(toBeReplaced, replaceWith);
-};
+}
 
 
-MessageMixer.replaceAllOccurrences = function (string, toBeReplaced, replaceWith) {
+function replaceAllOccurrences (string, toBeReplaced, replaceWith) {
   return string.split(toBeReplaced).join(replaceWith);
-};
+}
 
 MessageMixer.encode = function (string) {
   let replacementObject = { a: "@", s: "$", i: "!", o: "0" };
