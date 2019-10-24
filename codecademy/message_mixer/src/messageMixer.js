@@ -50,7 +50,7 @@ function encode (string) {
     string = MessageMixer.replaceAllOccurrences(string, key, replacementObject[key]);
   }	
   return string;
-};
+}
 
 function palindrome (str) {
   const reversed = reverseWord(str);
@@ -59,7 +59,7 @@ function palindrome (str) {
 
 function pigLatin (sentence, character) {
   return sentence.split(" ").join(character + " ");
-};
+}
 
 // module.exports = MessageMixer;
 
