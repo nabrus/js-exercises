@@ -30,7 +30,7 @@ function reverseWord (word) {
 function reverseAllWords (sentence) {
   let words = sentence.split(" ");
   for (let i = 0; i < words.length; i++) {
-    words[i] = MessageMixer.reverseWord(words[i]);
+    words[i] = reverseWord(words[i]);
   }
   return words.join(" ");
 }
@@ -44,7 +44,7 @@ function replaceAllOccurrences (string, toBeReplaced, replaceWith) {
   return string.split(toBeReplaced).join(replaceWith);
 }
 
-MessageMixer.encode = function (string) {
+function encode (string) {
   let replacementObject = { a: "@", s: "$", i: "!", o: "0" };
   for (let key in replacementObject) {
     string = MessageMixer.replaceAllOccurrences(string, key, replacementObject[key]);
@@ -52,12 +52,12 @@ MessageMixer.encode = function (string) {
   return string;
 };
 
-MessageMixer.palindrome = function (str) {
-  const reversed = MessageMixer.reverseWord(str);
+function palindrome (str) {
+  const reversed = reverseWord(str);
   return `${str} ${reversed}`;
 };
 
-MessageMixer.pigLatin = function (sentence, character) {
+function pigLatin (sentence, character) {
   return sentence.split(" ").join(character + " ");
 };
 
