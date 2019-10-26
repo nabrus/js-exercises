@@ -3,10 +3,18 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = void 0;
+exports.countCharacter = countCharacter;
+exports.capitalizeFirstCharacterOfWords = capitalizeFirstCharacterOfWords;
+exports.reverseWord = reverseWord;
+exports.reverseAllWords = reverseAllWords;
+exports.replaceFirstOccurence = replaceFirstOccurence;
+exports.replaceAllOccurrences = replaceAllOccurrences;
+exports.encode = encode;
+exports.palindrome = palindrome;
+exports.pigLatin = pigLatin;
 var MessageMixer = {};
 
-MessageMixer.countCharacter = function (inputString, inputCharacter) {
+function countCharacter(inputString, inputCharacter) {
   var count = 0;
   var string = inputString.toLowerCase();
   var character = inputCharacter.toLowerCase();
@@ -18,9 +26,9 @@ MessageMixer.countCharacter = function (inputString, inputCharacter) {
   }
 
   return count;
-};
+}
 
-MessageMixer.capitalizeFirstCharacterOfWords = function (string) {
+function capitalizeFirstCharacterOfWords(string) {
   var arr = string.split(" ");
 
   for (var i = 0; i < arr.length; i++) {
@@ -29,31 +37,31 @@ MessageMixer.capitalizeFirstCharacterOfWords = function (string) {
   }
 
   return arr.join(" ");
-};
+}
 
-MessageMixer.reverseWord = function (word) {
+function reverseWord(word) {
   return word.split("").reverse().join("");
-};
+}
 
-MessageMixer.reverseAllWords = function (sentence) {
+function reverseAllWords(sentence) {
   var words = sentence.split(" ");
 
   for (var i = 0; i < words.length; i++) {
-    words[i] = MessageMixer.reverseWord(words[i]);
+    words[i] = reverseWord(words[i]);
   }
 
   return words.join(" ");
-};
+}
 
-MessageMixer.replaceFirstOccurence = function (string, toBeReplaced, replaceWith) {
+function replaceFirstOccurence(string, toBeReplaced, replaceWith) {
   return string.replace(toBeReplaced, replaceWith);
-};
+}
 
-MessageMixer.replaceAllOccurrences = function (string, toBeReplaced, replaceWith) {
+function replaceAllOccurrences(string, toBeReplaced, replaceWith) {
   return string.split(toBeReplaced).join(replaceWith);
-};
+}
 
-MessageMixer.encode = function (string) {
+function encode(string) {
   var replacementObject = {
     a: "@",
     s: "$",
@@ -62,21 +70,20 @@ MessageMixer.encode = function (string) {
   };
 
   for (var key in replacementObject) {
-    string = MessageMixer.replaceAllOccurrences(string, key, replacementObject[key]);
+    string = replaceAllOccurrences(string, key, replacementObject[key]);
   }
 
   return string;
-};
+}
 
-MessageMixer.palindrome = function (str) {
-  var reversed = MessageMixer.reverseWord(str);
+function palindrome(str) {
+  var reversed = reverseWord(str);
   return "".concat(str, " ").concat(reversed);
-};
+}
 
-MessageMixer.pigLatin = function (sentence, character) {
+;
+
+function pigLatin(sentence, character) {
   return sentence.split(" ").join(character + " ");
-}; // module.exports = MessageMixer;
-
-
-var _default = MessageMixer;
-exports["default"] = _default;
+} // module.exports = MessageMixer;
+// export default MessageMixer;
