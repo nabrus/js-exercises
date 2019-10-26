@@ -63,4 +63,8 @@ function pigLatin (sentence, character) {
 
 // module.exports = MessageMixer;
 
-export default MessageMixer;
+// export default MessageMixer;
+
+export { countCharacter, capitalizeFirstCharacterOfWords, reverseWord, reverseAllWords, replaceFirstOccurence, replaceAllOccurrences, encode, palindrome, pigLatin };
+
+
