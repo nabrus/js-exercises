@@ -17,15 +17,15 @@ let payGrades = {
 };
 
 Employee.getCadre = function() {
-  if (salary >= payGrades.entryLevel.minSalary && salary <= payGrades.entryLevel.maxSalary) {
+  if (Employee.salary >= payGrades.entryLevel.minSalary && Employee.salary <= payGrades.entryLevel.maxSalary) {
     return "entryLevel";
-  } else if (salary >= payGrades.midLevel.minSalary && salary <= payGrades.midLevel.maxSalary) {
+  } else if (Employee.salary >= payGrades.midLevel.minSalary && Employee.salary <= payGrades.midLevel.maxSalary) {
     return "midLevel";
   } else return "seniorLevel";
 };
 
 Employee.calculateTax = function() {
-  return payGrades[Employee.getCadre()].taxMultiplier * salary;
+  return payGrades[Employee.getCadre()].taxMultiplier * Employee.salary;
 };
 
 Employee.getBenefits = function() {
@@ -33,7 +33,7 @@ Employee.getBenefits = function() {
 };
 
 Employee.calculateBonus = function() {
-  return 0.02 * salary;
+  return 0.02 * Employee.salary;
 };
 
 Employee.reimbursementEligibility = function() {
@@ -47,3 +47,5 @@ Employee.reimbursementEligibility = function() {
   }
   return totalBenefitsValue;
 };
+
+export default Employee;
