@@ -1,37 +1,49 @@
-let salary = 100000;
+let Employee = {
+  salary: 100000,
 
-let payGrades = {
-  entryLevel: { taxMultiplier: .05, benefits: ['health'], minSalary: 10000, maxSalary: 49999 },
-  midLevel: { taxMultiplier: .1, benefits: ['health', 'housing'], minSalary: 50000, maxSalary: 99999 },
-  seniorLevel: { taxMultiplier: .2, benefits: ['health', 'housing', 'wellness', 'gym'], minSalary: 100000, maxSalary: 200000 }
 };
 
-function getCadre() {
+
+let payGrades = {
+  entryLevel: {
+    taxMultiplier: 0.05, benefits: ["health"], minSalary: 10000, maxSalary: 49999,
+  },
+  midLevel: {
+    taxMultiplier: 0.1, benefits: ["health", "housing"], minSalary: 50000, maxSalary: 99999,
+  },
+  seniorLevel: {
+    taxMultiplier: 0.2, benefits: ["health", "housing", "wellness", "gym"], minSalary: 100000, maxSalary: 200000,
+  },
+};
+
+Employee.getCadre = function() {
   if (salary >= payGrades.entryLevel.minSalary && salary <= payGrades.entryLevel.maxSalary) {
-    return 'entryLevel';
+    return "entryLevel";
   } else if (salary >= payGrades.midLevel.minSalary && salary <= payGrades.midLevel.maxSalary) {
-    return 'midLevel';
-  } else return 'seniorLevel';
-}
+    return "midLevel";
+  } else return "seniorLevel";
+};
 
-function calculateTax() {
-  return payGrades[getCadre()].taxMultiplier * salary;
-}
+Employee.calculateTax = function() {
+  return payGrades[Employee.getCadre()].taxMultiplier * salary;
+};
 
-function getBenefits() {
-  return payGrades[getCadre()].benefits.join(', ');
-}
+Employee.getBenefits = function() {
+  return payGrades[Employee.getCadre()].benefits.join(", ");
+};
 
-function calculateBonus() {
-  return .02 * salary;
-}
+Employee.calculateBonus = function() {
+  return 0.02 * salary;
+};
 
-function reimbursementEligibility() {
-  let reimbursementCosts = { health: 5000, housing: 8000, wellness: 6000, gym: 12000 };
+Employee.reimbursementEligibility = function() {
+  let reimbursementCosts = {
+    health: 5000, housing: 8000, wellness: 6000, gym: 12000 
+  };
   let totalBenefitsValue = 0; 
-  let employeeBenefits = payGrades[getCadre()].benefits;
+  let employeeBenefits = payGrades[Employee.getCadre()].benefits;
   for (let i = 0; i < employeeBenefits.length; i++) {
     totalBenefitsValue += reimbursementCosts[employeeBenefits[i]];
   }
   return totalBenefitsValue;
-}
+};
