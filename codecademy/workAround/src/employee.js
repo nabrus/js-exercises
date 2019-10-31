@@ -4,7 +4,7 @@ let Employee = {
 };
 
 
-let payGrades = {
+export let payGrades = {
   entryLevel: {
     taxMultiplier: 0.05, benefits: ["health"], minSalary: 10000, maxSalary: 49999,
   },
@@ -16,7 +16,7 @@ let payGrades = {
   },
 };
 
-function getCadre() {
+export function getCadre() {
   if (Employee.salary >= payGrades.entryLevel.minSalary && Employee.salary <= payGrades.entryLevel.maxSalary) {
     return "entryLevel";
   } else if (Employee.salary >= payGrades.midLevel.minSalary && Employee.salary <= payGrades.midLevel.maxSalary) {
