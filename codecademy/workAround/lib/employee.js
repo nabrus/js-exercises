@@ -3,16 +3,15 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.cadre = getCadre;
-exports.tax = calculateTax;
-exports.benefits = getBenefits;
-exports.bonus = calculateBonus;
-exports.reimbursement = reimbursementEligibility;
-exports.Employee = void 0;
+exports.getCadre = getCadre;
+exports.calculateTax = calculateTax;
+exports.getBenefits = getBenefits;
+exports.calculateBonus = calculateBonus;
+exports.reimbursementEligibility = reimbursementEligibility;
+exports["default"] = exports.payGrades = void 0;
 var Employee = {
   salary: 100000
 };
-exports.Employee = Employee;
 var payGrades = {
   entryLevel: {
     taxMultiplier: 0.05,
@@ -33,6 +32,7 @@ var payGrades = {
     maxSalary: 200000
   }
 };
+exports.payGrades = payGrades;
 
 function getCadre() {
   if (Employee.salary >= payGrades.entryLevel.minSalary && Employee.salary <= payGrades.entryLevel.maxSalary) {
@@ -69,4 +69,11 @@ function reimbursementEligibility() {
   }
 
   return totalBenefitsValue;
-} // export default Employee;
+}
+
+var _default = Employee; // export {
+//   Employee, getCadre as cadre, calculateTax as tax, getBenefits as benefits,
+//   calculateBonus as bonus, reimbursementEligibility as reimbursement,
+// };
+
+exports["default"] = _default;
