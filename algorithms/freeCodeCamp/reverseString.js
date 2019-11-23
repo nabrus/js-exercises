@@ -7,8 +7,13 @@ Your result must be a string.
 */
 
 function reverseString(str) {
-  return str;
+  return str.split("").reverse().join("");
 }
+
+/*
+Or use the spread operator [...]
+`return [...str].reverse().join("");`
+*/
 
 console.log(reverseString("hello"));
 console.log(reverseString("Howdy"));
