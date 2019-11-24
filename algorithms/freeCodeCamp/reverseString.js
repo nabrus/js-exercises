@@ -15,6 +15,7 @@ Or use the spread operator [...]
 `return [...str].reverse().join("");`
 */
 
+// A way to do it without using `reverse()`
 function reverseStringA(str) {
   let reversed = "";
   for (let i = str.length - 1; i >= 0; i -= 1) {
