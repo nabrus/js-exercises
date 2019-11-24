@@ -24,9 +24,22 @@ function reverseStringA(str) {
   return reversed;
 }
 
+// Using a `for...of` loop
+function reverseStringB(str) {
+  let reversed = "";
+  // eslint-disable-next-line no-restricted-syntax
+  for (const char of str) {
+    reversed = char + reversed;
+  }
+  return reversed;
+}
+
 console.log(reverseString("hello"));
 console.log(reverseStringA("hello"));
+console.log(reverseStringB("hello"));
 console.log(reverseString("Howdy"));
 console.log(reverseStringA("Howdy"));
+console.log(reverseStringB("Howdy"));
 console.log(reverseString("Greetings from Earth"));
 console.log(reverseStringA("Greetings from Earth"));
+console.log(reverseStringB("Greetings from Earth"));
