@@ -10,10 +10,16 @@ For example: 5! = 1 * 2 * 3 * 4 * 5 = 120
 
 Only integers greater than or equal to zero will be supplied to the function.
 
-Remember to use Read-Search-Ask if you get stuck. Write your own code.
 */
 
 function factorialize(num) {
+  let factorial = [];
+
+  if (num <= 0) {
+    return 1;
+  } else {
+    factorial.push(num - 1);
+  }
   return num;
 }
 
