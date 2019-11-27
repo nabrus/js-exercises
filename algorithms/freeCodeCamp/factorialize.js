@@ -17,10 +17,10 @@ function factorialize(num) {
 
   if (num <= 0) {
     return 1;
-  } else {
-    factorial.push(num - 1);
-  }
-  return num;
+ 
+  num.forEach(n => {
+   n >= 0 ? 
+  });
 }
 
 console.log(factorialize(5));
