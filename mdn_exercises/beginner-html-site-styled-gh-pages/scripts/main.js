@@ -18,3 +18,16 @@ function setUserName() {
   localStorage.setItem('name', myName);
   myHeading.textContent = `Mozilla is cool, ${myName}`;
 }
+
+// Initialization at load
+if(!localStorage.getItem('name')) {
+  setUserName();
+} else {
+  let storedName = localStorage.getItem('name');
+  myHeading.textContent = `Mozilla is cool, ${storedName}`;
+}
+
+// Button event
+myButton.onclick = function() {
+  setUserName();
+}
