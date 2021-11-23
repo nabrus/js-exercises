@@ -20,7 +20,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const zTetrominoe = [
     [0, width, width+1, width*2+1],
     [width+1, width+2, width*2, width*2+1],
+    [0, width, width+1, width*2+1],
+    [width+1, width+2, width*2, width*2+1],
+  ]
 
+  const tTetrominoe = [
+    [1, width, width+1, width+2]
   ]
 
   console.log(lTetrominoe);
