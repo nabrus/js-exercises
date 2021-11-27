@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
   ]
 
   const tTetrominoe = [
-    [1, width, width+1, width+2]
+    [1, width, width+1, width+2],
     [1, width+1, width+2, width*2+1],
     [width, width+1, width+2, width*2+1],
     [1, width, width+1, width*2+1],
@@ -39,10 +39,13 @@ document.addEventListener('DOMContentLoaded', () => {
   ]
 
   const iTetrominoe = [
-    [1, width+1, width*2+1, width*3+1]
-    [width, width+1, width+2, width+3]
-    [1, width+1, width*2+1, width*3+1]
-    [width, width+1, width+2, width+3]
+    [1, width+1, width*2+1, width*3+1],
+    [width, width+1, width+2, width+3],
+    [1, width+1, width*2+1, width*3+1],
+    [width, width+1, width+2, width+3],
   ]
 
+  const theTetrominoes = [lTetrominoe, zTetrominoe, tTetrominoe, oTetrominoe, iTetrominoe]
+
+  console.log(theTetrominoes);
 })
