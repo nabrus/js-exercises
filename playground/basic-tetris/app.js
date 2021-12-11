@@ -48,8 +48,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const theTetrominoes = [lTetromino, zTetromino, tTetromino, oTetromino, iTetromino];
 
   let currentPosition  = 4;
-  let current = theTetrominoes[0][0];
+  // Randomly select a Tetromino and its first rotation
+  let random = Math.floor(Math.random()*theTetrominoes.length);
+  let current = theTetrominoes[random][0];
 
-  // Draw the first rotation in the first tetromino
+  // Draw the first rotation in the first Tetromino
+  function draw() {
+    current.forEach(index => {
+      squares[currentPosition + index].classList.add('tetromino');
+    })
+  }
   
+  draw();
 })
