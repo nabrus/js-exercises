@@ -67,6 +67,17 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   }
 
-  undraw();
+  // Moving the Tetromino down every second (1000 milliseconds) 
+
+  timerId = setInterval(moveDown, 1000);
+
+  // move down function
+  function moveDown() {
+    undraw()
+    currentPosition += width
+    draw()
+  }
+
+  moveDown()
 
 });
