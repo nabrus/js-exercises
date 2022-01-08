@@ -56,28 +56,40 @@ document.addEventListener("DOMContentLoaded", () => {
   // Draw the Tetromino
   function draw() {
     current.forEach(index => {
-      squares[currentPosition + index].classList.add('tetromino');
+      squares[currentPosition + index].classList.add('tetromino')
     });
   }
 
   // Undraw the Tetromino
   function undraw() {
     current.forEach(index => {
-      squares[currentPosition + index].classList.remove('tetromino');
-    })
+      squares[currentPosition + index].classList.remove('tetromino')
+    });
   }
-
+  draw()
   // Moving the Tetromino down every second (1000 milliseconds) 
 
-  timerId = setInterval(moveDown, 1000);
+  // timerId = setInterval(moveDown, 1000);
 
-  // move down function
-  function moveDown() {
-    undraw()
-    currentPosition += width
-    draw()
+  // // move down function
+  // function moveDown() {
+  //   undraw()
+  //   currentPosition += width
+  //   draw()
+  //   // freeze()
+  // }
+
+  // Freeze function
+  function freeze() {
+    if(current.some(index => squares[currentPosition + index + width].classList.contains('taken'))) {
+      current.forEach(index => squares[currentPosition + index].classlist.add('taken'))
+      // Start a new Tetromino falling
+      random = Math.floor(Math.random() * theTetrominos.length)
+      current = theTetrominos[random][currentPosition]
+      currentPosition = 4
+      draw()
+    }
   }
 
-  moveDown()
 
 });
