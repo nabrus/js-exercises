@@ -66,18 +66,17 @@ document.addEventListener("DOMContentLoaded", () => {
       squares[currentPosition + index].classList.remove('tetromino')
     });
   }
-  draw()
   // Moving the Tetromino down every second (1000 milliseconds) 
 
-  // timerId = setInterval(moveDown, 1000);
+  timerId = setInterval(moveDown, 1000);
 
   // // move down function
-  // function moveDown() {
-  //   undraw()
-  //   currentPosition += width
-  //   draw()
-  //   // freeze()
-  // }
+  function moveDown() {
+    undraw()
+    currentPosition += width
+    draw()
+    // freeze()
+  }
 
   // Freeze function
   function freeze() {
