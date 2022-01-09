@@ -57,15 +57,16 @@ document.addEventListener("DOMContentLoaded", () => {
   function draw() {
     current.forEach(index => {
       squares[currentPosition + index].classList.add('tetromino')
-    });
+    })
   }
 
   // Undraw the Tetromino
   function undraw() {
     current.forEach(index => {
       squares[currentPosition + index].classList.remove('tetromino')
-    });
+    })
   }
+
   // Moving the Tetromino down every second (1000 milliseconds) 
 
   timerId = setInterval(moveDown, 1000);
@@ -75,7 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
     undraw()
     currentPosition += width
     draw()
-    // freeze()
+    freeze()
   }
 
   // Freeze function
