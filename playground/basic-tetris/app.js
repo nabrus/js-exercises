@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Undraw the Tetromino
   function undraw() {
     current.forEach(index => {
-      squares[currentPosition + index].classList.remove('tetromino')
+      squares[currentPosition + index].classList.remove('tetromino')  
     })
   }
 
@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
     freeze()
   }
 
-  // Freeze function
+  // // Freeze function
   function freeze() {
     if(current.some(index => squares[currentPosition + index + width].classList.contains('taken'))) {
       current.forEach(index => squares[currentPosition + index].classList.add('taken'))
@@ -90,6 +90,17 @@ document.addEventListener("DOMContentLoaded", () => {
       draw()
     }
   }
+
+  // function freeze() {
+  //   if(current.some(index => squares[currentPosition + index + width].classList.contains('taken'))) {
+  //     current.forEach(index => squares[currentPosition + index].classList.add('taken'))
+  //     //start a new tetromino falling
+  //     random = Math.floor(Math.random() * theTetrominos.length)
+  //     current = theTetrominos[random][currentRotation]
+  //     currentPosition = 4
+  //     draw()
+  //   }
+  // }
 
 
 });
