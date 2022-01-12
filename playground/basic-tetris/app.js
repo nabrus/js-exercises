@@ -79,28 +79,15 @@ document.addEventListener("DOMContentLoaded", () => {
     freeze()
   }
 
-  // // Freeze function
-  function freeze() {
-    if(current.some(index => squares[currentPosition + index + width].classList.contains('taken'))) {
-      current.forEach(index => squares[currentPosition + index].classList.add('taken'))
-      // Start a new Tetromino falling
-      random = Math.floor(Math.random() * theTetrominos.length)
-      current = theTetrominos[random][currentPosition]
-      currentPosition = 4
-      draw()
-    }
-  }
-
-  // function freeze() {
-  //   if(current.some(index => squares[currentPosition + index + width].classList.contains('taken'))) {
-  //     current.forEach(index => squares[currentPosition + index].classList.add('taken'))
-  //     //start a new tetromino falling
-  //     random = Math.floor(Math.random() * theTetrominos.length)
-  //     current = theTetrominos[random][currentRotation]
-  //     currentPosition = 4
-  //     draw()
-  //   }
-  // }
-
+  // Freeze function
+ function freeze() {
+   if(current.some(index => squares[currentPosition + index + width].classList.contains('taken'))) {
+    current.forEach(index => squares[currentPosition + index].classList.add('taken'))
+    // Start a new Tetromino falling
+    random = Math.floor(Math.random() * theTetrominos.length)
+    current = theTetrominos[random][currentRotation]
+    currentPosition = 4
+   }
+ }
 
 });
