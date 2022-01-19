@@ -1,8 +1,8 @@
 // The DOMContentLoaded event fires after  HTML doc is loaded on page.
 // An alterative to putting script tag right before the end of the doc
 document.addEventListener("DOMContentLoaded", () => {
-  const grid = document.querySelector(".grid");
-  const squares = Array.from(document.querySelectorAll(".grid div"));
+  const grid = document.querySelector('.grid');
+  let squares = Array.from(document.querySelectorAll('.grid div'));
   // Array.from changes squares from a node list to an array
   const scoreDisplay = document.querySelector("#score");
   const startBtn = document.querySelector("#start-button");
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Moving the Tetromino down every second (1000 milliseconds) 
 
-  timerId = setInterval(moveDown, 1000);
+  timerId = setInterval(moveDown, 400);
 
   // // move down function
   function moveDown() {
