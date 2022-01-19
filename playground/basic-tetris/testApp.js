@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
       })
     }
 
-    timerId = setInterval(moveDown, 1000);
+  timerId = setInterval(moveDown, 1000);
 
     //move down function
   function moveDown() {
