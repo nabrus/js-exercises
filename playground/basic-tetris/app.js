@@ -68,8 +68,16 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Moving the Tetromino down every second (1000 milliseconds) 
+  timerId = setInterval(moveDown, 1000);
 
-  timerId = setInterval(moveDown, 400);
+  // Assign functions to key codes
+  function control(e) {
+    if(e.keyCode === 37) {
+      moveLeft()
+    }
+  }
+
+  document.addEventListener('keyup', control);
 
   // // move down function
   function moveDown() {
