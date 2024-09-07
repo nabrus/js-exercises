@@ -1,0 +1,52 @@
+.container {
+  background-color: greenyellow;
+  max-width: 500px;
+  height: 1000px;
+  margin: 0 auto;
+}
+
+.mcLogo {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+#title {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 30px;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  padding: 1em;
+}
+
+#survey-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 400px;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.user-info,
+input {
+  width: 200px;
+}
+
+.user-info,
+input,
+label {
+  padding: 2px;
+}
+
+#number {
+  width: 50px;
+}
