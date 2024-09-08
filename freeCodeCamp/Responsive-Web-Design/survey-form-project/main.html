@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Fonts start -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <!-- Google Fonts end -->
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="styles.css">
+  <title>Minecraft Survey</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="mcLogo"><img src="assets/minecraft_logo.png" alt="minecraft logo"></div>
+    <h1 id="title">Survey</h1>
+    <p id="description">Welcome to the Minecraft survey! Let us know what kind of Minecraft player you
+      are. Let's get started!
+    </p>
+
+    <form id="survey-form">
+      <!-- User info -->
+      <div class="user-info">
+        <label for="name" id="name-label">Name</label>
+        <input type="text" id="name" required placeholder="Enter your name" />
+        <label for="email" id="email-label">Email</label>
+        <input type="email" id="email" required placeholder="Enter your email" />
+        <label for="number" id="number-label">Age</label>
+        <input type="number" id="number" min="6" max="150" required placeholder="Age" />
+      </div>
+
+      <!-- Dropdown - Fav Biome Selection-->
+      <div class="dropdown">
+        <label for="fav">Favorite Overworld Biome for Base Builds</label>
+        <select name="biome" id="dropdown">
+          <option value="">-Select One-</option>
+          <option value="off-land">Offland (Ocean)</option>
+          <option value="highland">Highland (Mountains/Hills) </option>
+          <option value="woodland">Woodland (Forests/Jungle)</option>
+          <option value="arid-land">Arid-land (Desert/Savanna/Badland)</option>
+          <option value="wetland">Wetland (River/Beach/Swamp)</option>
+          <option value="flatland">Flatland (Plains/Ice Spikes)</option>
+          <option value="cave">Cave</option>
+        </select>
+      </div>
+
+
+      <!-- Radio Buttons - Game Modes -->
+      <fieldset>
+        <legend>Select Preferred Game Mode</legend>
+        <input type="radio" name="game-mode" checked value="creative" />
+        <label for="creative">Creative</label>
+        <input type="radio" name="game-mode" value="survival" />
+        <label for="survival">Survival</label>
+        <input type="radio" name="game-mode" value="hardcore" />
+        <label for="hardcore">Hardcore</label>
+        <input type="radio" name="game-mode" value="multiplayer" />
+        <label for="multiplayer">Multiplayer</label>
+      </fieldset>
+
+      <!-- Checkboxes -->
+      <input type="checkbox" value="building" />
+      <label for="building">Building</label>
+      <input type="checkbox" value="caving" />
+      <label for="caving">Caving</label>
+      <input type="checkbox" value="raiding" />
+      <label for="raiding">Raiding</label>
+      <input type="checkbox" value="redstone" />
+      <label for="redstone">Redstone Builds</label>
+      <input type="checkbox" value="enchanting" />
+      <label for="enchanting">Enchanting</label>
+      <input type="checkbox" value="brewing" />
+      <label for="brewing">Brewing</label>
+      <input type="checkbox" value="exploring" />
+      <label for="exploring">Exploring</label>
+      <input type="checkbox" value="mining" />
+      <label for="mining">Mining</label>
+      <input type="checkbox" value="fighting-mobs" />
+      <label for="fighting-mobs">Battling Mobs</label>
+      <input type="checkbox" value="farming" />
+      <label for="farming">Farming</label>
+      <input type="checkbox" value="all" />
+      <label for="all">Everything</label>
+
+      <!-- Text Area -->
+      <textarea name="comments" id="comments" rows="5" cols="35"
+        placeholder="Name the next mob you'd like to see.."></textarea>
+
+      <!-- Submit Button -->
+      <button id="submit">Submit</button>
+  </div>
+
+  </form>
+</body>
+
+</html>
