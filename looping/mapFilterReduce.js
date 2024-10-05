@@ -49,6 +49,29 @@ function toCelsius(temps) {
 const fahrenheitToCelsius = fahrenheitTemps.map(toCelsius);
 console.log(fahrenheitToCelsius); // [0, 20, 37.77777777777778]
 
+// or
+
+const tempConverter = fahrenheitTemps.map(temp => (temp - 32) * 5/9);
+console.log(tempConverter); // [0, 20, 37.77777777777778]
+
+// or to have only two decimal places for 100
+
+function tempChange(temps) {
+  const changeToCelsius = (temps - 32) * 5/9;
+  return Number(changeToCelsius.toFixed(2));
+}
+
+const tempConverter1 = fahrenheitTemps.map(tempChange);
+console.log(tempConverter1); // [0, 20, 37.78]
+
+// or
+
+const tempConverter2 = fahrenheitTemps.map(temps => {
+  return Number(((temps - 32) * 5/9).toFixed(2));
+})
+
+console.log(tempConverter2);
+
 /*
 2. Challenges for filter():
 
