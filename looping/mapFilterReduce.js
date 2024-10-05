@@ -72,6 +72,8 @@ const tempConverter2 = fahrenheitTemps.map(temps => {
 
 console.log(tempConverter2);
 
+console.log('----------------------------------');
+
 /*
 2. Challenges for filter():
 
@@ -80,6 +82,9 @@ Write a function that takes an array of numbers and returns only the even number
 */
 const filterNumbers = [1, 2, 3, 4, 5, 6];
 // Expected output: [2, 4, 6]
+
+const evenOnly = filterNumbers.filter(num => num % 2 === 0);
+console.log(evenOnly); // [2, 4, 6]
 
 /*
 Find people over a certain age:
