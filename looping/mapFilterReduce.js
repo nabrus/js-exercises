@@ -29,6 +29,8 @@ function onlyUsers(array) {
 const userNames = users.map(onlyUsers);
 console.log(userNames); // ['Alice', 'Bob', 'Charlie']
 
+// or
+
 const userNames1 = users.map(names => names.name);
 console.log(userNames1); // ['Alice', 'Bob', 'Charlie']
 
