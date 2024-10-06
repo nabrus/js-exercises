@@ -97,6 +97,9 @@ const filterUsers = [
 ];
 // Expected output: [{ name: 'Bob', age: 30 }, { name: 'Charlie', age: 35 }]
 
+const thirtyUp = filterUsers.filter(user => user.age >= 30);
+console.log(thirtyUp);
+
 /*
 Filter out words shorter than 5 letters:
 Given an array of words, use filter() to return only the words that have 5 or more letters.
@@ -104,6 +107,8 @@ Given an array of words, use filter() to return only the words that have 5 or mo
 const filterWords = ['apple', 'hi', 'banana', 'cat', 'elephant'];
 // Expected output: ['apple', 'banana', 'elephant']
 
+const overFiveChar = filterWords.filter(word => word.length >= 5);
+console.log(overFiveChar); // ['apple', 'banana', 'elephant']
 
 /*
 3. Challenges for reduce():
