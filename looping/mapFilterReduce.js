@@ -118,6 +118,9 @@ Write a function that uses reduce() to return the sum of all numbers in an array
 const reduceNumbers = [1, 2, 3, 4];
 // Expected output: 10
 
+const totalOfNums = reduceNumbers.reduce();
+console.log(totalOfNums);
+
 /*
 Find the longest word in an array:
 Use reduce() to find the longest word in an array of words.
