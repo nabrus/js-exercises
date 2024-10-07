@@ -110,6 +110,8 @@ const filterWords = ['apple', 'hi', 'banana', 'cat', 'elephant'];
 const overFiveChar = filterWords.filter(word => word.length >= 5);
 console.log(overFiveChar); // ['apple', 'banana', 'elephant']
 
+console.log('----------------------------------');
+
 /*
 3. Challenges for reduce():
 Sum all numbers in an array:
@@ -118,8 +120,8 @@ Write a function that uses reduce() to return the sum of all numbers in an array
 const reduceNumbers = [1, 2, 3, 4];
 // Expected output: 10
 
-const totalOfNums = reduceNumbers.reduce();
-console.log(totalOfNums);
+const totalOfNums = reduceNumbers.reduce((acc, currentVal) => acc + currentVal, 0);
+console.log(totalOfNums); // 10
 
 /*
 Find the longest word in an array:
@@ -127,6 +129,8 @@ Use reduce() to find the longest word in an array of words.
 */
 const words = ['apple', 'banana', 'grape', 'strawberry'];
 // Expected output: 'strawberry'
+
+// const longestWord = words.reduce((acc, fruit) => );
 
 /*
 Count occurrences of values in an array:
