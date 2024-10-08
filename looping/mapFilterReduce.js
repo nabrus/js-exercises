@@ -130,7 +130,9 @@ Use reduce() to find the longest word in an array of words.
 const words = ['apple', 'banana', 'grape', 'strawberry'];
 // Expected output: 'strawberry'
 
-// const longestWord = words.reduce((acc, fruit) => );
+const longestWord = words.reduce((acc, fruit) => {
+  console.log(acc, fruit);
+}, 0);
 
 /*
 Count occurrences of values in an array:
