@@ -130,9 +130,11 @@ Use reduce() to find the longest word in an array of words.
 const words = ['apple', 'banana', 'grape', 'strawberry'];
 // Expected output: 'strawberry'
 
-const longestWord = words.reduce((acc, fruit) => {
-  console.log(acc, fruit);
+const longestWord = words.reduce((longest, currentItem) => {
+  return longest.length > currentItem.length ? longest : currentItem;
 }, 0);
+
+console.log(longestWord); // strawberry
 
 /*
 Count occurrences of values in an array:
@@ -140,3 +142,27 @@ Write a function that takes an array and returns an object with the count of eac
 */
 const fruits = ['apple', 'banana', 'apple', 'orange', 'banana', 'apple'];
 // Expected output: { apple: 3, banana: 2, orange: 1 }
+
+const tally = fruits.reduce((acc, currentFruit) => {
+  acc[currentFruit] = acc[currentFruit] + 1 || 1;
+  return acc;
+}, {});
+
+console.log(tally); // {apple: 3, banana: 2, orange: 1}
+
+// Or
+
+const fruitCount = fruits.reduce((accumulator, currentFruit) => {
+  // Check if the fruit already exists in the accumulator object
+  if (accumulator[currentFruit]) {
+    // If it does, increment its count by 1
+    accumulator[currentFruit]++;
+  } else {
+    // If it doesn't exist, initialize its count to 1
+    accumulator[currentFruit] = 1;
+  }
+  return accumulator; // Return the accumulator object
+}, {}); // Start with an empty object as the initial value
+
+console.log(fruitCount);
+
