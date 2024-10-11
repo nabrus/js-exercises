@@ -74,6 +74,19 @@ console.log(tempConverter2);
 
 console.log('----------------------------------');
 
+// Write a function that takes an array of words and returns a new array with the first letter of each word capitalized.
+
+const fruitBasket = ['apple', 'banana', 'grape'];
+
+// const capItems = fruitBasket.map(fruit => fruit[0].toUpperCase() + fruit.slice(1));
+
+const capItems = fruitBasket.map(fruit => {
+  return `${fruit[0].toUpperCase()}${fruit.slice(1)}`
+});
+
+console.log(capItems); // ['Apple', 'Banana', 'Grape']
+
+
 /*
 2. Challenges for filter():
 
